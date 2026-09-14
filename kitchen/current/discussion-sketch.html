@@ -1,0 +1,40 @@
+<div id="kitchen-discussion-sketch">
+  <div class="kd-grid">
+    <section><h3>Table · corrected local placement</h3><svg viewBox="0 0 360 290" role="img" aria-label="Extended table square to window wall, with its nearest edge 30.5 inches from that wall">
+      <path d="M25 30H335" class="wall"/><text x="180" y="20">Rear window wall</text>
+      <path d="M292 30V102 M285 30H299 M285 102H299" class="dim"/><text x="317" y="71">30.5″</text>
+      <rect x="100" y="102" width="160" height="115" rx="57.5" class="kd-surface"/>
+      <path d="M180 91V229 M90 159.5H270" class="center"/>
+      <text x="180" y="144">Extended table</text><text x="180" y="179">Square to room</text>
+      <text x="180" y="251">Fixed under light fixture</text><text x="180" y="274">Rear wall alignment confirmed</text>
+    </svg></section>
+    <section><h3>Two daily + two occasional · test</h3><svg viewBox="0 0 360 290" role="img" aria-label="Proposed 72 by 42 inch rectangular social and helper surface with two front seats and two perpendicular end seats; not placed in room">
+      <path d="M92 34H268 M92 29V39 M268 29V39" class="dim"/><text x="180" y="24">72″ test top</text>
+      <rect x="92" y="52" width="176" height="103" class="kd-surface"/>
+      <rect x="129" y="52" width="102" height="44" class="helper"/><text x="180" y="79">Helper</text>
+      <rect x="92" y="59" width="37" height="59" class="knee"/><rect x="231" y="59" width="37" height="59" class="knee"/>
+      <rect x="114" y="118" width="59" height="37" class="knee"/><rect x="187" y="118" width="59" height="37" class="knee"/>
+      <rect x="28" y="59" width="64" height="59" class="occasional"/><text x="60" y="84">End</text><text x="60" y="102">stool</text>
+      <rect x="268" y="59" width="64" height="59" class="occasional"/><text x="300" y="84">End</text><text x="300" y="102">stool</text>
+      <rect x="114" y="155" width="59" height="64" class="seat"/><text x="143" y="190">Daily</text>
+      <rect x="187" y="155" width="59" height="64" class="seat"/><text x="216" y="190">Daily</text>
+      <text x="180" y="110">42″ deep</text>
+      <path d="M28 241H332 M28 236V246 M332 236V246" class="dim"/><text x="180" y="261">124″ including assumed end occupants</text>
+      <text x="180" y="282">Knee pockets reserved · room fit untested</text>
+    </svg></section>
+  </div>
+</div>
+<style>
+#kitchen-discussion-sketch .kd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+#kitchen-discussion-sketch svg{width:100%;display:block}
+#kitchen-discussion-sketch text{font:14px sans-serif;fill:var(--foreground);text-anchor:middle}
+#kitchen-discussion-sketch .wall{fill:none;stroke:var(--foreground);stroke-width:2}
+#kitchen-discussion-sketch .dim{fill:none;stroke:var(--foreground);stroke-width:1}
+#kitchen-discussion-sketch .center{fill:none;stroke:var(--border);stroke-dasharray:3 4}
+#kitchen-discussion-sketch .kd-surface{fill:var(--viz-series-2);fill-opacity:.15;stroke:var(--foreground)}
+#kitchen-discussion-sketch .helper{fill:var(--viz-series-1);fill-opacity:.2;stroke:var(--foreground)}
+#kitchen-discussion-sketch .knee{fill:none;stroke:var(--border);stroke-dasharray:3 3}
+#kitchen-discussion-sketch .seat{fill:var(--viz-series-4);fill-opacity:.15;stroke:var(--foreground)}
+#kitchen-discussion-sketch .occasional{fill:var(--viz-series-4);fill-opacity:.08;stroke:var(--foreground);stroke-dasharray:4 3}
+@media(max-width:700px){#kitchen-discussion-sketch .kd-grid{grid-template-columns:1fr}}
+</style>

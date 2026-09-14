@@ -1,5 +1,7 @@
 # Paired peninsula / freestanding fit test
 
+**Table correction:** Read [DISCUSSION.md](DISCUSSION.md) for the later controlling update. The live drawing now shows the table square and 30.5 inches from the confirmed rear wall. Historical table-related values and pull-out conclusions below describe the prior tilted placement and are superseded. The 17.2-inch tip constraint remains. Generic appliance bands are sensitivity illustrations, not new actual obstructions.
+
 The new shaped connection clears the captured bottom tread, so the former stair collision is not a general reason to discard continuity. **This particular connected placement is nevertheless too restrictive to select:** it closes the west approach, leaves a 17.2-inch local gap at the cleanup-side free end, and narrows the gap beside the chef island to 34.7 inches. The freestanding comparison retains a 34.3-inch west approach but has the same eastern and occupied-chair constraints. Neither establishes the requested comfortable four-guest plan.
 
 This is a controlled comparison: the four-place surface, independent helper, island, cleanup, table and body assumptions are identical. Only the shaped connection changes. It answers what continuity costs in this placement; it does not prove that every continuous peninsula fails.

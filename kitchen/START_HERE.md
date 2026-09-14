@@ -1,6 +1,8 @@
 # Kitchen — current entry point
 
-Updated September 14, 2026 after Jon's IMG_8610 clarification.
+Updated September 14, 2026 after the table and occasional-seating discussion.
+
+**Read [current/DISCUSSION.md](current/DISCUSSION.md) first.** The table is now square to the room and fixed 30.5 inches from the rear window wall, whose plane Jon confirmed. The comparison drawing/model have been corrected. Earlier 22-inch chair gaps and guest/table pull-out overlap conclusions are superseded; they are now 35.4 inches and an 8.4-inch gap in the same assumed chair poses. Next explore 2+2 occasional seating and a purposeful peninsula using an enclosed stair side.
 
 Read [current/EVALUATION.md](current/EVALUATION.md), [current/CURRENT_STATE.json](current/CURRENT_STATE.json), and open [current/comparison.html](current/comparison.html). The comparison uses one operating-state selector for both candidates. [comparison-model.json](current/comparison-model.json) records the exact study polygons and assumptions.
 

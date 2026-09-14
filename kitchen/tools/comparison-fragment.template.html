@@ -58,7 +58,7 @@ const NS='http://www.w3.org/2000/svg';
 const R=(x,y,w,h)=>[[x,y],[x+w,y],[x+w,y+h],[x,y+h]];
 function draw(svg,connected){
   svg.replaceChildren(); const mode=state.value,whole=view.value==='room';
-  const width=Math.max(280,svg.getBoundingClientRect().width),bounds=whole?[-180,-48,232,370]:[-47,-44,221,334];
+  const width=Math.max(280,svg.getBoundingClientRect().width),bounds=whole?[-180,-48,232,370]:[-47,-44,221,372];
   const [xmin,ymin,xmax,ymax]=bounds,pad=12,scale=(width-2*pad)/(xmax-xmin),height=(ymax-ymin)*scale+2*pad;
   svg.setAttribute('viewBox',`0 0 ${width} ${height}`);svg.style.height=height+'px';
   const X=x=>pad+(x-xmin)*scale,Y=y=>pad+(y-ymin)*scale;
@@ -94,7 +94,9 @@ function draw(svg,connected){
   // Confirmed X alignment; conditional Y registration, no fabricated porch interior closure.
   line([[5.8247,180],[5.8247,229]],'route');line([[5.8247,229],[5.8247,349]],'dim');
   if(!whole){text(-1,255,'Old porch', 'end');text(-1,267,'beverages', 'end');}
-  poly(D.table);text(86,281,'Extended');text(86,294,'table');
+  poly(D.table);text(D.table_center[0],D.table_center[1]-4,'Extended');text(D.table_center[0],D.table_center[1]+9,'table');
+  line([[5.8247,D.rear_window_wall_y],[181.5,D.rear_window_wall_y]]);text(86,D.rear_window_wall_y+15,'Window wall');
+  line([[144,D.table_center[1]+24],[144,D.rear_window_wall_y]]);text(162,D.rear_window_wall_y-13,'30.5″');
   const chairs=mode==='pull'?D.table_pulled:D.table_chairs;
   chairs.forEach(p=>poly(p,'shape uncertain'));
   const m5=D.points.M5;line([[m5[0],m5[1]+17],m5,[m5[0]+17,m5[1]]]);
@@ -135,9 +137,9 @@ function draw(svg,connected){
       poly(D.fixed.chef,'shape person');rect([44,144,24,18],'shape person','24 × 18 tray footprint proxy at west approach; not a walking-body clearance');
       if(connected)dim(D.metrics.east_tip_to_cleanup,'17″',27,1);else dim(D.metrics.west_gate_bare,'34″',-5,0);
     }
-    if(connected)dim(D.metrics.guest_to_table_chair,'22″',-17,1);
+    if(connected)dim(D.metrics.guest_to_table_chair,D.metrics.guest_to_table_chair.inches.toFixed(1)+'″',-20,1);
   }
-  if(mode==='pull')text(117,230,'Pull-outs overlap', 'start');
+  if(mode==='pull')text(118,242,D.metrics.both_chair_sets_pulled.inches.toFixed(1)+'″ gap', 'start');
   if(mode==='fridge'||mode==='ovens'){
     const p=+door.value,ov=mode==='ovens',fy=ov?+face.value:-2,x=ov?139:61.5,w=ov?29.5:48;
     rect([x,fy,w,p],'shape person','Assumed maximum open projection band, not a surveyed appliance sweep');
@@ -154,9 +156,9 @@ function render(){
    closed:'P1 closes the west approach; F1 retains a 34″ local gap. Both have only 17″ at the cleanup-side tip.',
    work:'44″ from island end to helper surface; 24″ behind the standing helper. P1’s added diagonal narrows the island-to-link gap to 35″.',
    dw:'Both: 11″ from loader envelope to helper surface. Loading is possible as a separate activity; through-serving here is restricted.',
-   arrival:'P1 redirects arrival around the free end: 17″ tip gap and 22″ between occupied chair envelopes. F1 retains the restrictive west approach.',
+   arrival:'P1 redirects arrival around the free end: 17″ tip gap and 35.4″ between assumed occupied chair envelopes. F1 retains the restrictive west approach.',
    serving:'Dashed lines show intended serving routes to the pantry. P1 closes the west route; F1 still shares the range aisle with the chef.',
-   pull:'The assumed guest and table-chair pull-out envelopes intersect in both cases.',
+   pull:'Corrected table: 8.4″ between nearest assumed pull-outs; the rear chair’s 36″ pull-out exceeds its fixed 30.5″ wall gap.',
    fridge:`Approximately 40″ closed fridge-to-island gap − ${door.value}″ projection test = ${40-(+door.value)}″ residual before a person; actual side-by-side door sweep is unmeasured.`,
    ovens:`Oven face Y${face.value} + ${door.value}″ door + 20″ centered user = Y${(+face.value)+(+door.value)+20}; cleanup starts at Y41. Actual oven face and door travel remain unmeasured.`
   };

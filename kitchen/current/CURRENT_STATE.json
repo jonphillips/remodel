@@ -1,5 +1,5 @@
 {
-  "checkpoint": "2026-09-14 current task: collinearity confirmed; paired connection study created.",
+  "checkpoint": "2026-09-14 discussion update: table squared and anchored 30.5 inches from confirmed rear window-wall plane; 2+2 seating and enclosed stair-side counter authorized for exploration.",
   "read_first": "START_HERE.md",
   "agreed_direction": {
     "cleanup": "Option C, 99-inch working allowance",
@@ -42,7 +42,7 @@
     "helper": "Separate useful board and landing, outside chef-to-heat movement.",
     "guests": "Four remains requested; three is an explicitly invited alternative. No decision to reduce the requirement. Angled inward end seats and 24-inch guest/18-inch helper surface depths are tests.",
     "cleanup": "Protect full daily cleanup capacity: dirty landing/scraping, sink, right-side dishwasher, clean drying/unloading and storage access. Existing bent run is the functional benchmark. Fixed wall cannot rely on outward expansion. Do not truncate to 65-inch sink/DW-only row to accommodate entertaining.",
-    "table": "Normal extension and table/window relationship stay fixed.",
+    "table": "Normally extended; square to principal walls; rear edge 30.5 inches from window wall; position under light fixture fixed.",
     "routes": "Table through range aisle and Butler's pantry to formal dining. Occasional traffic during cooking, mainly serving/entertaining. Secondary approach outside kitchen through hall is less friendly, not an outdoor route or accepted primary substitute.",
     "porch": "Two distinct porches: the new giant screened porch beyond M5, French doors and big sliding doors is loved and is NOT the reclaimable area. The old small screened porch is accessible by a door at the bottom of the stairs and measures 9 ft 3 in by 13 ft 5 in (111 inches inside parallel to the kitchen partition \u00d7 161 inches across the room; face-specific registration still conditional). Jon hopes to remove the wall with windows facing the kitchen table and as much of the wall/door at the bottom of the stairs as feasible. Reclaim as breakfast/beverage service area, not an eating area. Possible beverage fridge, dishwasher, ice machine, water dispenser and breakfast equipment. Redirect guest beverage trips and daily water/breakfast traffic, including Wendy, away from cooking zone and main refrigerator. Structural feasibility not established. Off-to-side location is not an assumed extension of guest perch.",
     "buffet": "Stage buffet while guests remain at perch, without clearing perch. At most 20 uses yearly. Lower helper run is preferred candidate; integrated porch transition and temporary/drop-down surfaces remain alternatives.",
@@ -350,6 +350,7 @@
     }
   },
   "next_task": [
+    "Start from the corrected orthogonal table. Explore a purposeful stair-side working elbow/peninsula and a rectangular 2+2 freestanding social/helper top, with occasional end stools shown separately.",
     "Use the same comparison tool and baseline; avoid unrelated variant galleries.",
     "Revise guest/helper footprint to widen a real route, then compare continuity again. No island shrink, guest reduction, or hall substitution without explicit tradeoff.",
     "Capture actual refrigerator sweep and oven front/open projection for appliance access; approximate refrigerator closed gap is 40 inches.",
@@ -455,6 +456,27 @@
     "previous_fit_report": "../history/02-full-room/READ_ME.md",
     "corrections": "../history/02-full-room/PORCH_AND_APPLIANCE_CORRECTION.md",
     "stair_update": "/Users/jon/Documents/Codex/2026-09-14/read-users-jon-documents-codex-2026/outputs/stair-registration/STAIR_UPDATE.json"
+  },
+  "table_correction": {
+    "dimensions": [
+      67,
+      48
+    ],
+    "center": [
+      85.99922922303705,
+      294.4137035867892
+    ],
+    "rear_window_wall_y": 348.9137035867892,
+    "rear_edge_y": 318.4137035867892,
+    "rear_wall_gap": 30.5,
+    "orientation_degrees": 0,
+    "status": "Relative placement fixed by user; lateral X retains previous conditional center under fixture. Global frame and S1 residual remain conditional."
+  },
+  "discussion_updates": {
+    "stair": "Jon is comfortable enclosing exposed banister and reclaiming some adjacent space for more mise; extent not yet designed. Do not infer removal of required stair space.",
+    "seating": "Test two daily far-side seats and two perpendicular occasional end stools, wine/appetizer use, about 20 hosting occasions per year. Three remains an explicit alternative, not a selected reduction.",
+    "island": "Fridge-facing end stays at Y38, unchanged from original. 66-inch length extends 9 inches farther toward table than original 57. Jon permits considering a couple inches of final length adjustment later, not a change now.",
+    "appliances": "Existing access is a lived usable baseline. Generic operating bands are not new evidence of actual appliance interference."
   },
   "current_comparison": "comparison-model.json",
   "current_result": "P1 shaped continuous connection closes the already restrictive west approach; its free-end gap to cleanup is inadequate in this specific placement. F1 retains west access but is also restricted. Neither is a selected design; four seats and daily core preserved."
