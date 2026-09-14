@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kitchen Layout Sandbox</title>
+<title>__TITLE__</title>
 </head>
 <body>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -14,6 +14,7 @@
   --accent:#0f766e; --accent-soft:rgba(15,118,110,.14); --accent-ink:#0b5b54;
   --work:#b06a3c; --work-fill:rgba(176,106,60,.16);
   --social:#4a6a99; --social-fill:rgba(74,106,153,.15);
+  --space:#5a7d5a; --space-fill:rgba(90,125,90,.13);
   --fixed:#7b8794; --fixed-fill:rgba(123,135,148,.12);
   --ghost:#9aa2ac;
   --ok:#3f8f4e; --warn:#c0862a; --tight:#c0483b;
@@ -28,6 +29,7 @@
   --accent:#3fd0c2; --accent-soft:rgba(63,208,194,.15); --accent-ink:#7fe4da;
   --work:#d1935f; --work-fill:rgba(209,147,95,.16);
   --social:#7fa3d6; --social-fill:rgba(127,163,214,.15);
+  --space:#84b184; --space-fill:rgba(132,177,132,.16);
   --fixed:#8793a1; --fixed-fill:rgba(135,147,161,.14);
   --ghost:#5a6472;
   --ok:#5cc06d; --warn:#e0a740; --tight:#e0685b;
@@ -39,6 +41,7 @@
   --accent:#3fd0c2; --accent-soft:rgba(63,208,194,.15); --accent-ink:#7fe4da;
   --work:#d1935f; --work-fill:rgba(209,147,95,.16);
   --social:#7fa3d6; --social-fill:rgba(127,163,214,.15);
+  --space:#84b184; --space-fill:rgba(132,177,132,.16);
   --fixed:#8793a1; --fixed-fill:rgba(135,147,161,.14);
   --ghost:#5a6472;
   --ok:#5cc06d; --warn:#e0a740; --tight:#e0685b;
@@ -167,6 +170,7 @@ button,select,input{font-family:inherit;font-size:13px;color:var(--ink)}
 .leg i{width:16px;height:11px;border-radius:2px;display:inline-block;border:1px solid}
 .leg.work i{background:var(--work-fill);border-color:var(--work)}
 .leg.social i{background:var(--social-fill);border-color:var(--social)}
+.leg.space i{background:var(--space-fill);border-color:var(--space)}
 .leg.fixed i{background:var(--fixed-fill);border-color:var(--fixed)}
 .leg.ghost i{background:transparent;border-style:dashed;border-color:var(--ghost)}
 .foot .note{margin-left:auto;max-width:44ch;font-style:italic}
@@ -197,7 +201,7 @@ svg text{font-family:var(--mono)}
   <header class="bar">
     <div class="brand">
       <span class="mark" aria-hidden="true"></span>
-      <div><h1>Kitchen Layout Sandbox</h1><p class="sub" id="subline">non-destructive study · inches · snapshot loading…</p></div>
+      <div><h1>__TITLE__</h1><p class="sub" id="subline">non-destructive study · inches · snapshot loading…</p></div>
     </div>
     <div class="tools">
       <span class="field"><label for="concept">Peninsula</label>
@@ -266,6 +270,7 @@ svg text{font-family:var(--mono)}
   <footer class="foot">
     <span class="leg work"><i></i>Chef work</span>
     <span class="leg social"><i></i>Seating / social</span>
+    <span class="leg space" id="leg-space" hidden><i></i>Reclaimable space</span>
     <span class="leg fixed"><i></i>Fixed shell</span>
     <span class="leg ghost"><i></i>Canonical position</span>
     <span class="note">Gaps are straight edge-to-edge distances, not walk-route widths or code checks. Snapshot only — nothing here changes the repo.</span>
@@ -285,12 +290,13 @@ svg text{font-family:var(--mono)}
 
 <script>
 const MODEL = __MODEL_JSON__;
+const SCOPE = "__SCOPE__";   // "kitchen" or "full" (adds the reclaimable old porch)
 (()=>{
 "use strict";
 const NS="http://www.w3.org/2000/svg";
 const $=s=>document.querySelector(s);
 const svg=$("#plan"), hud=$("#hud"), hintEl=$("#hint");
-const STORE_KEY="kitchen-sandbox:"+(MODEL.version||"v");
+const STORE_KEY="kitchen-sandbox:"+(SCOPE==="full"?"full:":"")+(MODEL.version||"v");
 
 /* ---------- geometry helpers ---------- */
 const rad=d=>d*Math.PI/180;
@@ -416,6 +422,13 @@ function buildRegistry(){
   // stairs + guests
   OBJ.push(mkPoly("stair","Stair tread",MODEL.stair.tread,"fixed",true,false));
   OBJ.push(mkPoly("guest","Guest cluster",MODEL.guest,"social",true,false));
+  // reclaimable old porch (full scope only): 161 x 111 inside, against the confirmed partition
+  if(SCOPE==="full"&&MODEL.porch){
+    const px=MODEL.porch.partition_x, y0=MODEL.porch.start_y_conditional, y1=MODEL.porch.end_y_conditional;
+    const dim=MODEL.porch.inside_dimensions||[161,111], pw=dim[0], ph=dim[1];
+    const py=y0+((y1-y0)-ph)/2;   // center the 111" interior within the 120" kitchen-side span
+    OBJ.push(mkRect("porch","Old porch (reclaimable)",[[px-pw,py],[px,py],[px,py+ph],[px-pw,py+ph]],"space",false));
+  }
   applyStored();
   setConcept(concept,true);
 }
@@ -438,7 +451,7 @@ function setConcept(id,silent){
 }
 
 /* ---------- view transform ---------- */
-const BOUNDS={x0:-56,y0:-42,x1:200,y1:360};
+const BOUNDS=SCOPE==="full"?{x0:-172,y0:-42,x1:200,y1:360}:{x0:-56,y0:-42,x1:200,y1:360};
 let view={k:2,ox:0,oy:0};
 function fit(){const r=svg.getBoundingClientRect();const pad=26;
   const bw=BOUNDS.x1-BOUNDS.x0, bh=BOUNDS.y1-BOUNDS.y0;
@@ -455,8 +468,8 @@ let selId=null;
 const NOISY=new Set(["guest","penhelper","dwdoor","counter","chef","landing","rear"]);
 const SHORT={island:"Island",table:"Table",pen:"Peninsula",cleanup:"Cleanup 99″",range:"Range",fridge:"Fridge",ovens:"Ovens",pantry:"Pantry",stair:"Stairs",dwloader:"DW load"};
 function fillClass(o){return o.group==="work"?"work":o.group==="social"?"social":"fixed";}
-function colorFor(g){return g==="work"?"var(--work)":g==="social"?"var(--social)":"var(--fixed)";}
-function fillFor(g){return g==="work"?"var(--work-fill)":g==="social"?"var(--social-fill)":"var(--fixed-fill)";}
+function colorFor(g){return g==="work"?"var(--work)":g==="social"?"var(--social)":g==="space"?"var(--space)":"var(--fixed)";}
+function fillFor(g){return g==="work"?"var(--work-fill)":g==="social"?"var(--social-fill)":g==="space"?"var(--space-fill)":"var(--fixed-fill)";}
 
 function el(t,a,parent){const n=document.createElementNS(NS,t);
   for(const k in a)n.setAttribute(k,a[k]);(parent||svg).appendChild(n);return n;}
@@ -866,7 +879,7 @@ const askName=(message,value)=>modal({message,value,input:true,ok:"Save"});
 const askConfirm=(message,ok)=>modal({message,ok:ok||"OK"});
 
 /* ---------- named layouts (Save As) ---------- */
-const LAY_KEY="kitchen-sandbox:layouts:"+(MODEL.version||"v");
+const LAY_KEY="kitchen-sandbox:layouts:"+(SCOPE==="full"?"full:":"")+(MODEL.version||"v");
 function getLayouts(){try{return JSON.parse(localStorage.getItem(LAY_KEY)||"{}");}catch(e){return {};}}
 function setLayouts(o){try{localStorage.setItem(LAY_KEY,JSON.stringify(o));}catch(e){}}
 function escHtml(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
@@ -1005,6 +1018,7 @@ drawClearances=function(sel){
 (function init(){
   try{const t=localStorage.getItem("kitchen-sandbox:theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}
   loadStored();
+  if(SCOPE==="full")$("#leg-space").hidden=false;
   $("#concept").value=concept;
   buildRegistry();
   buildList();

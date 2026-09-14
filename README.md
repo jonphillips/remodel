@@ -11,9 +11,14 @@ Start with [Kitchen / START_HERE](kitchen/START_HERE.md). The active design comp
 
 ## Layout sandbox
 
-`kitchen/tools/sandbox.html` is a direct-manipulation floor plan for trying layout ideas **without changing the canonical design**. Open it by double-clicking (any browser). Drag, resize, and rotate pieces (island, table, peninsula, appliances); the room shell and perimeter counters are locked by default but can be unlocked. It reports live edge-to-edge clearances between pieces, carries a table's or peninsula's chairs when you move them, and lets you show/hide any piece. Save several named layouts to compare, or Export/Import them as JSON. All edits live only in your browser — nothing is written back to the repository.
+A direct-manipulation floor plan for trying layout ideas **without changing the canonical design**. Open by double-clicking (any browser). Two scopes, built from the same tool:
 
-It reads a snapshot of `kitchen/studies/02-purposeful/explorations-model.json` that is inlined at build time. The generated `sandbox.html` (and `sandbox.fragment.html`) are gitignored; regenerate them, and refresh the snapshot after the canonical model changes, with:
+- `kitchen/tools/sandbox.html` — **kitchen only**, to stay focused on the kitchen.
+- `kitchen/tools/sandbox-porch.html` — **kitchen + the reclaimable old porch** (161 × 111 in ≈ 124 sq ft, per [EVALUATION.md](kitchen/current/EVALUATION.md)), placed against the confirmed kitchen-facing partition (X = 5.8247) and left editable, since the porch interior origin/setback is not yet fully reconciled. The new giant screened porch beyond M5 is not dimensioned in the repo and is not included.
+
+Drag, resize, rotate, and round the corners of pieces (island, table, peninsula, appliances, porch); the room shell and perimeter counters are locked by default but can be unlocked. It reports live edge-to-edge clearances between pieces, carries a table's or peninsula's chairs when you move them, and lets you show/hide any piece. Save several named layouts to compare, or Export/Import them as JSON. All edits live only in your browser — nothing is written back to the repository.
+
+Each sandbox inlines a snapshot of `kitchen/studies/02-purposeful/explorations-model.json` at build time. The generated `sandbox*.html` / `sandbox*.fragment.html` are gitignored; regenerate them, and refresh the snapshot after the canonical model changes, with:
 
 ```
 python3 kitchen/tools/build_sandbox.py
