@@ -1,0 +1,136 @@
+{
+  "points": {
+    "C3": [
+      0.0,
+      0.0
+    ],
+    "M5": [
+      0.0,
+      53.5
+    ],
+    "M2": [
+      -58.22542297823154,
+      -45.67056074766355
+    ],
+    "M4": [
+      29.11413570464511,
+      -83.04436827486563
+    ],
+    "TC": [
+      90.73842024279416,
+      60.39485981308411
+    ],
+    "TF": [
+      135.54123830320748,
+      11.161214953271028
+    ]
+  },
+  "wall": {
+    "C3": [
+      0,
+      0
+    ],
+    "M5": [
+      0,
+      53.5
+    ],
+    "M6_estimate": [
+      -26.342347822517944,
+      59.42289719626168
+    ],
+    "M7_70": [
+      31.786466617044844,
+      62.36682242990654
+    ],
+    "M7_70_5_illustration": [
+      31.59597330146912,
+      63.02336448598131
+    ],
+    "M7_71": [
+      31.38907997450002,
+      63.68457943925234
+    ]
+  },
+  "lower": [
+    [
+      -101.33584364745127,
+      -93.98981879266674
+    ],
+    [
+      -57.530717901311235,
+      -45.96783467742157
+    ],
+    [
+      -14.475049876885127,
+      -43.28279259760006
+    ],
+    [
+      29.11413570464511,
+      -83.04436827486563
+    ]
+  ],
+  "upper": [
+    [
+      -125.71623558288343,
+      -71.75029341385718
+    ],
+    [
+      -63.7151345268083,
+      -3.7807158968947903
+    ],
+    [
+      0.19444249835178695,
+      -0.4919525327816743
+    ],
+    [
+      56.07113616380821,
+      -53.492378050099376
+    ]
+  ],
+  "island": [
+    [
+      -34.64924140930695,
+      -158.88124412707845
+    ],
+    [
+      -72.32802894588394,
+      -124.51106854164549
+    ],
+    [
+      -33.9143032915765,
+      -82.39948247135356
+    ],
+    [
+      3.764484245000478,
+      -116.76965805678651
+    ]
+  ],
+  "range": [
+    [
+      7.28563819665127,
+      -162.61833824333905
+    ],
+    [
+      39.634038747647,
+      -127.15594997361953
+    ]
+  ],
+  "confidence": {
+    "points": "Conditional local solution preserving selected direct ties exactly for calculation; no tolerance implied.",
+    "wall": "Estimated wall directions; 65 approximate, 70\u201371 range retained. Only measured wall segments shown.",
+    "context": "Old field-coordinate geometry rigidly registered without scaling. Registration is conditional; no original datum has been repaired.",
+    "table": "End points from direct ties; 48-inch-wide capsule outline is a schematic shape assumption with normal extension retained.",
+    "chair": "Confirmed dimensions, assumed centered on table axis; drawn pose is schematic. Field door gaps are separate observations."
+  },
+  "checks": {
+    "C3_M2": 74.0,
+    "M5_M2": 115.00000000000001,
+    "C3_M4": 88.0,
+    "M2_M4": 95.00000000000001,
+    "M5_M4_predicted": 139.6137436121911,
+    "M5_M4_latest": 140,
+    "M5_M4_residual": 0.38625638780891336,
+    "old_M2_registration_residual": 0.7556367733326818,
+    "old_C3_registration_residual": 0.5289850467410104
+  }
+}

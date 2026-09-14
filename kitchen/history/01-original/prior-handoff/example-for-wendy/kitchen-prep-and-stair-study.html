@@ -1,0 +1,1097 @@
+<div id="prep-stair-study">
+ <div class="viz-controls">
+  <label class="form-label">Chef island<select id="ps-island" class="form-select"><option value="compact">36 × 60 · corner sink test</option><option value="long">30 × 78 · end sink test</option></select></label>
+  <label class="form-label">Guest arrangement<select id="ps-guests" class="form-select"><option value="3-20">3 · inward-turned ends</option><option value="3-0">3 · straight</option><option value="4-20">4 · inward-turned ends</option><option value="4-0">4 · straight</option></select></label>
+  <label class="form-label">Use<select id="ps-phase" class="form-select"><option value="cook">Cooking + helper</option><option value="buffet">Buffet + path to dining</option><option value="doors">Oven / dishwasher open tests</option></select></label>
+  <label class="form-check"><input id="ps-old" class="form-check-input" type="checkbox"><span class="form-check-label">Earlier range-connected footprint</span></label>
+ </div>
+ <div class="text-small">Concept dimensions in inches · fixed table and cleanup face · complete stair/door outlines pending</div>
+ <svg id="ps-map" role="img" aria-label="Kitchen concept comparison showing chef prep, island sink, range-side mise, angled guest surface, buffet use and stair reference"></svg>
+ <div id="ps-detail" class="text-small" aria-live="polite"></div>
+ <div class="ps-legend text-small"><span>Blue: proposed surfaces</span><span>Orange: occupied space</span><span>Purple: travel trace</span><span>Dashed: conditional context</span></div>
+ <div class="text-small">I intake · B 24 × 18 board · O offload · W island water · P produce/compost · M range mise · C chef · H helper</div>
+</div>
+<style>
+ #prep-stair-study #ps-map{display:block;width:100%}
+ #prep-stair-study #ps-map text{font-size:12px;fill:var(--foreground);font-weight:400}
+ #prep-stair-study .ps-legend{display:flex;flex-wrap:wrap;gap:12px;margin-block:8px}
+</style>
+<script>
+(()=>{
+const D={
+  "status": "Qualified concept geometry; no route, cabinetry or construction approval. Dimensions of proposed objects are design tests.",
+  "units": "inches",
+  "points": {
+    "C3": [
+      145.47519318656634,
+      178.73241474806167
+    ],
+    "M5": [
+      181.530181300697,
+      218.25820167368656
+    ],
+    "M2": [
+      157.71358827758075,
+      105.75144677971913
+    ],
+    "M4": [
+      68.0,
+      137.00000000000006
+    ],
+    "TC": [
+      119.13927707873167,
+      284.5030133223399
+    ],
+    "TF": [
+      52.859181367342416,
+      278.3229482073287
+    ]
+  },
+  "stair": [
+    3.3246858068247596,
+    176.91370358678918
+  ],
+  "stair_ties": {
+    "S1_M4": 76,
+    "S1_M2": 170,
+    "S1_M1": 203.5
+  },
+  "stair_third_tie_residual": -1.6551535181330053,
+  "lower_context": [
+    [
+      157.00000000000006,
+      41.000000000000036
+    ],
+    [
+      157.00000000000006,
+      106.00000000000006
+    ],
+    [
+      127.00000000000003,
+      137.00000000000006
+    ],
+    [
+      68.0,
+      137.00000000000006
+    ]
+  ],
+  "islands": {
+    "compact": {
+      "rect": [
+        78.5,
+        38,
+        36,
+        60
+      ],
+      "water_module": [
+        96.5,
+        38,
+        18,
+        18
+      ],
+      "water_bowl": [
+        98.5,
+        40,
+        14,
+        14
+      ],
+      "rear_strip": [
+        98.5,
+        56,
+        14,
+        24
+      ]
+    },
+    "long": {
+      "rect": [
+        78.5,
+        38,
+        30,
+        78
+      ],
+      "water_module": [
+        78.5,
+        98,
+        30,
+        18
+      ],
+      "water_bowl": [
+        86.5,
+        100,
+        14,
+        14
+      ],
+      "rear_strip": [
+        98.5,
+        56,
+        8,
+        24
+      ]
+    }
+  },
+  "social_cases": {
+    "3-0": {
+      "full": [
+        [
+          [
+            72.5,
+            190.0
+          ],
+          [
+            102.5,
+            190
+          ],
+          [
+            132.5,
+            190
+          ],
+          [
+            162.5,
+            190.0
+          ],
+          [
+            162.5,
+            148.0
+          ],
+          [
+            132.5,
+            148.0
+          ],
+          [
+            102.5,
+            148.0
+          ],
+          [
+            72.5,
+            148.0
+          ]
+        ]
+      ],
+      "guest": [
+        [
+          [
+            72.5,
+            190.0
+          ],
+          [
+            102.5,
+            190
+          ],
+          [
+            132.5,
+            190
+          ],
+          [
+            162.5,
+            190.0
+          ],
+          [
+            162.5,
+            166.0
+          ],
+          [
+            132.5,
+            166.0
+          ],
+          [
+            102.5,
+            166.0
+          ],
+          [
+            72.5,
+            166.0
+          ]
+        ]
+      ],
+      "helper": [
+        [
+          [
+            72.5,
+            166.0
+          ],
+          [
+            102.5,
+            166.0
+          ],
+          [
+            132.5,
+            166.0
+          ],
+          [
+            162.5,
+            166.0
+          ],
+          [
+            162.5,
+            148.0
+          ],
+          [
+            132.5,
+            148.0
+          ],
+          [
+            102.5,
+            148.0
+          ],
+          [
+            72.5,
+            148.0
+          ]
+        ]
+      ],
+      "chairs": [
+        [
+          [
+            75.5,
+            190.0
+          ],
+          [
+            99.5,
+            190.0
+          ],
+          [
+            99.5,
+            216.0
+          ],
+          [
+            75.5,
+            216.0
+          ]
+        ],
+        [
+          [
+            105.5,
+            190.0
+          ],
+          [
+            129.5,
+            190.0
+          ],
+          [
+            129.5,
+            216.0
+          ],
+          [
+            105.5,
+            216.0
+          ]
+        ],
+        [
+          [
+            135.5,
+            190.0
+          ],
+          [
+            159.5,
+            190.0
+          ],
+          [
+            159.5,
+            216.0
+          ],
+          [
+            135.5,
+            216.0
+          ]
+        ]
+      ],
+      "chair_labels": [
+        [
+          87.5,
+          203.0
+        ],
+        [
+          117.5,
+          203.0
+        ],
+        [
+          147.5,
+          203.0
+        ]
+      ],
+      "nominal_frontage": 90,
+      "projected_guest_edge_span": 90.0,
+      "angle": 0,
+      "checks": {
+        "mise_to_social_min_edge_distance": 38.58108344772085,
+        "M5_to_guest_chair_min": 22.145617240000792,
+        "compact_island_to_social_min": 50.0,
+        "long_island_to_social_min": 32.0
+      }
+    },
+    "3-20": {
+      "full": [
+        [
+          [
+            74.30922137642276,
+            179.73939570022995
+          ],
+          [
+            102.5,
+            190
+          ],
+          [
+            132.5,
+            190
+          ],
+          [
+            160.69077862357724,
+            179.73939570022995
+          ],
+          [
+            146.32593260389916,
+            140.27230562722178
+          ],
+          [
+            125.09426681024448,
+            148.0
+          ],
+          [
+            109.90573318975552,
+            148.0
+          ],
+          [
+            88.67406739610084,
+            140.27230562722178
+          ]
+        ]
+      ],
+      "guest": [
+        [
+          [
+            74.30922137642276,
+            179.73939570022995
+          ],
+          [
+            102.5,
+            190
+          ],
+          [
+            132.5,
+            190
+          ],
+          [
+            160.69077862357724,
+            179.73939570022995
+          ],
+          [
+            152.4822951837612,
+            157.18677280136814
+          ],
+          [
+            128.26815246299685,
+            166.0
+          ],
+          [
+            106.73184753700316,
+            166.0
+          ],
+          [
+            82.5177048162388,
+            157.18677280136814
+          ]
+        ]
+      ],
+      "helper": [
+        [
+          [
+            82.5177048162388,
+            157.18677280136814
+          ],
+          [
+            106.73184753700316,
+            166.0
+          ],
+          [
+            128.26815246299685,
+            166.0
+          ],
+          [
+            152.4822951837612,
+            157.18677280136814
+          ],
+          [
+            146.32593260389916,
+            140.27230562722178
+          ],
+          [
+            125.09426681024448,
+            148.0
+          ],
+          [
+            109.90573318975552,
+            148.0
+          ],
+          [
+            88.67406739610084,
+            140.27230562722178
+          ]
+        ]
+      ],
+      "chairs": [
+        [
+          [
+            77.12829923878047,
+            180.76545613020696
+          ],
+          [
+            99.68092213764228,
+            188.97393957002302
+          ],
+          [
+            90.78839841117491,
+            213.40594771045664
+          ],
+          [
+            68.2357755123131,
+            205.19746427064058
+          ]
+        ],
+        [
+          [
+            105.5,
+            190.0
+          ],
+          [
+            129.5,
+            190.0
+          ],
+          [
+            129.5,
+            216.0
+          ],
+          [
+            105.5,
+            216.0
+          ]
+        ],
+        [
+          [
+            135.31907786235774,
+            188.973939570023
+          ],
+          [
+            157.87170076121953,
+            180.76545613020693
+          ],
+          [
+            166.7642244876869,
+            205.19746427064055
+          ],
+          [
+            144.21160158882512,
+            213.40594771045662
+          ]
+        ]
+      ],
+      "chair_labels": [
+        [
+          83.95834882497769,
+          197.08570192033181
+        ],
+        [
+          117.5,
+          203.0
+        ],
+        [
+          151.04165117502234,
+          197.08570192033176
+        ]
+      ],
+      "nominal_frontage": 90,
+      "projected_guest_edge_span": 86.3815572471545,
+      "angle": 20,
+      "checks": {
+        "mise_to_social_min_edge_distance": 51.12965709351186,
+        "M5_to_guest_chair_min": 19.71335441052598,
+        "compact_island_to_social_min": 42.27230562722178,
+        "long_island_to_social_min": 24.272305627221783
+      }
+    },
+    "4-0": {
+      "full": [
+        [
+          [
+            72.5,
+            190.0
+          ],
+          [
+            102.5,
+            190
+          ],
+          [
+            162.5,
+            190
+          ],
+          [
+            192.5,
+            190.0
+          ],
+          [
+            192.5,
+            148.0
+          ],
+          [
+            162.5,
+            148.0
+          ],
+          [
+            102.5,
+            148.0
+          ],
+          [
+            72.5,
+            148.0
+          ]
+        ]
+      ],
+      "guest": [
+        [
+          [
+            72.5,
+            190.0
+          ],
+          [
+            102.5,
+            190
+          ],
+          [
+            162.5,
+            190
+          ],
+          [
+            192.5,
+            190.0
+          ],
+          [
+            192.5,
+            166.0
+          ],
+          [
+            162.5,
+            166.0
+          ],
+          [
+            102.5,
+            166.0
+          ],
+          [
+            72.5,
+            166.0
+          ]
+        ]
+      ],
+      "helper": [
+        [
+          [
+            72.5,
+            166.0
+          ],
+          [
+            102.5,
+            166.0
+          ],
+          [
+            162.5,
+            166.0
+          ],
+          [
+            192.5,
+            166.0
+          ],
+          [
+            192.5,
+            148.0
+          ],
+          [
+            162.5,
+            148.0
+          ],
+          [
+            102.5,
+            148.0
+          ],
+          [
+            72.5,
+            148.0
+          ]
+        ]
+      ],
+      "chairs": [
+        [
+          [
+            75.5,
+            190.0
+          ],
+          [
+            99.5,
+            190.0
+          ],
+          [
+            99.5,
+            216.0
+          ],
+          [
+            75.5,
+            216.0
+          ]
+        ],
+        [
+          [
+            105.5,
+            190.0
+          ],
+          [
+            129.5,
+            190.0
+          ],
+          [
+            129.5,
+            216.0
+          ],
+          [
+            105.5,
+            216.0
+          ]
+        ],
+        [
+          [
+            135.5,
+            190.0
+          ],
+          [
+            159.5,
+            190.0
+          ],
+          [
+            159.5,
+            216.0
+          ],
+          [
+            135.5,
+            216.0
+          ]
+        ],
+        [
+          [
+            165.5,
+            190.0
+          ],
+          [
+            189.5,
+            190.0
+          ],
+          [
+            189.5,
+            216.0
+          ],
+          [
+            165.5,
+            216.0
+          ]
+        ]
+      ],
+      "chair_labels": [
+        [
+          87.5,
+          203.0
+        ],
+        [
+          117.5,
+          203.0
+        ],
+        [
+          147.5,
+          203.0
+        ],
+        [
+          177.5,
+          203.0
+        ]
+      ],
+      "nominal_frontage": 120,
+      "projected_guest_edge_span": 120.0,
+      "angle": 0,
+      "checks": {
+        "mise_to_social_min_edge_distance": 38.58108344772085,
+        "M5_to_guest_chair_min": 2.258201673686557,
+        "compact_island_to_social_min": 50.0,
+        "long_island_to_social_min": 32.0
+      }
+    },
+    "4-20": {
+      "full": [
+        [
+          [
+            74.30922137642276,
+            179.73939570022995
+          ],
+          [
+            102.5,
+            190
+          ],
+          [
+            162.5,
+            190
+          ],
+          [
+            190.69077862357724,
+            179.73939570022995
+          ],
+          [
+            176.32593260389916,
+            140.27230562722178
+          ],
+          [
+            155.09426681024448,
+            148.0
+          ],
+          [
+            109.90573318975552,
+            148.0
+          ],
+          [
+            88.67406739610084,
+            140.27230562722178
+          ]
+        ]
+      ],
+      "guest": [
+        [
+          [
+            74.30922137642276,
+            179.73939570022995
+          ],
+          [
+            102.5,
+            190
+          ],
+          [
+            162.5,
+            190
+          ],
+          [
+            190.69077862357724,
+            179.73939570022995
+          ],
+          [
+            182.4822951837612,
+            157.18677280136814
+          ],
+          [
+            158.26815246299685,
+            166.0
+          ],
+          [
+            106.73184753700316,
+            166.0
+          ],
+          [
+            82.5177048162388,
+            157.18677280136814
+          ]
+        ]
+      ],
+      "helper": [
+        [
+          [
+            82.5177048162388,
+            157.18677280136814
+          ],
+          [
+            106.73184753700316,
+            166.0
+          ],
+          [
+            158.26815246299685,
+            166.0
+          ],
+          [
+            182.4822951837612,
+            157.18677280136814
+          ],
+          [
+            176.32593260389916,
+            140.27230562722178
+          ],
+          [
+            155.09426681024448,
+            148.0
+          ],
+          [
+            109.90573318975552,
+            148.0
+          ],
+          [
+            88.67406739610084,
+            140.27230562722178
+          ]
+        ]
+      ],
+      "chairs": [
+        [
+          [
+            77.12829923878047,
+            180.76545613020696
+          ],
+          [
+            99.68092213764228,
+            188.97393957002302
+          ],
+          [
+            90.78839841117491,
+            213.40594771045664
+          ],
+          [
+            68.2357755123131,
+            205.19746427064058
+          ]
+        ],
+        [
+          [
+            105.5,
+            190.0
+          ],
+          [
+            129.5,
+            190.0
+          ],
+          [
+            129.5,
+            216.0
+          ],
+          [
+            105.5,
+            216.0
+          ]
+        ],
+        [
+          [
+            135.5,
+            190.0
+          ],
+          [
+            159.5,
+            190.0
+          ],
+          [
+            159.5,
+            216.0
+          ],
+          [
+            135.5,
+            216.0
+          ]
+        ],
+        [
+          [
+            165.31907786235774,
+            188.973939570023
+          ],
+          [
+            187.87170076121953,
+            180.76545613020693
+          ],
+          [
+            196.7642244876869,
+            205.19746427064055
+          ],
+          [
+            174.21160158882512,
+            213.40594771045662
+          ]
+        ]
+      ],
+      "chair_labels": [
+        [
+          83.95834882497769,
+          197.08570192033181
+        ],
+        [
+          117.5,
+          203.0
+        ],
+        [
+          147.5,
+          203.0
+        ],
+        [
+          181.04165117502234,
+          197.08570192033176
+        ]
+      ],
+      "nominal_frontage": 120,
+      "projected_guest_edge_span": 116.3815572471545,
+      "angle": 20,
+      "checks": {
+        "mise_to_social_min_edge_distance": 51.12965709351186,
+        "M5_to_guest_chair_min": 7.062728925421112,
+        "compact_island_to_social_min": 42.27230562722178,
+        "long_island_to_social_min": 24.272305627221783
+      }
+    }
+  },
+  "fixed_cleanup_test": {
+    "rect": [
+      157,
+      41,
+      25,
+      65
+    ],
+    "sink_module": [
+      157,
+      43,
+      25,
+      30
+    ],
+    "dishwasher_module": [
+      157,
+      77,
+      25,
+      24
+    ],
+    "note": "Working face stays at reported X=157. Nominal 25-inch depth and 65-inch straight length; wall thickness/termination and full landing program unresolved. Modules are allowances, not selected products."
+  },
+  "mise_test": {
+    "rect": [
+      0,
+      111.5,
+      36,
+      24
+    ],
+    "old_nominal_rect": [
+      0,
+      111.5,
+      27.5,
+      24
+    ],
+    "note": "Test a deeper rectangular left-range landing without extending it toward the stair. Actual old curved footprint and usable gain not established."
+  },
+  "board": [
+    80.5,
+    56,
+    18,
+    24
+  ],
+  "intake": [
+    80.5,
+    38,
+    14,
+    18
+  ],
+  "offload": [
+    80.5,
+    80,
+    18,
+    18
+  ],
+  "chef": [
+    58.5,
+    58,
+    20,
+    24
+  ],
+  "helper": [
+    105.5,
+    128,
+    24,
+    20
+  ],
+  "notes": [
+    "Old orthogonal kitchen-axis registration remains conditional. M5 is drawn only as a point with corrected axis directions; old estimated trim positions and invented door sweeps are omitted.",
+    "Angles are 20-degree inward end-seat tests with 30-inch frontage per guest, 24-inch guest and 18-inch helper depth measured perpendicular to each edge. Joins/support/knee space unresolved.",
+    "Dining TC chair uses confirmed 23.5-inch width and 19-inch occupied projection, with assumed alignment. Other three chairs reuse those sizes only as stress proxies.",
+    "Guest occupied projection 26 inches and width 24 inches, person rectangles and appliance-open projections are design assumptions.",
+    "The compact sink has a very small 18-inch-square module allowance; no faucet, rim, cabinet or plumbing fit is certified.",
+    "Min edge distances and point-to-chair distances are local model diagnostics, not continuous route widths or verified physical clearances."
+  ]
+}
+;
+const root=document.getElementById('prep-stair-study'),svg=root.querySelector('#ps-map');
+const ns='http://www.w3.org/2000/svg';
+function draw(){
+ const id=root.querySelector('#ps-island').value,gid=root.querySelector('#ps-guests').value,phase=root.querySelector('#ps-phase').value;
+ const island=D.islands[id],social=D.social_cases[gid];
+ const width=root.clientWidth,narrow=width<480,s=(width-40)/242,height=350*s+45;
+ svg.replaceChildren();svg.setAttribute('viewBox',`0 0 ${width} ${height}`);svg.style.height=height+'px';
+ const X=x=>20+(x+10)*s,Y=y=>30+(y+2)*s;
+ const col={ink:'var(--foreground)',blue:'var(--blue)',green:'var(--green)',purple:'var(--purple)',orange:'var(--orange)',red:'var(--red)',gray:'var(--border)'};
+ function el(tag,attrs){const n=document.createElementNS(ns,tag);Object.entries(attrs).forEach(([k,v])=>n.setAttribute(k,v));svg.appendChild(n);return n;}
+ function line(ps,c=col.ink,dash='',w=1.3){return el('polyline',{points:ps.map(p=>`${X(p[0])},${Y(p[1])}`).join(' '),fill:'none',stroke:c,'stroke-width':w,'stroke-dasharray':dash});}
+ function poly(ps,c=col.blue,dash='',op=.08){return el('polygon',{points:ps.map(p=>`${X(p[0])},${Y(p[1])}`).join(' '),fill:c,'fill-opacity':op,stroke:c,'stroke-width':1,'stroke-dasharray':dash});}
+ function rect(a,c=col.blue,dash='',op=.08){return poly([[a[0],a[1]],[a[0]+a[2],a[1]],[a[0]+a[2],a[1]+a[3]],[a[0],a[1]+a[3]]],c,dash,op);}
+ function text(t,x,y,anchor='middle'){const n=el('text',{x:X(x),y:Y(y),'text-anchor':anchor});n.textContent=t;return n;}
+ function zone(a,t,c=col.green){rect(a,c);text(t,a[0]+a[2]/2,a[1]+a[3]/2+2);}
+ function arrow(ps,c){line(ps,c,'',1.6);const a=ps[ps.length-2],b=ps[ps.length-1],len=Math.hypot(b[0]-a[0],b[1]-a[1]),u=[(b[0]-a[0])/len,(b[1]-a[1])/len],v=[-u[1],u[0]];poly([b,[b[0]-5*u[0]+2*v[0],b[1]-5*u[1]+2*v[1]],[b[0]-5*u[0]-2*v[0],b[1]-5*u[1]-2*v[1]]],c,'',.6);}
+ el('title',{}).textContent=`${id} island with ${gid[0]} guests. Proposed geometry, not a clearance approval.`;
+ // Context: keep old range/island registration qualified. No invented room perimeter.
+ rect([64,38,51,57],col.gray,'4 4',0);
+ line(D.lower_context,col.gray,'4 4');
+ line([[0,39.5],[27.5,39.5],[27.5,63.5],[30.5,63.5],[30.5,111.5]],col.ink,'4 3');
+ line([[30.5,63.5],[30.5,111.5]],col.ink,'',2.2);
+ text('Range',8,82);text('48″',8,94);
+ rect(D.mise_test.old_nominal_rect,col.gray,'4 4',0);
+ rect(D.mise_test.rect);text('M',18,123);text('36 × 24',18,130);
+ // Fixed lower working edge; small cleanup modules expose the unresolved landing budget.
+ rect(D.fixed_cleanup_test.rect,col.ink,'4 3',.035);
+ zone(D.fixed_cleanup_test.sink_module,'S',col.blue);zone(D.fixed_cleanup_test.dishwasher_module,'DW',col.blue);
+ text(narrow?'Fixed':'Cleanup face held',169.5,34);
+ rect(island.rect);zone(D.intake,'I');zone(D.board,'B');zone(D.offload,'O');zone(island.rear_strip,'P');
+ rect(island.water_module,col.blue,'3 2',.03);zone(island.water_bowl,'W',col.blue);
+ rect(D.chef,col.orange,'3 2',.15);text('C',68.5,72);
+ arrow([[68.5,72],[47,80],[42,97]],col.green);
+ // Water access traces are centerlines only, not verified walking envelopes.
+ if(phase==='cook'){
+  if(id==='compact')arrow([[68.5,58],[67,25],[126,25],[126,47]],col.purple);
+  else arrow([[68.5,82],[65,125],[94,127]],col.purple);
+ }
+ if(root.querySelector('#ps-old').checked){
+  rect([0,137,120,42],col.red,'6 3',.05);if(!narrow)text('Earlier connection',49,169);
+ }
+ social.full.forEach(p=>poly(p,col.blue,'',.025));
+ social.guest.forEach(p=>poly(p,col.blue,'',.07));
+ social.helper.forEach(p=>poly(p,col.green,'',.065));
+ social.chairs.forEach((p,i)=>{poly(p,col.orange,'3 2',.12);text(String(i+1),...social.chair_labels[i]);});
+ const cx=72.5+social.nominal_frontage/2;
+ text(narrow?'24″ guest':'24″ guest depth',cx,180);
+ if(phase==='cook'){
+  zone([102.5,150,30,14],'H');rect(D.helper,col.orange,'3 2',.12);text('H',117.5,140);
+ }else if(phase==='buffet'){
+  text(narrow?'Buffet':'18″ lower buffet',cx,160);
+  rect([80,128,24,20],col.orange,'3 2',.12);text('Q',92,140);
+  arrow([[57,213],[52,180],[53,150],[81,136]],col.purple);
+  arrow([[92,126],[54.5,114],[54.5,25]],col.purple);
+ }else{
+  text(narrow?'18″':'18″ helper / buffet',cx,160);
+  rect([30.5,63.5,27,48],col.red,'4 3',.1);
+  rect([130,77,27,24],col.red,'4 3',.1);
+ }
+ // Post point only: never stand in for the cap, tread or landing footprint.
+ const S=D.stair;poly([[S[0],S[1]-2],[S[0]+2,S[1]],[S[0],S[1]+2],[S[0]-2,S[1]]],col.ink,'',.8);
+ text('S1',S[0]+4,S[1]+3,'start');if(!narrow){text('Stair post',S[0],S[1]+12,'start');text('outline pending',S[0],S[1]+19,'start');}
+ // Corrected orthogonal wall directions only; exact trim/openings remain unlocated.
+ const m=D.points.M5;
+ line([[m[0]+12,m[1]],m,[m[0],m[1]+12]],col.ink,'4 3',1.7);
+ text('M5',m[0]+4,m[1]+4,'start');
+ // Table retains its source ties, with capsule shape and chair-pose qualifications.
+ const tc=D.points.TC,tf=D.points.TF,L=Math.hypot(tc[0]-tf[0],tc[1]-tf[1]);
+ const u=[(tc[0]-tf[0])/L,(tc[1]-tf[1])/L],n=[u[1],-u[0]],mid=[(tc[0]+tf[0])/2,(tc[1]+tf[1])/2],aa=Math.atan2(u[1],u[0]),outline=[];
+ const e=[tc[0]-24*u[0],tc[1]-24*u[1]],b=[tf[0]+24*u[0],tf[1]+24*u[1]];
+ for(let i=0;i<=32;i++){const a=aa-Math.PI/2+i*Math.PI/32;outline.push([e[0]+24*Math.cos(a),e[1]+24*Math.sin(a)]);}
+ for(let i=0;i<=32;i++){const a=aa+Math.PI/2+i*Math.PI/32;outline.push([b[0]+24*Math.cos(a),b[1]+24*Math.sin(a)]);}
+ poly(outline,col.ink,'',.025);text('Table fixed',...mid);
+ function chair(rim,d,tag){const p=[-d[1],d[0]],a=[rim[0]-11.75*p[0],rim[1]-11.75*p[1]],b=[rim[0]+11.75*p[0],rim[1]+11.75*p[1]];poly([a,b,[b[0]+19*d[0],b[1]+19*d[1]],[a[0]+19*d[0],a[1]+19*d[1]]],col.orange,'3 3',.035);if(tag)text(tag,rim[0]+9.5*d[0],rim[1]+9.5*d[1]+2);}
+ chair(tc,u,'TC');chair(tf,u.map(x=>-x),'');chair([mid[0]+24*n[0],mid[1]+24*n[1]],n,'');chair([mid[0]-24*n[0],mid[1]-24*n[1]],n.map(x=>-x),'');
+ text(narrow?'Pantry ↑':'Butler’s pantry → formal dining',58,-5,narrow?'middle':'start');
+ line([[0,328],[24,328]],col.ink,'',2);line([[0,325],[0,331]],col.ink);line([[24,325],[24,331]],col.ink);text('24″',12,341);
+ let detail;
+ if(phase==='buffet')detail='Buffet sets up below the occupied perch; the illustrated serving path still crosses the chef’s range aisle. Q = plate pickup.';
+ else if(phase==='doors')detail='Assumed 27″ appliance projections: oven-open aisle 21″; dishwasher-open side gap '+(id==='compact'?'15.5″.':'21.5″.');
+ else if(gid[0]==='4')detail='Four places at the same 30″ allowance bring the end-chair envelope within '+social.checks.M5_to_guest_chair_min.toFixed(1)+'″ of the conditional M5 point.';
+ else if(id==='long')detail='Long island: '+social.checks.long_island_to_social_min.toFixed(1)+'″ local gap to the social surface; only 8″ behind the board after the test setbacks.';
+ else detail='Compact island: 14″ behind the board; '+social.checks.mise_to_social_min_edge_distance.toFixed(1)+'″ between the mise landing and social surface at their nearest edges.';
+ root.querySelector('#ps-detail').textContent=detail+' Local model checks; no continuous route approved.';
+}
+root.querySelectorAll('select,input').forEach(e=>e.addEventListener('change',draw));new ResizeObserver(draw).observe(root);draw();
+})();
+</script>

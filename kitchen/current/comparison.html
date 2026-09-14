@@ -1,0 +1,1562 @@
+<!doctype html>
+<html lang="en" data-visualize-standalone>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Kitchen Connection Comparison</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+</head>
+<body>
+<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="Kitchen Connection Comparison" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot; data-visualize-standalone&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;Kitchen Connection Comparison&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, &quot;Segoe UI&quot;, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --icon-size: 16px;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --corner-shape: round;
+  --radius: var(--border-radius-lg, 10px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: var(--visualize-paint-gutter, 0px);
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: var(--corner-shape);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget &gt; :not(.card, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin-block: 6px;
+  border: 0;
+  background: var(--border);
+}
+
+.nav {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+}
+
+.progress {
+  display: flex;
+  height: 8px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 8px) / 2);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar:only-child {
+  border-radius: var(--radius-full);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.nav-link,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn,
+.nav-link {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover,
+.nav-link:not(:disabled):not([aria-disabled=&quot;true&quot;]):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.nav-pills .nav-link {
+  min-width: 0;
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.nav-justified .nav-link {
+  flex: 1 1 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.nav-pills .nav-link.active {
+  color: var(--foreground);
+  background: var(--muted);
+}
+
+.btn:disabled,
+.nav-link:disabled,
+.nav-link[aria-disabled=&quot;true&quot;] {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: var(--corner-shape);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed=&quot;true&quot;],
+  [aria-selected=&quot;true&quot;],
+  .is-selected
+) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@media (pointer: coarse) {
+  .btn,
+  .nav-link,
+  .form-control,
+  .form-select {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Keep small-screen WebKit from zooming when a text field receives focus. */
+  .form-control,
+  .form-select {
+    font-size: max(16px, var(--font-size-normal));
+  }
+
+  .form-control[type=&quot;file&quot;]::file-selector-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control-color[type=&quot;color&quot;] {
+    width: 44px;
+    height: 44px;
+  }
+
+  .form-control:is(
+    [type=&quot;date&quot;],
+    [type=&quot;datetime-local&quot;],
+    [type=&quot;month&quot;],
+    [type=&quot;time&quot;],
+    [type=&quot;week&quot;]
+  ) {
+    min-width: 0;
+    max-width: 100%;
+    padding-block: 8px;
+  }
+
+  .form-check {
+    min-height: 44px;
+    padding-inline: 15px;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+
+  .form-check-input::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    content: &quot;&quot;;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .form-range {
+    height: 44px;
+    touch-action: pan-y;
+  }
+
+  .form-range::-webkit-slider-runnable-track {
+    height: 44px;
+  }
+
+  .form-range::-moz-range-track {
+    height: 44px;
+  }
+
+  .form-range::-webkit-slider-thumb {
+    margin-top: 12px;
+  }
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;kitchen-paired-fit&quot;&gt;
+  &lt;h2&gt;Kitchen connection comparison&lt;/h2&gt;
+  &lt;div class=&quot;viz-controls&quot;&gt;
+    &lt;label class=&quot;form-label&quot;&gt;Operating state
+      &lt;select class=&quot;form-select&quot; id=&quot;kp-state&quot;&gt;
+        &lt;option value=&quot;arrival&quot;&gt;Arrival · four guests seated&lt;/option&gt;
+        &lt;option value=&quot;closed&quot;&gt;Closed · daily core&lt;/option&gt;
+        &lt;option value=&quot;work&quot;&gt;Chef + independent helper&lt;/option&gt;
+        &lt;option value=&quot;dw&quot;&gt;Dishwasher loading&lt;/option&gt;
+        &lt;option value=&quot;fridge&quot;&gt;Refrigerator access · sensitivity&lt;/option&gt;
+        &lt;option value=&quot;ovens&quot;&gt;Wall-oven access · sensitivity&lt;/option&gt;
+        &lt;option value=&quot;serving&quot;&gt;Serving · guests remain seated&lt;/option&gt;
+        &lt;option value=&quot;pull&quot;&gt;Chair pull-out stress test&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;form-label&quot;&gt;View
+      &lt;select class=&quot;form-select&quot; id=&quot;kp-view&quot;&gt;&lt;option value=&quot;connection&quot;&gt;Kitchen + table connection&lt;/option&gt;&lt;option value=&quot;room&quot;&gt;Full context + beverage room inset&lt;/option&gt;&lt;/select&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;viz-controls&quot; id=&quot;kp-appliance&quot; hidden&gt;
+    &lt;label class=&quot;form-label&quot;&gt;Door projection test &lt;output id=&quot;kp-door-value&quot;&gt;27″&lt;/output&gt;
+      &lt;input class=&quot;form-range&quot; id=&quot;kp-door&quot; type=&quot;range&quot; min=&quot;18&quot; max=&quot;36&quot; step=&quot;1&quot; value=&quot;27&quot;&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;form-label&quot; id=&quot;kp-face-label&quot;&gt;Oven face Y hypothesis &lt;output id=&quot;kp-face-value&quot;&gt;−2″&lt;/output&gt;
+      &lt;input class=&quot;form-range&quot; id=&quot;kp-face&quot; type=&quot;range&quot; min=&quot;-10&quot; max=&quot;12&quot; step=&quot;1&quot; value=&quot;-2&quot;&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;kp-pair&quot;&gt;
+    &lt;section&gt;&lt;h3&gt;P1 · Continuous peninsula&lt;/h3&gt;&lt;svg id=&quot;kp-p&quot; class=&quot;kp-plan&quot; role=&quot;img&quot; aria-label=&quot;Continuous range-side peninsula fit test&quot;&gt;&lt;/svg&gt;&lt;/section&gt;
+    &lt;section&gt;&lt;h3&gt;F1 · Freestanding comparison&lt;/h3&gt;&lt;svg id=&quot;kp-f&quot; class=&quot;kp-plan&quot; role=&quot;img&quot; aria-label=&quot;Identical four-place surface without the range connection&quot;&gt;&lt;/svg&gt;&lt;/section&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;kp-readout&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;viz-row text-small kp-legend&quot;&gt;&lt;span&gt;Solid outlines: retained study geometry&lt;/span&gt;&lt;span&gt;Dashed: operating assumptions / route intent&lt;/span&gt;&lt;span&gt;Numbers: local edge gaps, not verified routes&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+#kitchen-paired-fit .kp-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+#kitchen-paired-fit .kp-plan{width:100%;display:block;overflow:visible}
+#kitchen-paired-fit .kp-plan text{fill:var(--foreground);font-family:inherit;font-size:12px;font-weight:400}
+#kitchen-paired-fit .kp-plan .shape{stroke:var(--foreground);stroke-width:1;fill:var(--muted);fill-opacity:.28}
+#kitchen-paired-fit .kp-plan .work{fill:var(--viz-series-1);fill-opacity:.18}
+#kitchen-paired-fit .kp-plan .social{fill:var(--viz-series-2);fill-opacity:.18}
+#kitchen-paired-fit .kp-plan .link{fill:var(--viz-series-3);fill-opacity:.30}
+#kitchen-paired-fit .kp-plan .person{fill:var(--viz-series-4);fill-opacity:.16;stroke-dasharray:4 3}
+#kitchen-paired-fit .kp-plan .uncertain{fill:var(--muted);fill-opacity:.12;stroke-dasharray:4 3}
+#kitchen-paired-fit .kp-plan .route{fill:none;stroke:var(--viz-series-3);stroke-width:2;stroke-dasharray:5 4}
+#kitchen-paired-fit .kp-plan .issue{stroke:var(--destructive);stroke-width:2;fill:none}
+#kitchen-paired-fit .kp-plan .dim{stroke:var(--foreground);stroke-width:1;fill:none}
+#kitchen-paired-fit .kp-legend{margin-top:12px}
+#kitchen-paired-fit [hidden]{display:none!important}
+@media(max-width:780px){#kitchen-paired-fit .kp-pair{grid-template-columns:1fr}}
+&lt;/style&gt;
+&lt;script&gt;
+(()=&gt;{
+const root=document.getElementById(&#x27;kitchen-paired-fit&#x27;);
+const D={&quot;version&quot;:&quot;2026-09-14 paired connection test v1&quot;,&quot;units&quot;:&quot;inches&quot;,&quot;status&quot;:&quot;Conditional concept comparison; neither candidate is approved as a complete occupied fit.&quot;,&quot;fixed&quot;:{&quot;island&quot;:[[78.5,38],[114.5,38],[114.5,104],[78.5,104]],&quot;cleanup&quot;:[[157,41],[182,41],[182,140],[157,140]],&quot;rear&quot;:[[182,79],[189,79],[189,140],[182,140]],&quot;landing&quot;:[[0,111.5],[36,111.5],[36,135.5],[0,135.5]],&quot;DWdoor&quot;:[[133,113],[157,113],[157,137],[133,137]],&quot;DWloader&quot;:[[113,113],[133,113],[133,137],[113,137]],&quot;range&quot;:[[0,63.5],[30.5,63.5],[30.5,111.5],[0,111.5]],&quot;chef&quot;:[[58.5,62],[78.5,62],[78.5,86],[58.5,86]]},&quot;stair&quot;:{&quot;shaft&quot;:[[-0.6753141931752404,176.91370358678918],[3.3246858068247596,176.91370358678918],[3.3246858068247596,180.91370358678918],[-0.6753141931752404,180.91370358678918]],&quot;cap&quot;:[[-1.6753141931752404,175.91370358678918],[4.32468580682476,175.91370358678918],[4.32468580682476,181.91370358678918],[-1.6753141931752404,181.91370358678918]],&quot;tread&quot;:[[-39.67531419317524,169.41370358678918],[5.8246858068247604,169.41370358678918],[5.8246858068247604,179.91370358678918],[-39.67531419317524,179.91370358678918]]},&quot;points&quot;:{&quot;C3&quot;:[145.47519318656634,178.73241474806167],&quot;M5&quot;:[181.530181300697,218.25820167368656],&quot;M2&quot;:[157.71358827758075,105.75144677971913],&quot;M4&quot;:[68.0,137.00000000000006],&quot;TC&quot;:[119.13927707873167,284.5030133223399],&quot;TF&quot;:[52.859181367342416,278.3229482073287]},&quot;table&quot;:[[97.47106446978317,258.37853127324644],[98.64091877228734,258.51664485894275],[99.80258702160742,258.7119941107023],[100.95327065718071,258.9641084150669],[102.0901975813411,259.27238040659483],[103.21062883754527,259.63606743105703],[104.31186520875883,260.0542933345563],[105.39125372010662,260.5260505742589],[106.44619403012152,261.0502026456533],[107.47414469519485,261.6254868204893],[108.47262929213662,262.25051718880064],[109.43924238409585,262.923787997684],[110.37165531546873,263.6436772787891],[111.26762182183384,264.40845075578295],[112.12498344139995,265.2162660223733],[112.94167471492952,266.06517698082655],[113.71572816161091,266.9531385302881],[114.44527901889198,267.8780114936089],[115.12856973485646,268.8375677708111],[115.76395420232035,269.82949570677573],[116.34990172444846,270.8514056602224],[116.88500070233702,271.90083576056446],[117.36796203567918,272.97525783877103],[117.79762222832049,274.0720835179475],[118.17294619122309,275.18867044896206],[118.49302973608584,276.32232867609645],[118.7571017536132,277.4703271173848],[118.96452607118492,278.6299001440292],[119.11480298545177,279.7982542430419],[119.20757046616457,280.97257474706265],[119.24260502833683,282.15003261513897],[119.21982227063958,283.3277912481335],[119.13927707873167,284.5030133223399],[119.00116349303532,285.67286762484406],[118.8058142412758,286.83453587416415],[118.55369993691117,287.9852195097374],[118.24542794538326,289.1221464338978],[117.88174092092109,290.242577690102],[117.4635150174218,291.3438140613155],[116.99175777771919,292.4232025726633],[116.46760570632476,293.4781428826782],[115.8923215314888,294.50609354775156],[115.26729116317743,295.5045781446933],[114.59402035429412,296.47119123665254],[113.87413107318899,297.4036041680254],[113.10935759619511,298.2995706743905],[112.3015423296048,299.15693229395663],[111.45263137115153,299.97362356748624],[110.56466982169003,300.7476770141676],[109.63979685836921,301.4772278714487],[108.68024058116698,302.16051858741315],[107.68831264520237,302.79590305487704],[106.66640269175572,303.38185057700514],[105.61697259141363,303.91694955489373],[104.54255051320705,304.39991088823587],[103.4457248340306,304.8295710808772],[102.32913790301606,305.2048950437798],[101.19547967588167,305.52497858864257],[100.04748123459333,305.7890506061699],[98.88790820794891,305.99647492374163],[97.7195541089362,306.14675183800847],[96.54523360491541,306.23951931872125],[95.3677757368391,306.2745538808935],[94.19001710384458,306.25177112319625],[93.01479502963822,306.17122593128835],[74.52739397629091,304.44743025642214],[73.35753967378675,304.3093166707258],[72.19587142446666,304.1139674189663],[71.04518778889337,303.8618531146017],[69.90826086473298,303.55358112307374],[68.78782960852881,303.18989409861155],[67.68659323731525,302.7716681951123],[66.60720472596748,302.2999109554097],[65.55226441595258,301.77575888401526],[64.52431375087923,301.2004747091793],[63.52582915393747,300.57544434086793],[62.559216061978226,299.9021735319846],[61.62680313060535,299.1822842508795],[60.73083662424025,298.4175107738856],[59.873475004674134,297.60969550729527],[59.05678373114456,296.760784548842],[58.28273028446317,295.8728229993805],[57.5531794271821,294.9479500360597],[56.869888711217634,293.98839375885746],[56.23450424375373,292.99646582289284],[55.648556721625624,291.9745558694462],[55.11345774373706,290.9251257691041],[54.6304964103949,289.85070369089755],[54.2008362177536,288.7538780117211],[53.82551225485099,287.6372910807066],[53.50542870998823,286.5036328535721],[53.24135669246088,285.3556344122838],[53.03393237488916,284.1960613856394],[52.883655460622315,283.02770728662665],[52.79088797990951,281.8533867826059],[52.75585341773726,280.6759289145296],[52.7786361754345,279.49817028153507],[52.859181367342416,278.3229482073287],[52.99729495303876,277.1530939048245],[53.192644204798285,275.9914256555045],[53.44475850916291,274.84074201993116],[53.753030500690826,273.7038150957708],[54.116717525153,272.5833838395666],[54.534943428652284,271.48214746835305],[55.006700668354895,270.4027589570053],[55.53085273974932,269.3478186469904],[56.10613691458528,268.319867981917],[56.73116728289665,267.32138338497526],[57.40443809177997,266.35477029301603],[58.12432737288509,265.42235736164315],[58.889100849878965,264.52639085527807],[59.696916116469275,263.66902923571195],[60.545827074922556,262.85233796218233],[61.43378862438406,262.07828451550097],[62.35866158770489,261.3487336582199],[63.31821786490709,260.6654429422554],[64.31014580087171,260.03005847479153],[65.33205575431836,259.44411095266344],[66.38148585466045,258.90901197477484],[67.45590793286705,258.4260506414327],[68.55273361204347,257.9963904487914],[69.66932054305802,257.6210664858888],[70.8029787701924,257.300982941026],[71.95097721148075,257.0369109234987],[73.11055023812517,256.82948660592695],[74.27890433713789,256.6792096916601],[75.45322484115866,256.5864422109473],[76.63068270923496,256.55140764877507],[77.8084413422295,256.5741904064723],[78.98366341643586,256.6547355983802]],&quot;table_chairs&quot;:[[[120.23013470210049,272.8037599425067],[118.04841945536285,296.20226670217306],[136.96636109083778,297.9662066888971],[139.14807633757542,274.56769992923074]],[[51.768323743973596,290.0222015871619],[53.950038990711235,266.6236948274955],[35.0320973552363,264.8597548407715],[32.850382108498664,288.25826160043783]],[[76.52811056327634,256.4257758124445],[99.9266173229427,258.60749105918217],[101.69055730966674,239.68954942370723],[78.29205055000038,237.50783417696957]],[[95.47034788279775,306.4001857172241],[72.07184112313139,304.2184704704864],[70.30790113640735,323.1364121059613],[93.70640789607371,325.318127352699]]],&quot;table_pulled&quot;:[[[120.23013470210049,272.8037599425067],[118.04841945536285,296.20226670217306],[153.8929404488943,299.5444687822818],[156.07465569563192,276.14596202261544]],[[51.768323743973596,290.0222015871619],[53.950038990711235,266.6236948274955],[18.10551799717979,263.2814927473868],[15.92380275044215,286.67999950705314]],[[76.52811056327634,256.4257758124445],[99.9266173229427,258.60749105918217],[103.26881940305142,222.76297006565073],[79.87031264338506,220.58125481891307]],[[95.47034788279775,306.4001857172241],[72.07184112313139,304.2184704704864],[68.72963904302267,340.06299146401784],[92.12814580268903,342.2447067107555]]],&quot;guest&quot;:[[54.30922137642275,179.73939570022995],[82.5,190.0],[142.5,190.0],[170.69077862357724,179.73939570022995],[162.4822951837612,157.18677280136814],[138.26815246299685,166.0],[86.73184753700316,166.0],[62.5177048162388,157.18677280136814]],&quot;helper_surface&quot;:[[78,148],[120,148],[120,166],[78,166]],&quot;helper_person&quot;:[[84,128],[108,128],[108,148],[84,148]],&quot;helper_board&quot;:[[84,148],[108,148],[108,166],[84,166]],&quot;helper_landing&quot;:[[108,148],[120,148],[120,166],[108,166]],&quot;seated&quot;:[[[79.68092213764228,188.97393957002302],[57.12829923878048,180.76545613020696],[48.2357755123131,205.19746427064058],[70.7883984111749,213.40594771045664]],[[109.5,190.0],[85.5,190.0],[85.5,216.0],[109.5,216.0]],[[139.5,190.0],[115.5,190.0],[115.5,216.0],[139.5,216.0]],[[167.87170076121953,180.76545613020693],[145.31907786235774,188.973939570023],[154.21160158882512,213.40594771045662],[176.7642244876869,205.19746427064055]]],&quot;pulled&quot;:[[[79.68092213764228,188.97393957002302],[57.12829923878048,180.76545613020696],[44.815574079056404,214.59439047849966],[67.36819697791822,222.80287391831573]],[[109.5,190.0],[85.5,190.0],[85.5,226.0],[109.5,226.0]],[[139.5,190.0],[115.5,190.0],[115.5,226.0],[139.5,226.0]],[[167.87170076121953,180.76545613020693],[145.31907786235774,188.973939570023],[157.6318030220818,222.8028739183157],[180.1844259209436,214.59439047849963]]],&quot;knee&quot;:[[[57.12829923878048,180.76545613020696],[79.68092213764228,188.97393957002302],[84.81122428752731,174.87855025823438],[62.25860138866551,166.67006681841832]],[[85.5,190.0],[109.5,190.0],[109.5,175.0],[85.5,175.0]],[[115.5,190.0],[139.5,190.0],[139.5,175.0],[115.5,175.0]],[[145.31907786235774,188.973939570023],[167.87170076121953,180.76545613020693],[162.7413986113345,166.6700668184183],[140.1887757124727,174.87855025823436]]],&quot;connector&quot;:[[36,114.5],[78,148],[78,166],[66,166],[36,135.5]],&quot;appliances&quot;:{&quot;pantry_x&quot;:[29.5,61.5],&quot;fridge_x&quot;:[61.5,109.5],&quot;counter_x&quot;:[109.5,139],&quot;ovens_x&quot;:[139,168.5],&quot;fridge_front_y_approx&quot;:-2,&quot;fridge_front_basis&quot;:&quot;Island appliance end Y38 minus reported approximately 40-inch clearance to refrigerator front/handles. Conditional cross-source derivation, not a measured face coordinate.&quot;,&quot;oven_front_y&quot;:null,&quot;oven_front_sensitivity_default&quot;:-2,&quot;door_projection_default&quot;:27,&quot;operator_depth_default&quot;:20,&quot;scope&quot;:&quot;X sequence from A0 and recorded widths. Oven Y face unknown. All appliance door extents are sensitivity proxies, not actual product dimensions; side-by-side fridge door sweep and pullout travel need capture.&quot;},&quot;porch&quot;:{&quot;partition_x&quot;:5.82468580682476,&quot;start_y_conditional&quot;:228.91370358678918,&quot;end_y_conditional&quot;:348.9137035867892,&quot;kitchen_side_length&quot;:120,&quot;inside_dimensions&quot;:[161,111],&quot;wall_approx&quot;:[6,7],&quot;placement&quot;:&quot;Kitchen-facing partition collinear with tread right edge, confirmed in current user message and IMG_8610. Y endpoints retain sketch interpretation. Interior origin/setback not numerically closed; display interior room separately as a dimensioned context inset.&quot;,&quot;purpose&quot;:&quot;Breakfast/beverage service; no guest seating assumed.&quot;},&quot;assumptions&quot;:{&quot;guest_frontage_each&quot;:30,&quot;guest_surface_depth&quot;:24,&quot;end_seat_angle_degrees&quot;:20,&quot;guest_body_width&quot;:24,&quot;guest_occupied_projection&quot;:26,&quot;guest_pulled_projection&quot;:36,&quot;knee_depth_proxy&quot;:15,&quot;guest_height&quot;:&quot;Unselected; knee/support fit remains unresolved.&quot;,&quot;helper_frontage&quot;:42,&quot;helper_depth&quot;:18,&quot;body&quot;:[24,20],&quot;table&quot;:&quot;Preserved normal-extension capsule registration; four chair poses assumed. TC chair dimensions measured; other poses reuse them as proxies.&quot;,&quot;walls&quot;:&quot;M5 orthogonal directions only, no reconstructed trim or door sweeps. Higher stair/rail envelope unknown.&quot;,&quot;connector&quot;:&quot;Shaped link touching existing study landing and guest/helper surface; roughly 14\u201316 inches normal to its diagonal sides, with wider terminal junction. A shallow transfer/landing link, not a new full-depth cabinet run.&quot;},&quot;metrics&quot;:{&quot;range_aisle&quot;:48,&quot;cleanup_aisle&quot;:42.5,&quot;island_to_helper_front&quot;:44,&quot;island_to_helper_body&quot;:24,&quot;west_gate_bare&quot;:{&quot;inches&quot;:34.256,&quot;segment&quot;:[[36,135.5],[62.5177048162388,157.18677280136814]]},&quot;west_gate_occupied&quot;:{&quot;inches&quot;:34.256,&quot;segment&quot;:[[36,135.5],[62.5177048162388,157.18677280136814]]},&quot;east_tip_to_cleanup&quot;:{&quot;inches&quot;:17.187,&quot;segment&quot;:[[162.4822951837612,157.18677280136814],[162.4822951837612,140.0]]},&quot;DW_door_to_social&quot;:{&quot;inches&quot;:17.029,&quot;segment&quot;:[[120,148],[133,137]]},&quot;DW_loader_to_social&quot;:{&quot;inches&quot;:11.0,&quot;segment&quot;:[[120,148],[120.0,137.0]]},&quot;helper_to_DW_loader&quot;:{&quot;inches&quot;:5.0,&quot;segment&quot;:[[108,128],[113.0,128.0]]},&quot;guest_to_table_chair&quot;:{&quot;inches&quot;:22.084,&quot;segment&quot;:[[85.5,216.0],[83.44973325850344,237.98874499399543]]},&quot;guest_to_table&quot;:{&quot;inches&quot;:41.084,&quot;segment&quot;:[[85.5,216.0],[81.68579327177947,256.9066866294704]]},&quot;both_chair_sets_pulled&quot;:{&quot;inches&quot;:0,&quot;segment&quot;:null},&quot;connector_to_island&quot;:{&quot;inches&quot;:34.71,&quot;segment&quot;:[[78.5,104],[56.856301429190125,131.1353832828064]]},&quot;connector_to_tread&quot;:{&quot;inches&quot;:45.294,&quot;segment&quot;:[[5.8246858068247604,169.41370358678918],[38.11624423333118,137.65151497055336]]},&quot;connector_to_cap&quot;:{&quot;inches&quot;:50.922,&quot;segment&quot;:[[4.32468580682476,175.91370358678918],[40.62819615246791,140.20533275500904]]},&quot;note&quot;:&quot;Edge-to-edge distances expose local constrictions. They are not continuous-route widths, code checks, or full collision-free route certifications.&quot;}};
+const state=root.querySelector(&#x27;#kp-state&#x27;),view=root.querySelector(&#x27;#kp-view&#x27;),door=root.querySelector(&#x27;#kp-door&#x27;),face=root.querySelector(&#x27;#kp-face&#x27;);
+const NS=&#x27;http://www.w3.org/2000/svg&#x27;;
+const R=(x,y,w,h)=&gt;[[x,y],[x+w,y],[x+w,y+h],[x,y+h]];
+function draw(svg,connected){
+  svg.replaceChildren(); const mode=state.value,whole=view.value===&#x27;room&#x27;;
+  const width=Math.max(280,svg.getBoundingClientRect().width),bounds=whole?[-180,-48,232,370]:[-47,-44,221,334];
+  const [xmin,ymin,xmax,ymax]=bounds,pad=12,scale=(width-2*pad)/(xmax-xmin),height=(ymax-ymin)*scale+2*pad;
+  svg.setAttribute(&#x27;viewBox&#x27;,`0 0 ${width} ${height}`);svg.style.height=height+&#x27;px&#x27;;
+  const X=x=&gt;pad+(x-xmin)*scale,Y=y=&gt;pad+(y-ymin)*scale;
+  function node(tag,attrs={},parent=svg){const e=document.createElementNS(NS,tag);for(const [k,v]of Object.entries(attrs))e.setAttribute(k,v);parent.appendChild(e);return e;}
+  function poly(points,cl=&#x27;shape&#x27;,label){const n=node(&#x27;polygon&#x27;,{points:points.map(p=&gt;`${X(p[0])},${Y(p[1])}`).join(&#x27; &#x27;),class:cl});if(label)node(&#x27;title&#x27;,{},n).textContent=label;return n;}
+  function line(points,cl=&#x27;dim&#x27;){return node(&#x27;polyline&#x27;,{points:points.map(p=&gt;`${X(p[0])},${Y(p[1])}`).join(&#x27; &#x27;),class:cl});}
+  function text(x,y,words,anchor=&#x27;middle&#x27;){const t=node(&#x27;text&#x27;,{x:X(x),y:Y(y),&#x27;text-anchor&#x27;:anchor});String(words).split(&#x27;|&#x27;).forEach((s,i)=&gt;{node(&#x27;tspan&#x27;,{x:X(x),dy:i?&#x27;1.2em&#x27;:0},t).textContent=s});return t;}
+  function rect(r,cl=&#x27;shape&#x27;,label){return poly(R(...r),cl,label);}
+  function dim(metric,label,dx=0,dy=0){if(!metric.segment)return;line(metric.segment,&#x27;issue&#x27;);const [a,b]=metric.segment;text((a[0]+b[0])/2+dx,(a[1]+b[1])/2+dy,label);}
+  node(&#x27;title&#x27;).textContent=connected?&#x27;P1 connected peninsula&#x27;:&#x27;F1 freestanding comparison&#x27;;
+  node(&#x27;desc&#x27;).textContent=&#x27;Same 36 by 66 chef island, 99-inch cleanup, 4 guests at 30 inches each, extended table. Added shaped range-side link only in P1. Dashed operating envelopes are assumptions.&#x27;;
+  // Appliance depths above these fronts are contextual symbols; X widths follow the captured sequence.
+  rect([0,-27,29.5,25],&#x27;shape uncertain&#x27;);
+  rect([61.5,-27,48,25],&#x27;shape uncertain&#x27;,&#x27;Refrigerator 48-inch width. Approximate front derived at Y −2.&#x27;);
+  rect([109.5,-27,29.5,25],&#x27;shape uncertain&#x27;,&#x27;29.5-inch intermediate counter. Face Y unmeasured.&#x27;);
+  rect([139,-27,29.5,25],&#x27;shape uncertain&#x27;,&#x27;Wall ovens, 29.5-inch width. Face depth unmeasured.&#x27;);
+  text(45.5,-34,&#x27;Pantry&#x27;);text(85.5,-12,&#x27;Fridge&#x27;);text(153.75,-34,&#x27;Wall ovens&#x27;);
+  line([[153.75,-31],[153.75,-27]]);
+  rect([0,39.5,27.5,24]);poly(D.fixed.range);text(15,80,&#x27;Cooktop&#x27;);text(15,92,&#x27;48″&#x27;);
+  poly(D.fixed.landing,&#x27;shape work&#x27;,&#x27;Protected 36 × 24 range-left mise/hot-pan landing&#x27;);text(17,122,&#x27;Mise&#x27;);
+  poly(D.fixed.island,&#x27;shape work&#x27;);text(96.5,80,&#x27;36 × 66&#x27;);
+  rect([99,41.5,11,13],&#x27;shape&#x27;,&#x27;Existing 13 × 11 prep sink opening retained&#x27;);
+  rect([80.5,62,18,24],&#x27;shape work&#x27;,&#x27;24 × 18 cutting board&#x27;);
+  poly(D.fixed.cleanup);poly(D.fixed.rear,&#x27;shape uncertain&#x27;);
+  rect([159.75,80,19.5,30],&#x27;shape&#x27;,&#x27;Main sink opening test&#x27;);
+  line([[157,77],[182,77]]);line([[157,113],[182,113]]);text(170,63,&#x27;Dirty&#x27;);text(170,129,&#x27;DW&#x27;);
+  text(205,89,&#x27;99″|cleanup&#x27;);line([[192,41],[198,41],[198,140],[192,140]]);
+  if(connected)poly(D.connector,&#x27;shape link&#x27;,&#x27;Shaped shallow continuous link. Proposed surface; support and height unresolved.&#x27;);
+  poly(D.guest,&#x27;shape social&#x27;);poly(D.helper_surface,&#x27;shape work&#x27;);
+  rect([84,148,24,18],&#x27;shape work&#x27;,&#x27;Independent helper board, 24 × 18&#x27;);rect([108,148,12,18],&#x27;shape work&#x27;,&#x27;Separate helper landing, 12 × 18&#x27;);
+  if(!whole){text(96,160,&#x27;Helper&#x27;);text(112,179,&#x27;4 × 30″&#x27;);}
+  poly(D.stair.tread);poly(D.stair.shaft);poly(D.stair.cap,&#x27;shape uncertain&#x27;,&#x27;Cap centering remains assumed&#x27;);text(-18,163,&#x27;Stairs&#x27;);
+  // Confirmed X alignment; conditional Y registration, no fabricated porch interior closure.
+  line([[5.8247,180],[5.8247,229]],&#x27;route&#x27;);line([[5.8247,229],[5.8247,349]],&#x27;dim&#x27;);
+  if(!whole){text(-1,255,&#x27;Old porch&#x27;, &#x27;end&#x27;);text(-1,267,&#x27;beverages&#x27;, &#x27;end&#x27;);}
+  poly(D.table);text(86,281,&#x27;Extended&#x27;);text(86,294,&#x27;table&#x27;);
+  const chairs=mode===&#x27;pull&#x27;?D.table_pulled:D.table_chairs;
+  chairs.forEach(p=&gt;poly(p,&#x27;shape uncertain&#x27;));
+  const m5=D.points.M5;line([[m5[0],m5[1]+17],m5,[m5[0]+17,m5[1]]]);
+  text(204,240,&#x27;M5&#x27;);if(!whole)text(203,253,&#x27;New porch&#x27;);
+  if(whole){
+    // Dimensioned inset is intentionally separated from registered partition.
+    rect([-170,229,161,111],&#x27;shape uncertain&#x27;,&#x27;161 × 111 inside. Context inset only; interior origin/setback not surveyed.&#x27;);
+    text(-90,266,&#x27;Old porch&#x27;);text(-90,284,&#x27;161 × 111 inside&#x27;);text(-90,302,&#x27;Breakfast / beverages&#x27;);
+    text(-90,355,&#x27;Inset · exact origin unresolved&#x27;);
+    text(17,241,&#x27;52″ tie&#x27;, &#x27;start&#x27;);text(17,339,&#x27;120″ side&#x27;,&#x27;start&#x27;);
+    line([[-50,352],[-50,365]],&#x27;route&#x27;);text(-112,365,&#x27;Cooking deck&#x27;);
+    text(205,269,&#x27;New giant&#x27;);text(205,282,&#x27;screened&#x27;);text(205,295,&#x27;porch&#x27;);
+  }
+  const occupied=[&#x27;arrival&#x27;,&#x27;serving&#x27;,&#x27;pull&#x27;].includes(mode);
+  if(occupied)(mode===&#x27;pull&#x27;?D.pulled:D.seated).forEach((p,i)=&gt;{poly(p,&#x27;shape person&#x27;);const x=p.reduce((s,q)=&gt;s+q[0],0)/4,y=p.reduce((s,q)=&gt;s+q[1],0)/4;text(x,y,`${i+1}`);});
+  if(mode===&#x27;closed&#x27;||mode===&#x27;arrival&#x27;){
+    dim(D.metrics.east_tip_to_cleanup,&#x27;17″&#x27;,27,1);
+    if(!connected)dim(D.metrics.west_gate_bare,&#x27;34″&#x27;,-5,0);
+    else {line([[45,139],[55,149]],&#x27;issue&#x27;);line([[45,149],[55,139]],&#x27;issue&#x27;);}
+  }
+  if(mode===&#x27;work&#x27;){
+    poly(D.fixed.chef,&#x27;shape person&#x27;,&#x27;Chef standing at range-facing board edge&#x27;);poly(D.helper_person,&#x27;shape person&#x27;,&#x27;Independent helper standing envelope&#x27;);
+    line([[62,74],[51,94],[48,111]],&#x27;route&#x27;);
+    if(connected)dim(D.metrics.connector_to_island,&#x27;35″&#x27;,-7,-5);
+    text(136,113,&#x27;24″&#x27;, &#x27;start&#x27;);line([[108,104],[108,128]]);
+  }
+  if(mode===&#x27;dw&#x27;){
+    poly(D.fixed.DWdoor,&#x27;shape person&#x27;,&#x27;24-inch installed door projection test&#x27;);poly(D.fixed.DWloader,&#x27;shape person&#x27;,&#x27;20 × 24 loader assumption&#x27;);
+    text(146,125,&#x27;Open&#x27;);text(122,125,&#x27;Load&#x27;);
+    dim(D.metrics.DW_loader_to_social,&#x27;11″&#x27;,-5,2);
+    if(connected)line([[181,188],[179,150],[147,148],[135,142]],&#x27;route&#x27;);
+  }
+  if(mode===&#x27;arrival&#x27;||mode===&#x27;serving&#x27;){
+    // Intent only. Deliberately retain red bottleneck markers instead of claiming a clear corridor.
+    const route=connected?[[10,210],[40,231],[149,231],[187,198],[180,149],[136,148],[123,122],[53,112],[47,16]]:[[10,210],[29,185],[47,150],[52,117],[53,98],[47,16]];
+    line(route,&#x27;route&#x27;);
+    if(mode===&#x27;serving&#x27;){
+      poly(D.fixed.chef,&#x27;shape person&#x27;);rect([44,144,24,18],&#x27;shape person&#x27;,&#x27;24 × 18 tray footprint proxy at west approach; not a walking-body clearance&#x27;);
+      if(connected)dim(D.metrics.east_tip_to_cleanup,&#x27;17″&#x27;,27,1);else dim(D.metrics.west_gate_bare,&#x27;34″&#x27;,-5,0);
+    }
+    if(connected)dim(D.metrics.guest_to_table_chair,&#x27;22″&#x27;,-17,1);
+  }
+  if(mode===&#x27;pull&#x27;)text(117,230,&#x27;Pull-outs overlap&#x27;, &#x27;start&#x27;);
+  if(mode===&#x27;fridge&#x27;||mode===&#x27;ovens&#x27;){
+    const p=+door.value,ov=mode===&#x27;ovens&#x27;,fy=ov?+face.value:-2,x=ov?139:61.5,w=ov?29.5:48;
+    rect([x,fy,w,p],&#x27;shape person&#x27;,&#x27;Assumed maximum open projection band, not a surveyed appliance sweep&#x27;);
+    const cx=x+w/2;rect([cx-12,fy+p,24,20],&#x27;shape person&#x27;,&#x27;Centered 24 × 20 operator proxy&#x27;);
+    text(cx,fy+p-5,&#x27;Door test&#x27;);
+    text(203,18,&#x27;Unverified&#x27;);
+  }
+  const bar=whole?[-163,192]:[-35,302];line([[bar[0],bar[1]],[bar[0]+36,bar[1]]]);line([[bar[0],bar[1]-2],[bar[0],bar[1]+2]]);line([[bar[0]+36,bar[1]-2],[bar[0]+36,bar[1]+2]]);text(bar[0]+18,bar[1]-5,&#x27;36″&#x27;);
+}
+function render(){
+  const s=state.value,app=[&#x27;fridge&#x27;,&#x27;ovens&#x27;].includes(s);root.querySelector(&#x27;#kp-appliance&#x27;).hidden=!app;root.querySelector(&#x27;#kp-face-label&#x27;).hidden=s!==&#x27;ovens&#x27;;
+  root.querySelector(&#x27;#kp-door-value&#x27;).textContent=door.value+&#x27;″&#x27;;root.querySelector(&#x27;#kp-face-value&#x27;).textContent=face.value+&#x27;″&#x27;;
+  const words={
+   closed:&#x27;P1 closes the west approach; F1 retains a 34″ local gap. Both have only 17″ at the cleanup-side tip.&#x27;,
+   work:&#x27;44″ from island end to helper surface; 24″ behind the standing helper. P1’s added diagonal narrows the island-to-link gap to 35″.&#x27;,
+   dw:&#x27;Both: 11″ from loader envelope to helper surface. Loading is possible as a separate activity; through-serving here is restricted.&#x27;,
+   arrival:&#x27;P1 redirects arrival around the free end: 17″ tip gap and 22″ between occupied chair envelopes. F1 retains the restrictive west approach.&#x27;,
+   serving:&#x27;Dashed lines show intended serving routes to the pantry. P1 closes the west route; F1 still shares the range aisle with the chef.&#x27;,
+   pull:&#x27;The assumed guest and table-chair pull-out envelopes intersect in both cases.&#x27;,
+   fridge:`Approximately 40″ closed fridge-to-island gap − ${door.value}″ projection test = ${40-(+door.value)}″ residual before a person; actual side-by-side door sweep is unmeasured.`,
+   ovens:`Oven face Y${face.value} + ${door.value}″ door + 20″ centered user = Y${(+face.value)+(+door.value)+20}; cleanup starts at Y41. Actual oven face and door travel remain unmeasured.`
+  };
+  root.querySelector(&#x27;#kp-readout&#x27;).textContent=words[s];
+  draw(root.querySelector(&#x27;#kp-p&#x27;),true);draw(root.querySelector(&#x27;#kp-f&#x27;),false);
+}
+[state,view,door,face].forEach(e=&gt;e.addEventListener(&#x27;input&#x27;,render));
+new ResizeObserver(render).observe(root.querySelector(&#x27;.kp-pair&#x27;));render();
+})();
+&lt;/script&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+  let lastPointerWasTouch = false;
+  let pinnedByTouch = false;
+
+  const getTrigger = (target) =&gt;
+    target?.nodeType === Node.ELEMENT_NODE
+      ? target.closest(&quot;[data-tooltip]&quot;)
+      : null;
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    pinnedByTouch = false;
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handlePointer = (event) =&gt; {
+    lastPointerWasTouch =
+      event.type === &quot;pointerdown&quot; &amp;&amp; event.pointerType === &quot;touch&quot;;
+  };
+  const handleTouchClick = (event) =&gt; {
+    const isTouch = event.pointerType === &quot;touch&quot; || lastPointerWasTouch;
+    lastPointerWasTouch = false;
+    if (!isTouch || event.detail === 0) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (
+      trigger == null ||
+      !trigger.isConnected ||
+      getContent(trigger).length === 0 ||
+      (pinnedByTouch &amp;&amp; activeTrigger === trigger)
+    ) {
+      if (pinnedByTouch) {
+        closeTooltip();
+      }
+      return;
+    }
+    openTooltip(trigger);
+    pinnedByTouch = activeTrigger === trigger;
+    window.setTimeout(() =&gt; {
+      if (activeTrigger === trigger &amp;&amp; !trigger.isConnected) {
+        closeTooltip(false);
+      }
+    }, 0);
+  };
+  const handleLeave = (event) =&gt; {
+    if (pinnedByTouch) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    lastPointerWasTouch = false;
+    const trigger = getTrigger(event.target);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    lastPointerWasTouch = false;
+    document.removeEventListener(&quot;pointerover&quot;, handlePointerOpen);
+    document.removeEventListener(&quot;pointerdown&quot;, handlePointer);
+    document.removeEventListener(&quot;pointercancel&quot;, handlePointer);
+    document.removeEventListener(&quot;click&quot;, handleTouchClick);
+    document.removeEventListener(&quot;pointerout&quot;, handleLeave);
+    document.removeEventListener(&quot;focusin&quot;, handleFocusIn);
+    document.removeEventListener(&quot;focusout&quot;, handleLeave);
+    document.removeEventListener(&quot;keydown&quot;, handleKeyDown);
+    document.removeEventListener(&quot;contextmenu&quot;, handleContextMenu);
+    tooltip = null;
+  };
+
+  document.addEventListener(&quot;pointerover&quot;, handlePointerOpen);
+  document.addEventListener(&quot;pointerdown&quot;, handlePointer);
+  document.addEventListener(&quot;pointercancel&quot;, handlePointer);
+  document.addEventListener(&quot;click&quot;, handleTouchClick);
+  document.addEventListener(&quot;pointerout&quot;, handleLeave);
+  document.addEventListener(&quot;focusin&quot;, handleFocusIn);
+  document.addEventListener(&quot;focusout&quot;, handleLeave);
+  document.addEventListener(&quot;keydown&quot;, handleKeyDown);
+  document.addEventListener(&quot;contextmenu&quot;, handleContextMenu);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-tabs&quot;&gt;
+(() =&gt; {
+  const selector = &#x27;.nav[role=&quot;tablist&quot;] [role=&quot;tab&quot;]&#x27;;
+  const disabled = &#x27;:disabled,[aria-disabled=&quot;true&quot;]&#x27;;
+  const selectTab = (selected) =&gt; {
+    const panelId = selected.getAttribute(&quot;aria-controls&quot;);
+    for (const tab of selected.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;)) {
+      const active = tab === selected;
+      tab.classList.toggle(&quot;active&quot;, active);
+      tab.setAttribute(&quot;aria-selected&quot;, String(active));
+      const id = tab.getAttribute(&quot;aria-controls&quot;);
+      const panel = id &amp;&amp; document.getElementById(id);
+      if (panel != null) {
+        panel.hidden = id !== panelId;
+        if (!panel.hidden &amp;&amp; selected.id) {
+          panel.setAttribute(&quot;aria-labelledby&quot;, selected.id);
+        }
+      }
+    }
+  };
+  const interact = (event) =&gt; {
+    const tab = event.target?.closest?.(selector);
+    if (event.defaultPrevented || tab == null || tab.matches(disabled)) {
+      return;
+    }
+    if (event.type === &quot;click&quot;) {
+      selectTab(tab);
+      return;
+    }
+    const tabs = Array.from(
+      tab.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;),
+    ).filter((candidate) =&gt; !candidate.matches(disabled));
+    const current = tabs.indexOf(tab);
+    let next;
+    if (event.key === &quot;ArrowRight&quot; || event.key === &quot;ArrowDown&quot;) {
+      next = (current + 1) % tabs.length;
+    } else if (event.key === &quot;ArrowLeft&quot; || event.key === &quot;ArrowUp&quot;) {
+      next = (current + tabs.length - 1) % tabs.length;
+    } else if (event.key === &quot;Home&quot;) {
+      next = 0;
+    } else if (event.key === &quot;End&quot;) {
+      next = tabs.length - 1;
+    } else {
+      return;
+    }
+    event.preventDefault();
+    tabs[next].focus();
+    selectTab(tabs[next]);
+  };
+
+  for (const list of document.querySelectorAll(&#x27;.nav[role=&quot;tablist&quot;]&#x27;)) {
+    const selected =
+      list.querySelector(&#x27;[role=&quot;tab&quot;][aria-selected=&quot;true&quot;]&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;].active&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;]&#x27;);
+    if (selected != null) {
+      selectTab(selected);
+    }
+  }
+  document.addEventListener(&quot;click&quot;, interact);
+  document.addEventListener(&quot;keydown&quot;, interact);
+  window.addEventListener(&quot;pagehide&quot;, () =&gt; {
+    document.removeEventListener(&quot;click&quot;, interact);
+    document.removeEventListener(&quot;keydown&quot;, interact);
+  }, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+</body>
+</html>

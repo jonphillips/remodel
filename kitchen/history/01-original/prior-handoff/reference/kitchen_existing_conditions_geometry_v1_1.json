@@ -1,0 +1,191 @@
+{
+  "schema_version": "1.1",
+  "title": "Kitchen Existing Conditions Geometry",
+  "canonical_checkpoint": "topology skeleton v4 approved for placement only; partial base-plan coordinates captured; full field survey required for construction and 3D-model coordinates",
+  "units": "inches",
+  "coordinate_language": {
+    "kitchen_sides": [
+      "range_side",
+      "appliance_side",
+      "family_room_side",
+      "dining_side"
+    ],
+    "island_edges": [
+      "range_edge",
+      "appliance_edge",
+      "family_room_chef_edge",
+      "dining_edge"
+    ],
+    "axes": {
+      "chef_axis": "family_room_chef_edge to range_edge",
+      "appliance_to_dining_length_axis": "appliance_edge to dining_edge"
+    },
+    "chef_position": "Chef stands at family_room_chef_edge and looks toward range_side."
+  },
+  "confidence_levels": {
+    "locked_topology": "Confirmed spatial relationship; diagrammatic placement is allowed, scale is not implied.",
+    "locked_measurement": "Explicit physical dimension with stated endpoints.",
+    "approximate_visual_alignment": "Photo/visual alignment; never a survey coordinate or derivation basis.",
+    "unsurveyed_schematic_coordinate_geometry": "Coordinates, angles, or locations not yet field-surveyed."
+  },
+  "locked_topology": {
+    "range": "On range_side.",
+    "appliance_wall_sequence": [
+      "butler_pantry_opening",
+      "refrigerator",
+      "intermediate_counter",
+      "wall_ovens",
+      "opening_or_transition"
+    ],
+    "family_room_counter_system": "Real counter/cabinet run turns through diagonal main cleanup sink and continues as straight cleanup/dishwasher run toward dining_side.",
+    "range_dining_transition": "Open floor/pass-through; no cabinetry wraps this corner.",
+    "island": "Freestanding central chef work object; no chairs.",
+    "guest_perch": "Separate social layer, not island seating."
+  },
+  "locked_measurements": [
+    {"id":"island_chef_axis","value":51,"units":"in","endpoints":"family_room_chef_edge to range_edge","note":"Definitive island orientation."},
+    {"id":"island_appliance_to_dining_axis","value":57,"units":"in","endpoints":"appliance_edge to dining_edge","note":"Definitive island orientation."},
+    {"id":"island_to_range_front","value":34,"units":"in","endpoints":"island range_edge to actual range front"},
+    {"id":"island_to_range_counter_face","value":37,"units":"in","endpoints":"island range_edge to range-side counter face","note":"Range projects 3 in proud."},
+    {"id":"island_appliance_edge_to_refrigerator_front_handles","value":40,"qualifier":"about","units":"in","endpoints":"island appliance_edge to refrigerator front/handles"},
+    {"id":"island_dining_edge_to_nearest_cleanup_counter","value":38,"units":"in","endpoints":"island dining_edge to nearest peninsula/cleanup counter edge"},
+    {"id":"chef_body_to_range_front","value":97,"qualifier":"about","units":"in","endpoints":"normal chef body position to range front"},
+    {"id":"refrigerator_width","value":48,"units":"in"},
+    {"id":"butler_pantry_opening_width","value":32,"units":"in"},
+    {"id":"intermediate_appliance_counter_width","value":29.5,"units":"in"},
+    {"id":"wall_ovens_width","value":29.5,"units":"in"},
+    {"id":"chef_core_cross_section","value":183.5,"units":"in","endpoints":"family-room boundary to opposite fixed range/perimeter condition through island zone"},
+    {"id":"family_room_side_aisle","value":42,"units":"in"},
+    {"id":"range_width","value":48,"units":"in"},
+    {"id":"range_counter_depth","value":27.5,"units":"in"},
+    {"id":"range_left_and_right_counter_width","value":24,"units":"in","note":"Each side; partly curved/shaped."},
+    {"id":"stair_edge_to_left_range_edge","value":60,"units":"in"},
+    {"id":"right_range_edge_to_door_jamb_opening","value":28,"units":"in"},
+    {"id":"prep_sink_from_family_room_edge","value":4,"units":"in"},
+    {"id":"prep_sink_from_appliance_end","value":6.5,"units":"in"},
+    {"id":"chef_body_centerline_to_island_edge","min":9,"max":10,"units":"in"},
+    {"id":"chef_body_centerline_to_cutting_sweet_spot","min":18,"max":20,"units":"in"},
+    {"id":"comfortable_reach_from_family_room_edge","value":28,"qualifier":"about","units":"in"},
+    {"id":"straight_lower_cleanup_counter_run","value":76,"units":"in","note":"Family-room entrance end to first reference point before geometry changes."},
+    {"id":"angled_peninsula_projection_depth","value":60,"qualifier":"about","units":"in","note":"Projection/depth, not diagonal edge length."},
+    {"id":"raised_guest_surface_depth","value":18,"units":"in"},
+    {"id":"lower_kitchen_side_surface_depth","value":24,"units":"in"},
+    {"id":"straight_cleanup_service_counter_depth","value":25,"units":"in","endpoints":"C1→C2 far dining-facing edge to kitchen-facing working edge","note":"Confirmed for the straight cleanup/service counter; use this, not the 24 in lower-surface datum, when testing a straight C1→C5 continuation."},
+    {"id":"c3_to_w1_walkway_turning_distance","value":54,"qualifier":"about","units":"in","endpoints":"C3 far peninsula-edge endpoint to W1 far wall corner","note":"Direct field measurement; it supersedes the approximately 49 in result derived from the current nominal coordinates."},
+    {"id":"dining_table_width","value":48,"units":"in"},
+    {"id":"dining_table_length","value":67,"units":"in"},
+    {"id":"dining_table_to_window","value":30,"units":"in"},
+    {"id":"guest_edge_to_dining_table","value":84,"units":"in"}
+  ],
+  "approximate_visual_alignments": [
+    {
+      "id": "chef_edge_projection_at_refrigerator",
+      "description": "Projected family_room_chef_edge appears to intersect refrigerator about 6 inboard from refrigerator right edge when facing refrigerator.",
+      "value": 6,
+      "units": "in",
+      "prohibited_uses": [
+        "Deriving precise range-edge projection",
+        "Placing refrigerator in a scaled plan",
+        "Creating 3D-model coordinates"
+      ]
+    }
+  ],
+  "survey_coordinate_checkpoint_2026_09_12": {
+    "datum": {
+      "origin": "Theoretical intersection of range-side and appliance-side inside wall faces.",
+      "positive_x": "range side to family-room side",
+      "positive_y": "appliance side to dining/window-table side",
+      "units": "inches"
+    },
+    "island_edges_parallel_to_datums": true,
+    "coordinates": {
+      "I0_island_range_appliance_corner": [64, 38],
+      "R0_range_front_appliance_range_corner": [30.5, 63.5],
+      "A0_butler_opening_range_side_edge": [29.5, 0],
+      "C1_far_dining_facing_peninsula_edge_family_room_end": [190, 41],
+      "C2_far_dining_facing_peninsula_edge_diagonal_start": [190, 133],
+      "C3_far_dining_facing_peninsula_edge_diagonal_end": [146, 177],
+      "C4_far_dining_facing_peninsula_edge_dining_end": [68, 177],
+      "W1_family_dining_walkway_far_wall_corner": [177, 215],
+      "G1_raised_guest_perch_front_end": [143, 176],
+      "G2_raised_guest_perch_front_end": [64, 176],
+      "T1_dining_table_kitchen_near_corner": [60, 258],
+      "T2_dining_table_kitchen_near_corner": [126, 258]
+    },
+    "audit_notes": [
+      "C1 through C4 locate the far, dining-table-facing edge of the cleanup peninsula, not the island-facing working edge. The latter remains unsurveyed.",
+      "C1 and C2 share X = 190, making their straight far-edge segment parallel to the island appliance-to-dining edges. C1 is the counter edge beyond the family-room wall line; the wall itself remains a separate unsurveyed reference.",
+      "The straight C1→C2 cleanup/service counter is 25 in deep. Its provisional kitchen-facing working-edge line is therefore X = 165 when its far edge is X = 190; this is a calculated inference, not a separately captured coordinate.",
+      "C3 and C4 share Y = 177, placing the far edge 1 in dining-side of the raised guest-perch front at Y = 176. This near coincidence is preserved as captured; counter depth and the perch's exact relationship remain separately unsurveyed.",
+      "W1 = (177, 215) is the nominal wall corner on the far side of the family-room-to-dining walkway. Its current coordinate relationship to C3 computes to about 49 in, but a direct field measurement is about 54 in. Preserve the direct measurement and treat W1's coordinate as approximate until its X or Y value is reconciled.",
+      "Island range-edge X coordinate minus range-front X coordinate is 33.5 in; consistent with the separately measured 34 in clearance.",
+      "Guest-perch Y = 176 and table-near-edge Y = 258 imply 82 in, versus separately measured 84 in. Preserve both until field verification resolves the 2 in difference.",
+      "T2.X minus T1.X is 66 in, versus previously reported 67 in table length. Preserve both until field verification resolves the 1 in difference."
+    ]
+  },
+  "active_concept_study_reclaim_the_diagonal_2026_09_12": {
+    "status": "Provisional design test only; not existing-condition geometry, not a locked design, and not usable for construction or 3D-model coordinates.",
+    "intent": "Reclaim the footprint of the current diagonal family-room passageway for a straighter cleanup/service row while preserving an intelligible dining-table-to-inner-kitchen route.",
+    "range_assumption": "Hold existing range location for this test because exhaust constraints make a range relocation high-friction.",
+    "cleanup_row_test": {
+      "current_captured_far_edge_x": 190,
+      "proposed_far_edge_x": 195,
+      "proposed_shift_toward_family_room_wall": 5,
+      "counter_depth_assumed_from_locked_measurement": 25,
+      "proposed_kitchen_facing_working_edge_x": 170,
+      "proposed_extension": "Straighten and modestly lengthen the row into the current diagonal footprint; keep its lower termination outboard of the dining-table approach. Exact endpoint is unsurveyed."
+    },
+    "flipped_peninsula_test": {
+      "range_anchored": true,
+      "peninsula_end_x": 120,
+      "study_length": 120,
+      "chef_support_depth": 24,
+      "raised_guest_bar_depth": 18,
+      "note": "Guest layer remains distinct from island seating. Island size and final program are not decided by this test."
+    },
+    "derived_route_checks": [
+      {
+        "name": "table_corner_to_cleanup_working_edge",
+        "calculation": "proposed X 170 minus captured T2.X 126",
+        "value": 44,
+        "units": "in",
+        "interpretation": "Clears the project 42 in minimum in the nominal coordinate frame; table/chair envelope still requires field verification."
+      },
+      {
+        "name": "peninsula_end_to_cleanup_working_edge",
+        "calculation": "proposed X 170 minus peninsula-end X 120",
+        "value": 50,
+        "units": "in",
+        "interpretation": "Open floor route, not a pivot zone or additional counter zone."
+      }
+    ],
+    "required_field_validation": [
+      "Maximum available counter outer-face location toward family-room wall, including wall/trim/opening constraints.",
+      "Complete lower cleanup termination geometry and its relationship to the passage.",
+      "Dining table and chair pull-back envelope at the proposed route.",
+      "Narrowest walkable route and turning condition from kitchen table to inner kitchen.",
+      "Sink, dishwasher, plumbing, electric, and cabinet-depth feasibility."
+    ],
+    "visual_reference": "cleanup-row-into-diagonal-study.html"
+  },
+  "unsurveyed_schematic_coordinate_geometry": [
+    "All v4 image coordinates and apparent dimensions",
+    "Exact refrigerator-to-island alignment and projected overlaps",
+    "Perimeter wall offsets, opening coordinates, and counter segment endpoints",
+    "Diagonal cleanup-sink angle and full cleanup/peninsula geometry",
+    "Exact relation of island ends to appliance-wall and range-wall segments",
+    "Guest perch, table, chair, and circulation coordinates"
+  ],
+  "modeling_requirements": {
+    "eventual_deliverable": "Reliable three-dimensional model.",
+    "rule": "Use v4 only as topology reference; never trace or scale it.",
+    "required_survey_inputs": [
+      "Shared 2D datum network",
+      "Wall, opening, and counter coordinates",
+      "Angles and offsets",
+      "Counter and appliance dimensions/heights/projections",
+      "Ceiling and soffit transitions",
+      "Verified island and perimeter locations"
+    ]
+  }
+}

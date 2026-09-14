@@ -1,0 +1,72 @@
+{
+  "status": "Three direct ties captured. Third tie supports the photo-consistent dining-side branch for rough study; approximately -1.655-inch residual against older conditional M1 context retained. Not a survey or complete stair footprint.",
+  "units": "inches",
+  "raw_measurements": {
+    "S1_M4": 76,
+    "S1_M2": 170,
+    "S1_M1": 203.5
+  },
+  "source": "Jon explicitly supplied S1\u2013M4=76 and S1\u2013M2=170 in this task following the named horizontal tie request.",
+  "S1_definition": "Vertical corner of bottom kitchen-stair newel shaft nearest M4, at lower-counter height. Decorative cap excluded.",
+  "method_status": "Horizontal and same S1 endpoint interpreted from preceding request; not independently verified. No measurement tolerance supplied.",
+  "baseline": {
+    "M2_M4": 95,
+    "status": "Previously user-reported direct chord, preserved in qualified combined geometry."
+  },
+  "geometry": {
+    "triangle_inequality_slack": 1.0000000000000284,
+    "projection_from_M4_along_M4_to_M2": -74.20526315789469,
+    "unsigned_offset_from_extended_baseline": 16.418858659102856,
+    "branches": [
+      {
+        "sign": -1,
+        "conditional_kitchen_axis_display_coordinate": [
+          -7.476694795811993,
+          145.9032883082514
+        ],
+        "S1_M4_check": 75.99999999999999,
+        "S1_M2_check": 170.0,
+        "predicted_S1_M1_using_older_context_point": 195.08275943516588,
+        "inside_historical_peninsula_rectangle_0_120_137_179": false,
+        "S1_M1_observed": 203.5,
+        "S1_M1_observed_minus_predicted": 8.417240564834117
+      },
+      {
+        "sign": 1,
+        "conditional_kitchen_axis_display_coordinate": [
+          3.3246858068247596,
+          176.91370358678918
+        ],
+        "S1_M4_check": 75.99999999999999,
+        "S1_M2_check": 169.99999999999997,
+        "predicted_S1_M1_using_older_context_point": 205.155153518133,
+        "inside_historical_peninsula_rectangle_0_120_137_179": true,
+        "S1_M1_observed": 203.5,
+        "S1_M1_observed_minus_predicted": -1.6551535181330053
+      }
+    ]
+  },
+  "branch_assessment": "Positive-sign dining-side branch is supported by photos and the third tie. Its S1\u2013M1 prediction is 205.155 inches versus 203.5 observed. The alternative predicts 195.083 inches. Use positive branch provisionally; no exact three-tie solution or measurement tolerance claimed. Both original two-tie solutions retained.",
+  "sensitivity": {
+    "note": "Illustrative change of S1\u2013M2 alone by 0.5 inch, holding the other ties exact. This is NOT a supplied or estimated measurement tolerance.",
+    "unsigned_offsets": {
+      "169.5": 20.034315739075563,
+      "170": 16.418858659102856,
+      "170.5": 11.652998184577163
+    }
+  },
+  "design_implication": "Photo-consistent branch puts the shaft reference inside the historical range-connected peninsula footprint. This flags a potential physical conflict beyond traffic inconvenience; it is conditional and must not be used to claim a new layout fits. That earlier footprint is already superseded for the fixed-wall baseline.",
+  "limits": [
+    "Post cap, shaft dimensions, stair nosing, landing and arrival space are not captured by one point.",
+    "Display orientation and M1 context retain prior registration uncertainty. Original coordinates are not replaced.",
+    "No old non-orthogonal wall or hypothetical French-door geometry is used for the stair calculation."
+  ],
+  "third_tie_source": "Jon replied 203.5 inches to the named S1\u2013M1 request; same point and horizontal lower-counter-height method interpreted from that request, not independently verified.",
+  "completed_check": {
+    "name": "S1_M1",
+    "endpoint": "M1, the family-room-entrance end of the same lower straight cleanup working edge that leads to M2.",
+    "method": "From the same S1 shaft mark, straight horizontal at lower-counter height. Report obstruction rather than slope or endpoint substitution.",
+    "purpose": "Additional bearing and branch check. M1 placement remains older conditional counter context, so retain any residual rather than fitting it away."
+  },
+  "next_data": "No immediate tape repeat requested. Post shaft/cap projections and bottom-step outline remain to be captured before clearance approval. Continue chef-prep program discussion."
+}

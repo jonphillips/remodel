@@ -1,0 +1,408 @@
+{
+  "checkpoint": "2026-09-14: Jon corrected porch topology and existing oven location; supersedes affected full-room study assumptions.",
+  "read_first": "START_HERE.md",
+  "agreed_direction": {
+    "cleanup": "Option C, 99-inch working allowance",
+    "island": {
+      "dimensions": [
+        36,
+        66
+      ],
+      "rect": [
+        78.5,
+        38,
+        36,
+        66
+      ],
+      "status": "Jon agreed to working footprint; not fabrication approval.",
+      "frontage_sequence": [
+        24,
+        24,
+        18
+      ],
+      "board": [
+        24,
+        18
+      ],
+      "prep_opening": [
+        13,
+        11
+      ]
+    }
+  },
+  "program": {
+    "chef": "Agreed 36 \u00d7 66-inch island working footprint; chef stands on range-facing edge. Placement remains subject to full-room fit.",
+    "sink": "Prep sink must remain on island; Jon accepts walking around to use it and prioritizes uninterrupted intake/cutting/offloading frontage.",
+    "board_inches": [
+      24,
+      18
+    ],
+    "mise": "Mixed-size bowls leave the island quickly for the undersized counter left of the range.",
+    "compost": "Portable bowl beyond the board among washed produce; no dedicated cabinet requested.",
+    "helper": "Separate useful board and landing, outside chef-to-heat movement.",
+    "guests": "Four remains requested; three is an explicitly invited alternative. No decision to reduce the requirement. Angled inward end seats and 24-inch guest/18-inch helper surface depths are tests.",
+    "cleanup": "Protect full daily cleanup capacity: dirty landing/scraping, sink, right-side dishwasher, clean drying/unloading and storage access. Existing bent run is the functional benchmark. Fixed wall cannot rely on outward expansion. Do not truncate to 65-inch sink/DW-only row to accommodate entertaining.",
+    "table": "Normal extension and table/window relationship stay fixed.",
+    "routes": "Table through range aisle and Butler's pantry to formal dining. Occasional traffic during cooking, mainly serving/entertaining. Secondary approach outside kitchen through hall is less friendly, not an outdoor route or accepted primary substitute.",
+    "porch": "Two distinct porches: the new giant screened porch beyond M5, French doors and big sliding doors is loved and is NOT the reclaimable area. The old small screened porch is accessible by a door at the bottom of the stairs and measures 9 ft 3 in by 13 ft 5 in (111 x 161 inches; axis assignment unconfirmed). Jon hopes to remove the wall with windows facing the kitchen table and as much of the wall/door at the bottom of the stairs as feasible. Reclaim as breakfast/beverage service area, not an eating area. Possible beverage fridge, dishwasher, ice machine, water dispenser and breakfast equipment. Redirect guest beverage trips and daily water/breakfast traffic, including Wendy, away from cooking zone and main refrigerator. Structural feasibility not established. Off-to-side location is not an assumed extension of guest perch.",
+    "buffet": "Stage buffet while guests remain at perch, without clearing perch. At most 20 uses yearly. Lower helper run is preferred candidate; integrated porch transition and temporary/drop-down surfaces remain alternatives.",
+    "M5": "Orthogonal to kitchen axes: French-door plane parallel to cleanup, slider plane parallel to peninsula. Earlier inferred wall angles/trim locations and hypothetical French-door sweeps must not control decisions.",
+    "priorities": "Daily cleanup and cooking outrank occasional buffet/hosting (about 15\u201320 times yearly). Perch and independent buffet staging remain separate needs; guest surface must adapt to a viable daily kitchen.",
+    "cleanup_workflow": "Facing main sink: dirty dishes land left; rinse then load dishwasher right, or hand-wash and place in rack on countertop above dishwasher. Extra dirty dishes may stack on island. Island overflow is explicitly accepted, not an automatic layout failure; ordinary landing still belongs left of sink."
+  },
+  "latest_measurements": {
+    "cleanup_wall_termination_to_M2": {
+      "distance": 27,
+      "direction": "Back toward M1, confirmed by Jon with junction photo.",
+      "perpendicular_wall_depth": 25,
+      "depth_endpoints": "Frontmost straight lower granite edge to kitchen-facing tile backsplash beneath microwave; horizontal and perpendicular to working edge."
+    },
+    "M3_interior_to_left_side_of_DW": {
+      "distance": 12,
+      "endpoint_wording": "M3 interior to left side of dishwasher",
+      "note": "Preserve user wording. Replaces assumed 6-inch corner offset for study of existing installation; exact coordinate mapping remains conditional."
+    },
+    "DW_door_length": 27,
+    "DW_effective_installed_projection": {
+      "approximate_distance": 24,
+      "explanation": "Dishwasher is inset slightly to be flush with cabinetry; user distinguishes actual extension from door length.",
+      "scope": "Existing installation; do not automatically treat as a future product specification."
+    },
+    "main_sink_opening": {
+      "size": [
+        30,
+        19.5
+      ],
+      "orientation": "left-to-right, front-to-back",
+      "scope": "Existing visible opening; not external sink dimensions or chosen product."
+    },
+    "drying_rack": {
+      "size": [
+        18,
+        15
+      ],
+      "includes_tray": "Interpreted from preceding request for rack including tray.",
+      "orientation": "Unspecified; drawing tests 18 along run and 15 deep."
+    },
+    "family_room_counter_projection": {
+      "distance": 2,
+      "reference": "Beyond family-room face of cleanup wall after wall terminates",
+      "scope": "Existing counter rear projection, not extra aisle width.",
+      "photo": "new-photos/cleanup-rear-wall-projection.jpg"
+    },
+    "island_prep_sink_opening": {
+      "size": [
+        13,
+        11
+      ],
+      "scope": "Existing opening in plan; no bowl depth supplied."
+    },
+    "cleanup_wall_thickness": {
+      "value": 5,
+      "units": "inches",
+      "source": "Jon: the depth of the cleanup wall is 5 inches. Interpreted as cross-wall thickness in the context of the two finished faces."
+    }
+  },
+  "wall": {
+    "status": "Conditional placement in original kitchen frame; based on confirmed endpoints, not a survey.",
+    "kitchen_facing_finished_surface_x": 182,
+    "termination_y": 79,
+    "calculations": [
+      "157 + 25 = 182",
+      "106 - 27 = 79"
+    ],
+    "limits": [
+      "Conditional original kitchen frame; not an as-built survey.",
+      "5-inch wall thickness interpreted between the two faces; structural role unknown.",
+      "Wall face terminates at Y79; continuation beyond it is a proposed supported counter.",
+      "Older raised edge X190 retained as separate source geometry; not silently reconciled with the latest conditional local chain X189."
+    ],
+    "rear_extension": {
+      "kitchen_finished_face_x": 182,
+      "wall_thickness": 5,
+      "family_room_face_x": 187,
+      "nominal_counter_rear_extent_x": 189,
+      "working_front_to_outer_edge": 32,
+      "reserve_beyond_25_inch_working_surface": 7,
+      "calculation": "25 + 5 + 2 = 32; 5 + 2 = 7",
+      "scope": "Nominal rear envelope beyond wall termination, not extra aisle width or a selected countertop/screen design."
+    },
+    "wall_thickness": 5,
+    "family_room_face_x": 187,
+    "nominal_existing_rear_edge_x": 189
+  },
+  "cleanup_geometry": {
+    "status": "Lead 99 \u00d7 25 concept using measured sink opening/rack; product fit and full occupied fit unresolved.",
+    "counter_rect": [
+      157,
+      41,
+      25,
+      99
+    ],
+    "working_edge_x": 157,
+    "end_y": 140,
+    "extends_beyond_wall_end": 61,
+    "extends_past_existing_M2": 34,
+    "dirty_rect": [
+      157,
+      41,
+      25,
+      36
+    ],
+    "sink_module": [
+      157,
+      77,
+      25,
+      36
+    ],
+    "sink_opening_test_rect": [
+      159.75,
+      80,
+      19.5,
+      30
+    ],
+    "DW_module": [
+      157,
+      113,
+      25,
+      24
+    ],
+    "rack_rect": [
+      162,
+      116,
+      15,
+      18
+    ],
+    "end_allowance": 3,
+    "bridge_allowance": 0,
+    "door_test_rect": [
+      133,
+      113,
+      24,
+      24
+    ],
+    "loader_test_rect": [
+      113,
+      113,
+      20,
+      24
+    ],
+    "notes": [
+      "36-inch sink cabinet is a study allowance, not a product requirement inferred from opening.",
+      "Sink opening leaves 5.5 total depth for front/back structure, rim and faucet; placement unresolved.",
+      "3-inch old sink/DW bridge removed as unsubstantiated allowance; 3-inch end allowance retained.",
+      "Door test uses current approximately 24-inch installation projection, not future product specification."
+    ],
+    "remaining_room_checks": [
+      "Sink/rim/faucet/cabinet installation",
+      "Island prep-sink and chef staging fit",
+      "Dish storage/unloading and open appliances",
+      "Stair shaft/cap/step arrival envelope",
+      "Independent helper and four-place guest perch with normal table/doors"
+    ],
+    "rear_detail": {
+      "status": "Keep 25-inch working depth in island comparison; reserve additional rear envelope for sink surround or cosmetic rack screen. No screen height/thickness or stepped working face selected.",
+      "possible_screen": "User suggested low cosmetic wall to hide rack from family room; exploratory, not selected.",
+      "nominal_reserve_depth": 7,
+      "nominal_overall_envelope_depth": 32
+    }
+  },
+  "island_geometry": {
+    "island": [
+      78.5,
+      38,
+      36,
+      66
+    ],
+    "frontage_sequence": [
+      24,
+      24,
+      18
+    ],
+    "sequence_labels": [
+      "Intake",
+      "Board",
+      "Offload"
+    ],
+    "board": [
+      80.5,
+      62,
+      18,
+      24
+    ],
+    "intake": [
+      80.5,
+      38,
+      14,
+      24
+    ],
+    "offload": [
+      80.5,
+      86,
+      32,
+      18
+    ],
+    "sink_zone": [
+      94.5,
+      38,
+      20,
+      24
+    ],
+    "sink_external": [
+      97,
+      40.5,
+      15,
+      15
+    ],
+    "sink_bowl_reference": [
+      97.875,
+      41.375,
+      13.25,
+      13.25
+    ],
+    "faucet_center": [
+      104.5,
+      59
+    ],
+    "sink_cabinet_envelope": [
+      90.5,
+      38,
+      24,
+      24
+    ],
+    "water_visit": [
+      114.5,
+      38,
+      20,
+      24
+    ],
+    "checks": {
+      "range_aisle": 48,
+      "cleanup_aisle": 42.5,
+      "board_rear_strip_after_2_inch_front_and_rear_setbacks": 14,
+      "island_end_y": 104,
+      "signed_DW_start_beyond_island_end": 9,
+      "island_to_left_range_landing_bare_nearest": 43.15669125408017,
+      "island_to_open_DW_bare_nearest": 20.573040611440984,
+      "island_to_DW_loader_bare_nearest": 9.0,
+      "water_visit_to_DW_loader_bare_nearest": 51.0
+    },
+    "existing_bowl_test_rect": [
+      99,
+      41.5,
+      11,
+      13
+    ]
+  },
+  "stair": {
+    "point": [
+      3.3246858068247596,
+      176.91370358678918
+    ],
+    "third_tie_residual": -1.6551535181330053,
+    "complete_envelope": "Bottom tread and shaft captured; cap centered by assumption; higher stair/rail and adjacent opening details remain incomplete.",
+    "existing_S1": [
+      3.3246858068247596,
+      176.91370358678918
+    ],
+    "existing_third_tie_residual": -1.6551535181330053,
+    "transcribed_dimensions": {
+      "bottom_tread": [
+        45.5,
+        10.5
+      ],
+      "shaft": [
+        4,
+        4
+      ],
+      "cap": [
+        6,
+        6
+      ],
+      "tread_left_to_shaft_left": 39,
+      "shaft_right_to_tread_right": 2.5,
+      "shaft_projection_beyond_tread_front_interpretation": 1
+    },
+    "dimension_chain_check": "39 + 4 + 2.5 = 45.5",
+    "cap_centering": "Assumed centered for diagram; no confirmation supplied.",
+    "orientation": "Sketch right interpreted as +X toward island/family room; sketch up as -Y toward range/appliance wall.",
+    "status": "S1 corner and shaft/tread relation confirmed. Room coordinate registration remains conditional with original residual; cap centering assumed.",
+    "confirmation": "Jon confirmed S1 is the upper-right shaft corner and the shaft projects 1 inch beyond the tread front.",
+    "registered_geometry": {
+      "shaft_rect": [
+        -0.6753141931752404,
+        176.91370358678918,
+        4,
+        4
+      ],
+      "tread_rect": [
+        -39.67531419317524,
+        169.41370358678918,
+        45.5,
+        10.5
+      ],
+      "cap_rect_if_centered": [
+        -1.6753141931752404,
+        175.91370358678918,
+        6,
+        6
+      ]
+    }
+  },
+  "next_task": [
+    "Discuss continuous range-connected peninsula versus separate surface without selecting by default. Distinguish reduced beverage traffic from remaining stair/table-to-pantry route.",
+    "Register reclaimable 111 x 161 porch and its two intended opening walls to S1 using one annotated overhead sketch; do not reuse M5 as its anchor.",
+    "Establish existing appliance-wall oven and refrigerator operating envelopes when testing a concrete layout; no current oven under cooking unit.",
+    "Keep Option C 99-inch cleanup, 36 x 66 island, four guest places, and normally extended table.",
+    "Future hood/downdraft choice remains open; do not infer feasibility from photos."
+  ],
+  "preserved_example": "prior-handoff/example-for-wendy/kitchen-example-for-wendy.html",
+  "drawings_status": "Snapshots generated before final 5-inch wall thickness and island agreement; geometry remains illustrative. START_HERE and this state supersede historical captions.",
+  "all_historical_checks": "current/cleanup-return-study.json retains initial A/B/C under historical fields. Use C_current and agreed_island, not initial C/common_island.",
+  "source_handoff": "/Users/jon/Documents/Codex/2026-09-14/files-pasted-by-the-user-kitchen/outputs/kitchen-next-session",
+  "room_fit_study": "room-fit-study.json",
+  "full_room_result": "Four tested guest/helper arrangements have unresolved occupied conditions. Guest/table/cleanup/stair geometry diagnostics remain conditional. Range-oven obstruction does NOT represent existing conditions and is withdrawn. Suggested guest expansion toward M5/porch was based on incorrect porch identification and is withdrawn.",
+  "porch_correction": {
+    "new_large_screen_porch": {
+      "location": "Beyond M5, French doors, and big sliding glass doors",
+      "status": "Loved, retained; distinct from reclaimable porch"
+    },
+    "old_small_screen_porch": {
+      "access": "Door at base of stairs",
+      "dimensions_inches": [
+        111,
+        161
+      ],
+      "dimension_orientation": "Not registered to kitchen axes",
+      "desired_openings": [
+        "Wall with windows facing kitchen table",
+        "As much of the stair-base wall/door as feasible"
+      ],
+      "program": "Breakfast and beverage service; not dining or seating",
+      "possible_equipment": [
+        "Breakfast supplies/appliances",
+        "Beverage refrigerator",
+        "Dishwasher",
+        "Ice machine",
+        "Water dispenser"
+      ],
+      "daily_benefit": "Reduce main-fridge and cooking-zone traffic, including Wendy\u2019s water trips; guests get beverages outside cooking zone",
+      "guest_perch_relation": "Off to side; do not assume guest seating extends into it",
+      "source": "Jon correction in current task",
+      "photo": {
+        "file": "reclaimable-porch-window-wall-and-stair-door.jpg",
+        "identification": "Table-facing double-window wall on photo left; adjacent return with open glazed door beside the bottom stair/newel on photo right. These are the two wall/opening areas Jon hopes to open for breakfast/beverage access.",
+        "limits": "Photo documents topology and endpoint identities only; no lengths, structural status, or exact opening extents inferred."
+      }
+    }
+  },
+  "appliance_correction": {
+    "existing_cooking_unit": "Downdraft cooking unit; no oven beneath it",
+    "existing_ovens": "On appliance wall",
+    "ventilation": "Future hood feasibility versus retaining downdraft unresolved",
+    "required_action": "Withdraw current-condition range-oven door/operator obstruction. Do not model an oven beneath cooking unit unless chosen in a future design. Preserve appliance wall for full layout and door-envelope testing."
+  },
+  "continuous_peninsula_status": "Not rejected by Jon and not resolved by the fit study. Earlier specific range-connected rectangle conflicted with provisional S1. Reassess alternative continuous geometry against confirmed stair footprint and actual routes; disconnected studies do not constitute a decision to abandon continuity.",
+  "superseded_by": "/Users/jon/Documents/Codex/2026-09-14/read-users-jon-documents-codex-2026/outputs/kitchen-next-turn/CURRENT_STATE.json",
+  "superseding_reason": "New 10:09 porch sketch records inside orientation, 52-inch tie, 120-inch partition reading, approximately 6-inch walls and cooking-deck adjacency."
+}

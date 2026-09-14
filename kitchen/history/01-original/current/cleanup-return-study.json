@@ -1,0 +1,372 @@
+{
+  "status": "Agreed working layout: Option C straight cleanup and 36 \u00d7 66 island. Cabinet installation and full room fit remain provisional.",
+  "units": "inches",
+  "original_frame": {
+    "M1": [
+      157,
+      41
+    ],
+    "M2": [
+      157,
+      106
+    ],
+    "M3": [
+      127,
+      137
+    ],
+    "M4": [
+      68,
+      137
+    ]
+  },
+  "conditional_stair_reference": {
+    "point": [
+      3.3246858068247596,
+      176.91370358678918
+    ],
+    "third_tie_residual": -1.6551535181330053,
+    "complete_envelope": false
+  },
+  "common_island": [
+    78.5,
+    38,
+    36,
+    60
+  ],
+  "common_test_assumptions": {
+    "counter_depth": 24,
+    "dirty_patch": [
+      36,
+      24
+    ],
+    "main_sink_module_frontage": 30,
+    "DW_frontage": 24,
+    "DW_open_projection": 27,
+    "loader_depth": 20,
+    "prep_sink_module": [
+      18,
+      18
+    ]
+  },
+  "A": {
+    "working_edge": [
+      [
+        157,
+        41
+      ],
+      [
+        157,
+        106
+      ],
+      [
+        127,
+        137
+      ],
+      [
+        68,
+        137
+      ]
+    ],
+    "DW_front": [
+      [
+        97,
+        137
+      ],
+      [
+        121,
+        137
+      ]
+    ],
+    "return_length": 59
+  },
+  "B": {
+    "working_edge": [
+      [
+        157,
+        41
+      ],
+      [
+        157,
+        106
+      ],
+      [
+        127,
+        137
+      ],
+      [
+        95,
+        137
+      ]
+    ],
+    "DW_front": [
+      [
+        97,
+        137
+      ],
+      [
+        121,
+        137
+      ]
+    ],
+    "return_length": 32,
+    "removed_end_length": 27,
+    "DW_corner_allowance": 6,
+    "DW_end_allowance": 2
+  },
+  "C": {
+    "counter_rect": [
+      157,
+      41,
+      24,
+      96
+    ],
+    "dirty_rect": [
+      157,
+      41,
+      24,
+      36
+    ],
+    "sink_module": [
+      157,
+      77,
+      24,
+      30
+    ],
+    "DW_module": [
+      157,
+      110,
+      24,
+      24
+    ],
+    "door_rect": [
+      130,
+      110,
+      27,
+      24
+    ],
+    "loader_rect": [
+      110,
+      110,
+      20,
+      24
+    ],
+    "wall_fit": "unresolved"
+  },
+  "checks": {
+    "bent_chain": 167.139309220246,
+    "short_chain": 140.139309220246,
+    "bent_closed_island_end_gap": 39,
+    "bent_open_door_to_island_gap": 12,
+    "return_length_threshold_for_no_island_x_overlap": 12.5,
+    "straight_side_gap": 42.5,
+    "straight_DW_y_start_beyond_island_end": 12,
+    "straight_total": 96
+  },
+  "guests_helper_buffet": "Four guests requested; no new perch placement passed. Independent helper still unresolved. Buffet follows daily baseline.",
+  "drawing": "/Users/jon/.codex/visualizations/2026/09/14/01a09fb9-ffe9-7420-a37e-47b63adcab49/cleanup-return-comparison.html",
+  "latest_user_measurements": {
+    "cleanup_wall_termination_to_M2": {
+      "distance": 27,
+      "direction": "Back toward M1, confirmed by Jon with junction photo.",
+      "perpendicular_wall_depth": 25,
+      "depth_endpoints": "Frontmost straight lower granite edge to kitchen-facing tile backsplash beneath microwave; horizontal and perpendicular to working edge."
+    },
+    "M3_interior_to_left_side_of_DW": {
+      "distance": 12,
+      "endpoint_wording": "M3 interior to left side of dishwasher",
+      "note": "Preserve user wording. Replaces assumed 6-inch corner offset for study of existing installation; exact coordinate mapping remains conditional."
+    },
+    "DW_door_length": 27,
+    "DW_effective_installed_projection": {
+      "approximate_distance": 24,
+      "explanation": "Dishwasher is inset slightly to be flush with cabinetry; user distinguishes actual extension from door length.",
+      "scope": "Existing installation; do not automatically treat as a future product specification."
+    },
+    "main_sink_opening": {
+      "size": [
+        30,
+        19.5
+      ],
+      "orientation": "left-to-right, front-to-back",
+      "scope": "Existing visible opening; not external sink dimensions or chosen product."
+    },
+    "drying_rack": {
+      "size": [
+        18,
+        15
+      ],
+      "includes_tray": "Interpreted from preceding request for rack including tray.",
+      "orientation": "Unspecified; drawing tests 18 along run and 15 deep."
+    },
+    "family_room_counter_projection": {
+      "distance": 2,
+      "reference": "Beyond family-room face of cleanup wall after wall terminates",
+      "scope": "Existing counter rear projection, not extra aisle width.",
+      "photo": "reference-photos/cleanup-rear-wall-projection.jpg"
+    },
+    "island_prep_sink_opening": {
+      "size": [
+        13,
+        11
+      ],
+      "scope": "Existing opening in plan; no bowl depth supplied."
+    },
+    "cleanup_wall_thickness": {
+      "value": 5,
+      "units": "inches",
+      "source": "Jon: the depth of the cleanup wall is 5 inches. Interpreted as cross-wall thickness in the context of the two finished faces."
+    }
+  },
+  "comparison_geometry_status": "A/B/C coordinates and original checks below preserve first-comparison assumptions. Latest user measurements supersede those assumptions for subsequent designs; previous drawing is not updated.",
+  "updated_implications": {
+    "A_bare_gap_after_effective_DW_projection": {
+      "approximate": 15,
+      "calculation": "39 - approximately 24; conditional on same counter reference and overlapping footprints; excludes operator"
+    },
+    "B_return_if_keep_observed_offset_and_assumed_24_DW_and_2_end": {
+      "length": 38,
+      "calculation": "12 + 24 + 2; former 32-inch test is insufficient for this allowance"
+    },
+    "C": "Superseded by C_current: 99 \u00d7 25 test = 36 dirty + 36 sink cabinet + 24 DW + 3 terminal allowance; measured 30 \u00d7 19.5 opening and 18 \u00d7 15 rack represented."
+  },
+  "next_process": [
+    "Register bottom-step and newel shaft/cap outline to existing S1 for entrance and range-side landing tests.",
+    "Fit four-person separate guest/helper surface around agreed 36 \u00d7 66 island and normal extended table; do not silently revert to 36 \u00d7 60.",
+    "Resolve actual left-range mise/hot-pan arrangement and other appliance/door envelopes.",
+    "Finalize sink/cabinet/faucet/storage details alongside the room fit; rear screen remains exploratory."
+  ],
+  "wall_registration": {
+    "status": "Conditional placement in original kitchen frame; based on confirmed endpoints, not a survey.",
+    "kitchen_facing_finished_surface_x": 182,
+    "termination_y": 79,
+    "calculations": [
+      "157 + 25 = 182",
+      "106 - 27 = 79"
+    ],
+    "limits": [
+      "Conditional original kitchen frame; not an as-built survey.",
+      "5-inch wall thickness interpreted between the two faces; structural role unknown.",
+      "Wall face terminates at Y79; continuation beyond it is a proposed supported counter.",
+      "Older raised edge X190 retained as separate source geometry; not silently reconciled with the latest conditional local chain X189."
+    ],
+    "rear_extension": {
+      "kitchen_finished_face_x": 182,
+      "wall_thickness": 5,
+      "family_room_face_x": 187,
+      "nominal_counter_rear_extent_x": 189,
+      "working_front_to_outer_edge": 32,
+      "reserve_beyond_25_inch_working_surface": 7,
+      "calculation": "25 + 5 + 2 = 32; 5 + 2 = 7",
+      "scope": "Nominal rear envelope beyond wall termination, not extra aisle width or a selected countertop/screen design."
+    },
+    "wall_thickness": 5,
+    "family_room_face_x": 187,
+    "nominal_existing_rear_edge_x": 189
+  },
+  "C_current": {
+    "status": "Lead 99 \u00d7 25 concept using measured sink opening/rack; product fit and full occupied fit unresolved.",
+    "counter_rect": [
+      157,
+      41,
+      25,
+      99
+    ],
+    "working_edge_x": 157,
+    "end_y": 140,
+    "extends_beyond_wall_end": 61,
+    "extends_past_existing_M2": 34,
+    "dirty_rect": [
+      157,
+      41,
+      25,
+      36
+    ],
+    "sink_module": [
+      157,
+      77,
+      25,
+      36
+    ],
+    "sink_opening_test_rect": [
+      159.75,
+      80,
+      19.5,
+      30
+    ],
+    "DW_module": [
+      157,
+      113,
+      25,
+      24
+    ],
+    "rack_rect": [
+      162,
+      116,
+      15,
+      18
+    ],
+    "end_allowance": 3,
+    "bridge_allowance": 0,
+    "door_test_rect": [
+      133,
+      113,
+      24,
+      24
+    ],
+    "loader_test_rect": [
+      113,
+      113,
+      20,
+      24
+    ],
+    "notes": [
+      "36-inch sink cabinet is a study allowance, not a product requirement inferred from opening.",
+      "Sink opening leaves 5.5 total depth for front/back structure, rim and faucet; placement unresolved.",
+      "3-inch old sink/DW bridge removed as unsubstantiated allowance; 3-inch end allowance retained.",
+      "Door test uses current approximately 24-inch installation projection, not future product specification."
+    ],
+    "remaining_room_checks": [
+      "Sink/rim/faucet/cabinet installation",
+      "Island prep-sink and chef staging fit",
+      "Dish storage/unloading and open appliances",
+      "Stair shaft/cap/step arrival envelope",
+      "Independent helper and four-place guest perch with normal table/doors"
+    ],
+    "rear_detail": {
+      "status": "Keep 25-inch working depth in island comparison; reserve additional rear envelope for sink surround or cosmetic rack screen. No screen height/thickness or stepped working face selected.",
+      "possible_screen": "User suggested low cosmetic wall to hide rack from family room; exploratory, not selected.",
+      "nominal_reserve_depth": 7,
+      "nominal_overall_envelope_depth": 32
+    }
+  },
+  "current_drawing": "/Users/jon/.codex/visualizations/2026/09/14/01a09fb9-ffe9-7420-a37e-47b63adcab49/option-c-measured-cleanup.html",
+  "current_report": "option-c-measured-cleanup.md",
+  "current_island_study": "island-entry-study.json",
+  "current_island_report": "island-entry-comparison.md",
+  "agreed_island": {
+    "dimensions": [
+      36,
+      66
+    ],
+    "rect": [
+      78.5,
+      38,
+      36,
+      66
+    ],
+    "status": "Jon agreed to working footprint; not fabrication approval.",
+    "frontage_sequence": [
+      24,
+      24,
+      18
+    ],
+    "board": [
+      24,
+      18
+    ],
+    "prep_opening": [
+      13,
+      11
+    ]
+  }
+}

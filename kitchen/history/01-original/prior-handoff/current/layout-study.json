@@ -1,0 +1,307 @@
+{
+  "status": "Conditional design footprints; no candidate approved. Not a survey, cabinet order, or construction model.",
+  "units": "inches",
+  "coordinate_note": "Inverse rigid display conversion of combined-geometry.json for axis-aligned concept drawing. Derived wall/table points are NOT replacement field coordinates.",
+  "sources": [
+    "/Users/jon/Documents/Codex/2026-09-13/continue-this-kitchen-redesign-read-start/outputs/combined-geometry.json",
+    "/Users/jon/Documents/Codex/2026-09-13/continue-this-kitchen-redesign-read-start/outputs/CURRENT_STATE.json",
+    "/Users/jon/Desktop/combined-geometry-review.md"
+  ],
+  "points": {
+    "C3": [
+      145.47519318656634,
+      178.73241474806167
+    ],
+    "M5": [
+      181.530181300697,
+      218.25820167368656
+    ],
+    "M2": [
+      157.71358827758075,
+      105.75144677971913
+    ],
+    "M4": [
+      68.0,
+      137.00000000000006
+    ],
+    "TC": [
+      119.13927707873167,
+      284.5030133223399
+    ],
+    "TF": [
+      52.859181367342416,
+      278.3229482073287
+    ]
+  },
+  "wall": {
+    "C3": [
+      145.47519318656634,
+      178.73241474806167
+    ],
+    "M5": [
+      181.530181300697,
+      218.25820167368656
+    ],
+    "M6_estimate": [
+      204.9834899953881,
+      204.8812696161658
+    ],
+    "M7_70": [
+      164.0219209398855,
+      246.2307027977912
+    ],
+    "M7_70_5_illustration": [
+      164.60511746755662,
+      246.58737769848693
+    ],
+    "M7_71": [
+      165.20357950193392,
+      246.9364525566227
+    ]
+  },
+  "lower": [
+    [
+      157.00000000000006,
+      41.000000000000036
+    ],
+    [
+      157.00000000000006,
+      106.00000000000006
+    ],
+    [
+      127.00000000000003,
+      137.00000000000006
+    ],
+    [
+      68.0,
+      137.00000000000006
+    ]
+  ],
+  "upper": [
+    [
+      190.00000000000006,
+      41.00000000000004
+    ],
+    [
+      190.00000000000006,
+      133.00000000000009
+    ],
+    [
+      145.0,
+      178.50000000000009
+    ],
+    [
+      67.99999999999999,
+      177.00000000000009
+    ]
+  ],
+  "source_residuals": {
+    "C3_M2": 74.0,
+    "M5_M2": 115.00000000000001,
+    "C3_M4": 88.0,
+    "M2_M4": 95.00000000000001,
+    "M5_M4_predicted": 139.6137436121911,
+    "M5_M4_latest": 140,
+    "M5_M4_residual": 0.38625638780891336,
+    "old_M2_registration_residual": 0.7556367733326818,
+    "old_C3_registration_residual": 0.5289850467410104
+  },
+  "common_test": {
+    "cleanup": [
+      170,
+      41,
+      25,
+      110
+    ],
+    "chef_support": [
+      0,
+      137,
+      120,
+      24
+    ],
+    "raised_guest_surface": [
+      0,
+      161,
+      120,
+      18
+    ],
+    "range_connection": [
+      0,
+      135.5,
+      27.5,
+      1.5
+    ],
+    "guest_centers_x": [
+      15,
+      45,
+      75,
+      105
+    ],
+    "guest_width": 24,
+    "guest_occupied_projection": 26,
+    "guest_pullout_projection": 36,
+    "chef_helper_envelope": [
+      24,
+      20
+    ],
+    "route_width_test": 42,
+    "dishwasher": [
+      170,
+      78,
+      25,
+      24
+    ],
+    "dishwasher_open_projection": 27
+  },
+  "options": {
+    "A": {
+      "name": "Continuous peninsula prep",
+      "island": null,
+      "chef_center": [
+        60,
+        127
+      ],
+      "helper_center": [
+        160,
+        59
+      ],
+      "water": [
+        14,
+        139,
+        18,
+        18
+      ],
+      "board": [
+        38,
+        139,
+        36,
+        20
+      ],
+      "mise": [
+        78,
+        139,
+        36,
+        20
+      ],
+      "helper_board": [
+        173,
+        44,
+        19,
+        30
+      ]
+    },
+    "B": {
+      "name": "Shallower island",
+      "island": [
+        64,
+        38,
+        33,
+        57
+      ],
+      "chef_center": [
+        107,
+        77
+      ],
+      "helper_center": [
+        96,
+        127
+      ],
+      "water": [
+        75,
+        42,
+        18,
+        18
+      ],
+      "board": [
+        79,
+        62,
+        18,
+        30
+      ],
+      "mise": [
+        69,
+        65,
+        10,
+        30
+      ],
+      "helper_board": [
+        78,
+        139,
+        36,
+        20
+      ]
+    },
+    "C": {
+      "name": "Range-facing worktable",
+      "island": [
+        78.5,
+        38,
+        33,
+        57
+      ],
+      "chef_center": [
+        68.5,
+        75
+      ],
+      "helper_center": [
+        96,
+        127
+      ],
+      "water": [
+        5,
+        42,
+        18,
+        18
+      ],
+      "board": [
+        80.5,
+        48,
+        20,
+        36
+      ],
+      "mise": [
+        80.5,
+        84,
+        27,
+        11
+      ],
+      "helper_board": [
+        78,
+        139,
+        36,
+        20
+      ]
+    }
+  },
+  "envelope_assumptions": {
+    "guests": "30-inch pitch, 24-inch envelope width, 26-inch occupied or 36-inch pullout projection; design allowances, not measured guest chairs. 18-inch raised top requires actual knee-clearance/support design.",
+    "dining": "TC chair uses confirmed 23.5-inch width and 19/36 projection with assumed axial pose. TF and two side chairs reuse those sizes only as stress proxies; their actual dimensions and poses are unknown.",
+    "appliances": "Range oven 27-inch open projection over 48-inch width is deliberately conservative schematic; dishwasher 24-inch width/27-inch projection is a test module, not selected product.",
+    "french_doors": "Optional hypothetical pair of 32-inch leaves, near hinge 3 inches beyond M7, flush continuation of wall, inward 90-degree sweeps. Opening width, hinge, setback, handing and plane are NOT measured. Does not reproduce 37/26.5 field observations; cannot validate actual door use.",
+    "appliance_wall": "Refrigerator/ovens are topology-only and intentionally not assigned invented coordinates or swings. Their full access test remains unresolved."
+  },
+  "checks": {
+    "table_length": 66.56759190729899,
+    "guest_frontage_existing_context": 79,
+    "four_seats_at_24": 96,
+    "four_seats_test_pitch_30": 120,
+    "cleanup_face_170_relative_to_measured_lower_157": 13,
+    "cleanup_outer_195_relative_to_old_upper_190": 5,
+    "cleanup_mouth_by_working_face": {
+      "157": 37,
+      "162": 42,
+      "170": 50
+    },
+    "mouth_if_27_inch_dishwasher_opens_across_it": 23,
+    "B_depth_reduction": 18,
+    "B_family_aisle_to_old_lower": 60,
+    "B_family_aisle_to_test_row": 73,
+    "C_range_aisle": 48.0,
+    "C_family_aisle_to_test_row": 58.5,
+    "C_range_aisle_with_27_inch_oven_projection": 21.0,
+    "island_dining_end_to_peninsula_front": 42,
+    "same_gap_with_20_inch_helper_work_envelope": 22,
+    "guest_back_to_schematic_side_chair_back_y_projection": 33.5986918003384,
+    "guest_pullout_to_schematic_side_chair_back_y_projection": 23.5986918003384
+  }
+}

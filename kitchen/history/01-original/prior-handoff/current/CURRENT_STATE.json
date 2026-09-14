@@ -1,0 +1,66 @@
+{
+  "checkpoint": "2026-09-14 session handoff complete; cleanup workflow confirmed; no overall layout selected",
+  "read_first": "cleanup-baseline-audit.md",
+  "detailed_user_corrections": "discussion-reset.md",
+  "proposed_geometry": "spatial-comparison-v2.json",
+  "stair_measurements": "stair-registration.json",
+  "validation": "spatial-v2-validation.md",
+  "confirmed_program": {
+    "chef": "Range-facing prep on a shallower island is the lead hypothesis; not a finalized footprint.",
+    "sink": "Prep sink must remain on island; Jon accepts walking around to use it and prioritizes uninterrupted intake/cutting/offloading frontage.",
+    "board_inches": [
+      24,
+      18
+    ],
+    "mise": "Mixed-size bowls leave the island quickly for the undersized counter left of the range.",
+    "compost": "Portable bowl beyond the board among washed produce; no dedicated cabinet requested.",
+    "helper": "Separate useful board and landing, outside chef-to-heat movement.",
+    "guests": "Four remains requested; three is an explicitly invited alternative. No decision to reduce the requirement. Angled inward end seats and 24-inch guest/18-inch helper surface depths are tests.",
+    "cleanup": "Protect full daily cleanup capacity: dirty landing/scraping, sink, right-side dishwasher, clean drying/unloading and storage access. Existing bent run is the functional benchmark. Fixed wall cannot rely on outward expansion. Do not truncate to 65-inch sink/DW-only row to accommodate entertaining.",
+    "table": "Normal extension and table/window relationship stay fixed.",
+    "routes": "Table through range aisle and Butler's pantry to formal dining. Occasional traffic during cooking, mainly serving/entertaining. Secondary approach outside kitchen through hall is less friendly, not an outdoor route or accepted primary substitute.",
+    "porch": "Former screened porch to be integrated by opening its wall for some breakfast/beverage functions. This is distinct from fixed cleanup wall. Detailed porch design deferred.",
+    "buffet": "Stage buffet while guests remain at perch, without clearing perch. At most 20 uses yearly. Lower helper run is preferred candidate; integrated porch transition and temporary/drop-down surfaces remain alternatives.",
+    "M5": "Orthogonal to kitchen axes: French-door plane parallel to cleanup, slider plane parallel to peninsula. Earlier inferred wall angles/trim locations and hypothetical French-door sweeps must not control decisions.",
+    "priorities": "Daily cleanup and cooking outrank occasional buffet/hosting (about 15\u201320 times yearly). Perch and independent buffet staging remain separate needs; guest surface must adapt to a viable daily kitchen.",
+    "cleanup_workflow": "Facing main sink: dirty dishes land left; rinse then load dishwasher right, or hand-wash and place in rack on countertop above dishwasher. Extra dirty dishes may stack on island. Island overflow is explicitly accepted, not an automatic layout failure; ordinary landing still belongs left of sink."
+  },
+  "current_study": {
+    "lead_test": "No preferred overall layout currently. Prior compact-island/three-angled-seat recommendation withdrawn because its cleanup program is inadequate. Preserve as exploratory comparison for Wendy.",
+    "long_island_test": "30 \u00d7 78 island gives only 8 inches behind board after test setbacks and roughly 24.3-inch unoccupied gap to angled social counter.",
+    "four_guest_test": "At the same 30-inch seat-frontage allowance the end chair approaches the conditional M5 point within about 7.1 inches angled or 2.3 inches straight. Does not prove four impossible elsewhere.",
+    "angled_tradeoff": "Compared with straight ends, increases local mise/social separation from about 38.6 to 51.1 inches but brings social tips closer to island (about 42.3 inches for compact test). No continuous route passed.",
+    "unresolved": [
+      "Post cap and bottom-step/landing outline; one shaft point is not stair envelope",
+      "Actual usable left-range counter footprint and hot-pan landing allocation",
+      "Compact 18-square sink module/faucet/cabinet fit",
+      "Fixed cleanup wall termination and adequate sink/DW landings; 65-inch straight run is not a complete cleanup solution",
+      "Occupied helper, appliance-open and buffet serving routes",
+      "Final four-seat alternative and actual door/appliance envelopes"
+    ],
+    "daily_baseline": "Retain and account for three-part bent cleanup system before fitting social surface; reconfiguration must replace actual daily functions. Original lower-edge segments 65, 43.139 and 59 inches are not all usable landing.",
+    "island_against_retained_cleanup": "Retained Y=137 lower edge leaves conditional 39-inch bare gap to compact island, 21 to long island at tested positions. Prior helper envelope crosses retained work edge; repositioning required. No occupied route approved.",
+    "landing_arithmetic_correction": "11 inches is base-run length outside 30-inch sink and 24-inch dishwasher modules, not total landing. Dishwasher countertop counts. V2 reserves 2 inches before sink module and 33 after; actual usable surface remains unproven."
+  },
+  "do_not_repeat_questions": [
+    "Porch and formal dining topology",
+    "Traffic frequency",
+    "Buffet setup sequence/frequency",
+    "Prep sink must stay on island",
+    "Board dimensions",
+    "Mise destination",
+    "S1 ties already supplied",
+    "Cleanup dirty-left/sink/DW-right-and-rack sequence",
+    "Island accepted for extra dirty dishes"
+  ],
+  "drawing": "../example-for-wendy/kitchen-prep-and-stair-study.html",
+  "historical_only": "The first layout-tradeoff-review and its common X=170 cleanup row are superseded as a baseline. Preserve them as history; never treat their 50-inch mouth or speculative doors as current findings.",
+  "preserved_example": {
+    "standalone": "../example-for-wendy/kitchen-example-for-wendy.html",
+    "bundle": "../example-for-wendy/",
+    "status": "Original unchanged; historical exploratory example, not selected or recommended overall layout."
+  },
+  "cleanup_audit": "cleanup-baseline-audit.json",
+  "next_design_challenge": "Fit the full left-dirty / sink / right-DW-and-rack arrangement inside fixed cleanup boundary, then resolve dining-side return termination and kitchen entry relative to compact prep island, stair arrival and separate guest perch. Do not preserve every existing bend as mandatory or delete daily function to fit seating. Measure actual modules/landings only when required for dimensional fit.",
+  "handoff_start": "../START_HERE.md"
+}

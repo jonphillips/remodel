@@ -1,0 +1,38 @@
+{
+  "kitchen-prep-and-stair-study.html": {
+    "original": "/Users/jon/.codex/visualizations/2026/09/13/01a09c16-e69c-74f2-9874-107b7e6218eb/kitchen-prep-and-stair-study.html",
+    "sha256": "f4d3b48badd5af89e3295a80932751af080727be22fa37c8625b5a9a25bb52bf"
+  },
+  "spatial-comparison-v2.md": {
+    "original": "/Users/jon/Documents/Codex/2026-09-13/re/outputs/spatial-comparison-v2.md",
+    "sha256": "4d99bde8dfc49fef05ec42d8ca56648589aa4318e917ea3312ae3c733bca7dff"
+  },
+  "spatial-comparison-v2.json": {
+    "original": "/Users/jon/Documents/Codex/2026-09-13/re/outputs/spatial-comparison-v2.json",
+    "sha256": "b0e43d3367f1d682157b5fc5ef0b9ccc86ad88bd89d15b8ce55833159ece9df6"
+  },
+  "spatial-v2-validation.md": {
+    "original": "/Users/jon/Documents/Codex/2026-09-13/re/outputs/spatial-v2-validation.md",
+    "sha256": "7dfaa4a94509b6e39e4920e7ec0662a675e4f8a1eed14d43fa80ddaa3d6a57c0"
+  },
+  "CURRENT_STATE.json": {
+    "original": "/Users/jon/Documents/Codex/2026-09-13/re/outputs/CURRENT_STATE.json",
+    "sha256": "e60add8383fc4661a7de14789ab10cfb758497e07c7c09fb236124a9bc9d9f62"
+  },
+  "stair-registration.json": {
+    "original": "/Users/jon/Documents/Codex/2026-09-13/re/outputs/stair-registration.json",
+    "sha256": "dfbf0591b97fd4f9777062559286699a0eaaa90be23e28fecf9638dd6b54646d"
+  },
+  "stair-reference-capture.md": {
+    "original": "/Users/jon/Documents/Codex/2026-09-13/re/outputs/stair-reference-capture.md",
+    "sha256": "6303dd8780d80492cde014f245b8a2e56ff451c0596c17d581b45b8414f8ef05"
+  },
+  "discussion-reset.md": {
+    "original": "/Users/jon/Documents/Codex/2026-09-13/re/outputs/discussion-reset.md",
+    "sha256": "4a46382b3f39087359657af7ce8b948a2720cac30045d7f89a35866850a71605"
+  },
+  "next-design-comparison.md": {
+    "original": "/Users/jon/Documents/Codex/2026-09-13/re/outputs/next-design-comparison.md",
+    "sha256": "623402348bfd3140477ffa5bdcd66e52809c8e998214d4a8b4da16ea6e74aa8c"
+  }
+}

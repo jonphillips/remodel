@@ -1,0 +1,70 @@
+{
+  "status": "Daily cleanup audit; no revised footprint, selected layout or clearance approval",
+  "source": "/Users/jon/Documents/Codex/2026-09-13/continue-this-kitchen-redesign-read-start/work/handoff/reference/full_measurement_audit.json",
+  "source_frame": "Original reported lower-edge coordinates only; do not mix with rigid-registered M2 for chain lengths",
+  "points": {
+    "M1": [
+      157,
+      41
+    ],
+    "M2": [
+      157,
+      106
+    ],
+    "M3": [
+      127,
+      137
+    ],
+    "M4": [
+      68,
+      137
+    ]
+  },
+  "segments": [
+    {
+      "endpoints": [
+        "M1",
+        "M2"
+      ],
+      "length_inches": 65.0
+    },
+    {
+      "endpoints": [
+        "M2",
+        "M3"
+      ],
+      "length_inches": 43.139309220245984
+    },
+    {
+      "endpoints": [
+        "M3",
+        "M4"
+      ],
+      "length_inches": 59.0
+    }
+  ],
+  "total_bent_edge_inches": 167.139309220246,
+  "not_a_capacity_measure": "Edge length includes sink frontage and bends; not uninterrupted landing frontage, countertop area or a required new straight-run length.",
+  "historical_76_inch_reading": "Preserved with its original verbal endpoints. Not assumed equivalent to named M1\u2013M2; no averaging or fresh remeasurement requested.",
+  "v2_landing_accounting_correction": {
+    "straight_run_length": 65,
+    "sink_module_length": 30,
+    "dishwasher_module_length": 24,
+    "other_base_run_length": 11,
+    "counter_length_outside_sink_module": 35,
+    "before_sink_module": 2,
+    "after_sink_module": 33,
+    "qualification": "Module arithmetic, not measured usable surface. The dishwasher has countertop above it. Sink module is not the actual sink cutout."
+  },
+  "retained_lower_edge_checks": {
+    "lower_working_edge_y": 137,
+    "compact_island_end_y": 98,
+    "compact_bare_gap": 39,
+    "long_island_end_y": 116,
+    "long_bare_gap": 21,
+    "qualification": "Conditional axis separation where footprints overlap. No person, appliance, end projection or full counter footprint clearance approval."
+  },
+  "next_user_input": "Answered: dirty left; sink; dishwasher right with dishrack above; extra dirty dishes may stack on island.",
+  "preserved_example": "preserved-example-v2-2026-09-14/kitchen-example-for-wendy.html",
+  "confirmed_cleanup_workflow": "Facing main sink: dirty dishes land left; rinse then load dishwasher right, or hand-wash and place in rack on countertop above dishwasher. Extra dirty dishes may stack on island. Island overflow is explicitly accepted, not an automatic layout failure; ordinary landing still belongs left of sink."
+}

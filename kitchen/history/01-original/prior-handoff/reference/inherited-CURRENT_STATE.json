@@ -1,0 +1,594 @@
+{
+  "checkpoint": "2026-09-13 combined approximate base assembled and numerically checked; complete layout comparison next",
+  "units": "inches",
+  "program": {
+    "prep": "Closer to range; facing range not required",
+    "helper": "About 20% of time; vegetable prep, board and landing space",
+    "guest_target": "At least four comfortable seats; no island chairs",
+    "table": "Normal one-extension configuration; 48-inch circle without extension",
+    "range": "Hold existing location for current study"
+  },
+  "raw_points": {
+    "M1": [
+      157,
+      41
+    ],
+    "M2": [
+      157,
+      106
+    ],
+    "M3": [
+      127,
+      137
+    ],
+    "M4": [
+      68,
+      137
+    ],
+    "M5": [
+      138.5,
+      216.5
+    ],
+    "C3": [
+      145,
+      178.5
+    ]
+  },
+  "point_definitions": {
+    "M1": "Family-room entrance end of kitchen-facing cleanup working edge; confirmed lower countertop edge",
+    "M2": "Kitchen-facing bend from straight run into diagonal sink section; confirmed lower countertop edge",
+    "M3": "Kitchen-facing bend from diagonal into dining-side straight run; confirmed lower countertop edge",
+    "M4": "Free end of dining-side kitchen-facing straight run; confirmed lower countertop edge",
+    "M5": "Passage wall corner previously called W1; new coordinate explicitly supplied by Jon",
+    "C3": "Outer raised-counter corner where diagonal meets dining-side straight outer edge; remeasured by Jon",
+    "M6": "M6: seam where painted wall meets outside edge of nearest white vertical casing on right side of sliding glass door, toward family room",
+    "M7": "M7: painted-wall/white-casing seam at nearest vertical trim on left side of French doors, toward dining"
+  },
+  "table_reference": {
+    "TC": {
+      "definition": "Center of the rounded table end nearest the French doors, directly in front of the left-end wooden armchair in the wide photo. Use the rim point on the extended table\u2019s long centerline, not an arbitrary position selected by a moved chair.",
+      "status": "Both table ends constrained in independent local frame by four reported horizontal ties; derived end-to-end span approximately 66.6 inches. No global coordinates assigned.",
+      "identification_photo": "photos/current/wide-table-C3-marker-chair-positions.jpg",
+      "correction": "Earlier assistant instruction tied TC to the black-cushioned armchair identified in the close-up. The wide photo places that chair at the opposite end. For this passage study TC is explicitly reassigned to the French-door-side rounded end before any TC measurement is taken."
+    },
+    "TF": {
+      "definition": "Center of opposite rounded table end from TC, in front of black-cushioned armchair in wide identification photo; table long centerline meeting rim.",
+      "status": "Both ties captured: C3\u2013TF=136 and M5\u2013TF=142 inches. Local orientation derived; approximately 66.6-inch end-to-end span is consistent with prior 66/67 readings without replacing them.",
+      "identification_photo": "photos/current/wide-table-C3-marker-chair-positions.jpg"
+    }
+  },
+  "direct_measurements": {
+    "C3_to_M5": {
+      "value": 53.5,
+      "units": "inches",
+      "source": "Jon supplied after the illustrated direct, level C3-to-M5 tape request",
+      "confidence": "User-reported direct field measurement; controls point-to-point distance over inconsistent coordinates",
+      "prior_approximate_value": 54,
+      "endpoint_status": "Counter endpoint C3 identified by Jon on annotated photo; wall endpoint shown in diagnostic photo."
+    },
+    "C3_to_M6": {
+      "value": 65,
+      "units": "inches",
+      "qualifier": "approximately",
+      "source": "Jon: tough to get exactly; closest estimate 65 inches",
+      "confidence": "User-reported approximate direct distance; no uncertainty interval supplied",
+      "endpoints": "Identified raised-counter bend C3 to sliding-door painted-wall/nearest-casing seam M6",
+      "scope": "Local triangle constraint only; not an exact global coordinate or a passage-width measurement"
+    },
+    "C3_to_M7": {
+      "min": 70,
+      "max": 71,
+      "units": "inches",
+      "qualifier": "estimated range",
+      "source": "Jon: Estimating 70\u201371 inches",
+      "confidence": "User-reported approximate direct distance; range preserved",
+      "endpoints": "Identified raised-counter bend C3 to nearest French-door painted-wall/casing seam M7",
+      "scope": "Local triangle constraint only, not an exact global coordinate or passage width"
+    },
+    "C3_to_TC": {
+      "value": 109,
+      "units": "inches",
+      "source": "Jon explicitly reported 109 inches after the request for horizontal C3\u2192TC measurement",
+      "confidence": "User-reported direct distance, interpreted as horizontal per the preceding instructions; method not independently verified",
+      "endpoints": "C3 identified raised-counter bend to TC at center of French-door-side rounded table rim, in front of the left-end armchair",
+      "configuration": "Normal table configuration with one extension installed",
+      "limits": [
+        "One tie alone does not fix TC location or table orientation",
+        "Does not measure passage width or distance to chair back"
+      ]
+    },
+    "M5_to_TC": {
+      "value": 91,
+      "units": "inches",
+      "source": "Jon explicitly supplied 91 inches in the resume request for pending M5 \u2192 TC.",
+      "confidence": "User-reported direct distance, interpreted as horizontal per pending request; method not independently verified",
+      "endpoints": "M5 projecting wall corner to TC center of French-door-side rounded table rim",
+      "configuration": "Normal table configuration with one extension installed, carried forward from checkpoint"
+    },
+    "C3_to_TF": {
+      "value": 136,
+      "units": "inches",
+      "source": "Jon replied 136 inches to horizontal C3-to-opposite-rounded-table-end request.",
+      "confidence": "User-reported direct distance, interpreted as horizontal per preceding request; method not independently verified",
+      "endpoints": "C3 actual raised-counter bend to TF center of opposite rounded table rim, in front of black-cushioned armchair",
+      "configuration": "Normal extension installed and table position unchanged per preceding request; not independently verified",
+      "limits": [
+        "One tie does not locate TF or establish table orientation",
+        "Not passage width or chair clearance"
+      ]
+    },
+    "M5_to_TF": {
+      "value": 142,
+      "units": "inches",
+      "source": "Jon replied 142 inches to pending horizontal M5-to-opposite-table-end-center request.",
+      "confidence": "User-reported direct distance, interpreted as horizontal per preceding request; method not independently verified",
+      "endpoints": "M5 projecting wall corner to TF center of opposite rounded table rim in front of black-cushioned armchair",
+      "configuration": "Normal extension installed and table position unchanged per preceding request; not independently verified"
+    },
+    "occupied_passage_chair_back_to_French_door_center": {
+      "value": 37,
+      "units": "inches",
+      "source": "Jon: 37 inches to the center of the French doors, in response to shortest horizontal occupied-chair-back clearance request.",
+      "confidence": "User-reported direct clearance; horizontal, comfortably occupied chair and closed doors interpreted from preceding request, not independently verified",
+      "endpoints": "French-door-end passage chair back to center of French doors; exact start point on chair back and door center surface not further specified",
+      "limits": [
+        "Endpoint is door center, not a surveyed full door/trim boundary",
+        "Does not establish door swing clearance or continuous route width",
+        "Do not subtract 17-inch additional chair pullout directly: tape bearing relative to chair travel is unknown"
+      ]
+    },
+    "pulled_out_passage_chair_back_to_closed_doors_or_trim": {
+      "value": 26.5,
+      "units": "inches",
+      "source": "Jon replied 26.5 inches to request for shortest horizontal gap from chair back to closed French doors or trim with chair pulled out to stand.",
+      "confidence": "User-reported direct clearance; horizontal and prior 36-inch tabletop-edge-to-back pullout position interpreted from preceding request, not independently verified",
+      "endpoints": "French-door-end passage chair back to nearest closed French-door or trim surface; exact target surface not explicitly identified in reply",
+      "limits": [
+        "Different endpoint wording from occupied 37-inch tie to door center; do not assume same tape bearing or endpoint",
+        "Not a complete circulation-route survey or door-swing test"
+      ]
+    },
+    "C3_to_M4": {
+      "value": 88,
+      "units": "inches",
+      "source": "Jon explicitly supplied both named ties in response to the lower-counter bridge batch.",
+      "confidence": "User-reported direct distance, interpreted as horizontal at raised-counter height with M4 vertically projected per preceding request; method not independently verified",
+      "endpoints": "C3 actual outer raised-counter bend to M4 kitchen-facing corner at free end of lower dining-side counter, vertically projected to raised-counter height",
+      "limits": [
+        "Not a passage width",
+        "No stated measurement tolerance; derived placement is not an as-built global coordinate"
+      ]
+    },
+    "M5_to_M4": {
+      "value": 141,
+      "units": "inches",
+      "source": "Jon explicitly supplied both named ties in response to the lower-counter bridge batch.",
+      "confidence": "User-reported direct distance, interpreted as horizontal at raised-counter height with M4 vertically projected per preceding request; method not independently verified",
+      "endpoints": "M5 projecting wall corner to M4 kitchen-facing corner at free end of lower dining-side counter, vertically projected to raised-counter height",
+      "limits": [
+        "Not a passage width",
+        "No stated measurement tolerance; derived placement is not an as-built global coordinate"
+      ],
+      "repeat_readings": [
+        {
+          "value": 140,
+          "units": "inches",
+          "source": "Jon: I get 140 inches, on targeted recheck of M5\u2013M4.",
+          "confidence": "User-reported repeat direct distance, interpreted as horizontal to same projected lower-counter corner per request; method not independently verified"
+        }
+      ],
+      "current_working_reading": 140,
+      "reading_status": "Original 141 retained; latest explicit recheck 140 used for current rough-study comparison. Observed repeat spread is not a statistical tolerance or verified error bound."
+    },
+    "C3_to_M2": {
+      "value": 74,
+      "units": "inches",
+      "source": "Jon explicitly supplied C3\u2013M2=74 and M5\u2013M2=115 in response to named second counter-point batch.",
+      "confidence": "User-reported direct distance, interpreted as horizontal with M2 vertically projected to raised-counter height per preceding request; method not independently verified",
+      "endpoints": "C3 identified outer raised-counter bend to M2 lower kitchen-facing bend from straight family-room-side run into diagonal sink section, vertically projected to raised-counter height",
+      "limits": [
+        "Not a passage width",
+        "No stated measurement tolerance; no global coordinates assigned"
+      ]
+    },
+    "M5_to_M2": {
+      "value": 115,
+      "units": "inches",
+      "source": "Jon explicitly supplied C3\u2013M2=74 and M5\u2013M2=115 in response to named second counter-point batch.",
+      "confidence": "User-reported direct distance, interpreted as horizontal with M2 vertically projected to raised-counter height per preceding request; method not independently verified",
+      "endpoints": "M5 projecting wall corner to M2 lower kitchen-facing bend from straight family-room-side run into diagonal sink section, vertically projected to raised-counter height",
+      "limits": [
+        "Not a passage width",
+        "No stated measurement tolerance; no global coordinates assigned"
+      ]
+    },
+    "M2_to_M4": {
+      "value": 95,
+      "units": "inches",
+      "source": "Jon replied 95 inches to direct straight horizontal M2\u2013M4 cross-check request.",
+      "confidence": "User-reported direct distance, interpreted as horizontal at lower-counter height per preceding request; method not independently verified",
+      "endpoints": "M2 lower kitchen-facing bend at start of diagonal sink section to M4 kitchen-facing free-end corner of lower dining-side counter",
+      "measurement_scope": "Straight chord, not sum of bent edge lengths, per request",
+      "limits": [
+        "Does not independently establish wall or table registration",
+        "No tolerance supplied"
+      ]
+    }
+  },
+  "wall_segments": {
+    "M5_M6": {
+      "length": 27,
+      "units": "inches",
+      "source": "Jon explicitly reported 27 inches after endpoint definition",
+      "confidence": "User-reported direct wall-face measurement",
+      "start": "M5: projecting wall corner between sliding-door-side and French-door-side wall faces",
+      "end": "M6: seam where painted wall meets outside edge of nearest white vertical casing on right side of sliding glass door, toward family room",
+      "measurement_scope": "Exposed painted wall face; does not include casing or opening width",
+      "orientation": "Unsurveyed relative to global X/Y; do not assume wall faces are perpendicular or parallel to kitchen axes",
+      "coordinate_status": "M6 has no captured global or local X/Y coordinate"
+    },
+    "M5_M7": {
+      "length": 33,
+      "units": "inches",
+      "source": "Jon explicitly reported 33 inches after endpoint definition",
+      "confidence": "User-reported direct wall-face measurement",
+      "start": "M5: projecting wall corner",
+      "end": "M7: painted-wall/white-casing seam at nearest vertical trim on left side of French doors, toward dining",
+      "measurement_scope": "Exposed painted wall face, excluding casing and opening width",
+      "orientation": "Unsurveyed relative to global X/Y; no plan angle inferred",
+      "coordinate_status": "M7 has no captured global or local X/Y coordinate"
+    }
+  },
+  "table_configuration": {
+    "unextended_shape": "circular",
+    "unextended_diameter": 48,
+    "units": "inches",
+    "normal_configuration": "One extension installed",
+    "source": "Jon explicitly stated that one extension is normal and the table without extension is 48 inches circular",
+    "limits": "Do not remove extension for design testing. Leaf width not newly measured; previous 48\u00d767 overall record and 66-inch captured span remain subject to their existing audit."
+  },
+  "chair": {
+    "chair": "Dining chair nearest the studied family-room/kitchen/dining passage, per the preceding measurement request",
+    "source": "Jon explicitly supplied chair dimensions in conversation",
+    "units": "inches",
+    "confidence": "User-reported direct dimensions; spatial placement and orientation remain uncaptured",
+    "width_including_arms": 23.5,
+    "tabletop_edge_to_chair_back_comfortably_occupied": 19,
+    "tabletop_edge_to_chair_back_pulled_out_to_stand": 36,
+    "derived_additional_pullout_projection": 17,
+    "limits": [
+      "Projections are from tabletop edge, not overall chair depth",
+      "Do not subtract either projection from the diagonal C3\u2013M5 distance",
+      "A rectangular envelope is a conservative schematic footprint, not a surveyed chair outline or a full person maneuvering envelope",
+      "Location of the relevant tabletop edge and chair centerline must be tied to C3/M5 before circulation can be evaluated"
+    ],
+    "identified_chair": "For current passage study: French-door-side left-end wooden armchair; supplied dimensions now confirmed applicable.",
+    "identification_photo": "photos/current/wide-table-C3-marker-chair-positions.jpg",
+    "photo_limits": "Identifies chair and rounded adjacent tabletop edge only. Photo is not a scaled plan and does not establish occupied/pulled-out state, exact chair alignment, location, table dimensions, or a new tabletop coordinate.",
+    "placement_correction": "Wide photo shows the black-cushioned chair previously identified by assistant at the opposite table end from the French-door/M5 passage. Preserve the supplied 23.5/19/36 dimensions and their source; do not assume they have been verified for the left-end passage-side chair. Confirm applicability before final clearance testing. Subsequent explicit user confirmation establishes applicability of all three dimensions to passage chair; actual chair alignment remains unsurveyed.",
+    "passage_chair_identification": "Wooden armchair at left rounded end of table, nearest French doors, without black cushion in the wide photo. Different from cane-backed guest-perch chairs in foreground.",
+    "passage_chair_dimensions_confirmed": true,
+    "applicability_confirmation": "Jon replied yes on 2026-09-13: 23.5-inch width, 19-inch occupied projection and 36-inch stand-up pullout projection also apply to French-door-end armchair.",
+    "historical_other_chair_photo": "photos/current/dining-chair-black-cushion-and-rounded-table-edge.jpg"
+  },
+  "local_offsets": {
+    "origin_point": "C3",
+    "target_point": "M5",
+    "reported_offset": [
+      37,
+      40.5
+    ],
+    "units": "inches",
+    "source": "Jon independently measured and explicitly described the offsets as approximate because parallel reference surfaces were difficult to establish.",
+    "confidence": "Approximate independently reported local component offsets; not locked survey coordinates.",
+    "axis_interpretation": "Uses existing X/Y direction conventions. Interpreting the supplied positive values as +X toward family room and +Y toward dining is a stated working interpretation, not an independently surveyed bearing.",
+    "derived_component_distance": 54.856631322019766,
+    "direct_distance": 53.5,
+    "difference_from_direct_distance": 1.3566313220197657,
+    "interpretation": "Component length about 54.9 inches is broadly consistent with the 53.5-inch direct tape for a rough relative-placement guide. The approximately 1.4-inch residual is not resolved or averaged away.",
+    "conditional_global_placement": {
+      "value": [
+        182,
+        219
+      ],
+      "calculation": "C3=(145,178.5) plus approximate positive offset=(37,40.5)",
+      "status": "Derived provisional illustration coordinate only. Does not replace confirmed raw M5=(138.5,216.5) or establish an as-built point."
+    }
+  },
+  "local_wall_reconstruction": {
+    "status": "Approximate local illustration, not a surveyed/global plan",
+    "construction": "Use C3=(0,0), M5=(0,53.5) in an independent local display frame. Intersect distance circles to locate M6 and M7. M6 and M7 are displayed on opposite sides of C3\u2013M5, reflecting the identified projecting wall corner and photo topology. No photo-derived dimensions or angles.",
+    "view_orientation": "Looking from C3 toward M5: sliding-door endpoint shown left, French-door endpoint right. Display axes are not original kitchen X/Y.",
+    "inputs": {
+      "C3_M5": 53.5,
+      "M5_M6": 27,
+      "M5_M7": 33,
+      "C3_M6_approximate": 65,
+      "C3_M7_estimated_range": [
+        70,
+        71
+      ]
+    },
+    "illustrative_local_coordinates": {
+      "C3": [
+        0,
+        0
+      ],
+      "M5": [
+        0,
+        53.5
+      ],
+      "M6_estimate": [
+        -26.342347822517944,
+        59.42289719626168
+      ],
+      "M7_70": [
+        31.786466617044844,
+        62.36682242990654
+      ],
+      "M7_70_5_illustration": [
+        31.59597330146912,
+        63.02336448598131
+      ],
+      "M7_71": [
+        31.38907997450002,
+        63.68457943925234
+      ]
+    },
+    "M7_midpoint_rule": "70.5 is a drawing example within the reported range, never a replacement measured value.",
+    "uncertainty": "M6 is based on an approximate 65 with no stated tolerance; M7 band only reflects the supplied 70\u201371 range, not total survey uncertainty. Global orientation and datum connection remain unresolved.",
+    "limits": [
+      "Do not assume right-angle wall corner",
+      "Do not use 53.5 as corridor width",
+      "Do not accept/reject the shifted cleanup row from this isolated local diagram",
+      "Do not overwrite original/global coordinates with display coordinates"
+    ]
+  },
+  "global_coordinate_status": {
+    "controlling_direct_distance_inches": 53.5,
+    "counter_endpoint_identified": true,
+    "raw_coordinate_readings": "Retained exactly as reported and reconfirmed; no value silently replaced.",
+    "coordinate_placement_status": "Unreconciled. The assumption that these wall-referenced readings locate the physical endpoints in one shared orthogonal horizontal frame has not been established.",
+    "prohibited_uses": [
+      "Using the calculated 38.6-inch distance as the physical separation",
+      "Using the existing plotted M5/C3 relationship to claim a usable circulation width or reject a layout",
+      "Moving a point to fit 53.5 inches without independent field positioning",
+      "Treating the single 53.5-inch diagonal as a verified continuous passage width"
+    ],
+    "cause": "Undetermined; endpoint ambiguity at C3 is now resolved. No specific coordinate error, datum offset or tape slope established.",
+    "local_relative_placement": "Supported approximately by independent local (37,40.5) component readings and direct 53.5-inch tape. Exact global placement remains unresolved."
+  },
+  "pending": "Use qualified combined base for full alternatives: active cleanup/flipped peninsula, shallower island, and range-facing pivot worktable. No tape repeat needed now. Preserve range, normal table/window relationship, four distinct guest seats, and helper independence. High reasoning recommended for full simultaneous layout tradeoff pass; setting has not been changed by assistant.",
+  "important": "START_HERE.md states current corrections. Historical audit statements may be superseded. No approximate or derived coordinate is an as-built field point.",
+  "table_local_reconstruction": {
+    "status": "Derived local geometry from reported distances; not an independently verified survey or global placement",
+    "frame": "Same independent display frame as local wall reconstruction: C3=(0,0), M5=(0,53.5); French-door side positive display X",
+    "TC_illustrative_local_coordinates": [
+      90.73842024279416,
+      60.39485981308411
+    ],
+    "mirror_solution": [
+      -90.73842024279416,
+      60.39485981308411
+    ],
+    "branch_selection": "Positive display X follows French-door/dining-side topology from identified photos; photos supply no dimensions or angles",
+    "inputs_inches": {
+      "C3_M5": 53.5,
+      "C3_TC": 109,
+      "M5_TC": 91
+    },
+    "limits": [
+      "No measurement tolerance supplied; decimal coordinates are calculation precision only",
+      "Not passage width or occupied-chair clearance",
+      "Original global datum discrepancy remains unresolved",
+      "Table long axis now constrained locally by end-center ties, with branch chosen from photo topology. Full table outline and occupied-chair envelope are not verified; no clearance conclusion yet."
+    ],
+    "TF_illustrative_local_coordinates": [
+      135.54123830320748,
+      11.161214953271028
+    ],
+    "TF_inputs_inches": {
+      "C3_TF": 136,
+      "M5_TF": 142,
+      "C3_M5": 53.5
+    },
+    "derived_end_to_end_span_inches": 66.56759190729898,
+    "table_span_audit": {
+      "derived_span": 66.56759190729898,
+      "prior_reported_length": 67,
+      "prior_coordinate_span": 66,
+      "status": "Derived span approximately 66.6 inches is consistent at reported field precision with earlier 66/67-inch records. It does not resolve endpoint equivalence or replace either raw value. No repeat length measurement presently needed."
+    }
+  },
+  "local_chair_test": {
+    "status": "Conditional schematic test only",
+    "assumptions": [
+      "Chair centered on TC and aligned with table long axis; actual placement not independently verified",
+      "23.5-inch rectangular width extends outward from TC by reported occupied/pulled-out projection",
+      "French-door-side wall geometry retains estimated C3\u2013M7=70\u201371"
+    ],
+    "results": {
+      "occupied": {
+        "schematic_corners": [
+          [
+            99.42876505665505,
+            68.30310911468058
+          ],
+          [
+            86.64095767535011,
+            82.35558157964712
+          ],
+          [
+            69.26026804762833,
+            66.53908297645418
+          ],
+          [
+            82.04807542893327,
+            52.48661051148763
+          ]
+        ],
+        "distance_to_measured_French_door_side_wall_segment_range": [
+          37.7053517650622,
+          37.97861340957768
+        ]
+      },
+      "pulled_out": {
+        "schematic_corners": [
+          [
+            99.42876505665505,
+            68.30310911468058
+          ],
+          [
+            75.19923528155095,
+            94.92884641672245
+          ],
+          [
+            57.818545653829176,
+            79.11234781352951
+          ],
+          [
+            82.04807542893327,
+            52.48661051148763
+          ]
+        ],
+        "distance_to_measured_French_door_side_wall_segment_range": [
+          30.60282165267093,
+          30.952895815269812
+        ]
+      }
+    },
+    "limits": [
+      "Distances are only to measured M5\u2013M7 wall segment, which ends at near French-door casing. Door assembly and boundary beyond M7 are uncaptured and may be closer.",
+      "Not continuous passage widths, person maneuvering envelopes or layout approval.",
+      "Ranges reflect only supplied M7 tie range, not total measurement uncertainty."
+    ],
+    "field_clearance_check": {
+      "occupied_clearance_inches": 37,
+      "endpoint": "Center of French doors",
+      "interpretation": "Use direct field clearances 37 inches occupied to door center and 26.5 inches pulled out to nearest closed doors/trim for their respective measured conditions. Conditional approximately 38/31-inch distances were to M5\u2013M7 wall segment only, a different boundary; they are not the actual door clearance. No wall geometry is adjusted to fit these readings.",
+      "pulled_out_clearance_status": "Direct user-reported measurement captured",
+      "pulled_out_clearance_inches": 26.5,
+      "pulled_out_endpoint": "Nearest closed French doors or trim per request; exact surface not explicitly confirmed"
+    }
+  },
+  "geometry_review": {
+    "date": "2026-09-13",
+    "finding": "Wall/table network and lower working-counter chain lack a verified common placement. C3 is shared with old readings, but a shared point alone does not independently fix bearing, and old global datum coherence is unresolved.",
+    "historical_cleanup_warning": "Original X=170 working edge used a presumed X=165 existing edge (190 minus 25). Later user-located lower working edge is X=157. The old 5-inch move and 44/50-inch results are not validated by current readings. Raised-to-lower projected separation is not countertop depth.",
+    "next_method": "Locate two distinct lower working-edge points independently using ties to local C3/M5 baseline, in small batches. Start M4 (accessible free end facing dining), then another separated working-edge point such as M2 as required. Do not fit the whole old chain from one new point or promote field coordinates to verified as-built geometry.",
+    "first_batch": [
+      "Horizontal C3\u2013M4",
+      "Horizontal M5\u2013M4"
+    ],
+    "measurement_plane": "Project M4 vertically to raised countertop height using an upright level/straightedge; use actual C3 bend at that height and M5 wall corner at same height. Never slope tape between countertop levels.",
+    "scope": "First two ties locate the free lower working-counter endpoint relative to table/wall. They do not establish the full working-counter bearing or validate all layouts.",
+    "door_swing": "Deferred until counter/table route is located; no inference of swing from photographs and no repeated chair-clearance measurement needed."
+  },
+  "lower_counter_local_reconstruction": {
+    "status": "Direct counter triangle and latest wall recheck support proceeding with approximate concept registration. Original wall-circle placements retained as superseded diagnostic calculations, not adopted current geometry.",
+    "frame": "Independent local C3=(0,0), M5=(0,53.5); not original kitchen axes",
+    "M4_circle_intersections": [
+      [
+        15.185315336219551,
+        -86.67990654205607
+      ],
+      [
+        -15.185315336219551,
+        -86.67990654205607
+      ]
+    ],
+    "branch_status": "Both mathematical branches retained pending separated counter-point ties and topology assessment. No old raw point overwritten.",
+    "triangle_check": {
+      "valid": true,
+      "C3_M4_plus_C3_M5_minus_M5_M4": 0.5,
+      "interpretation": "Nearly collinear triangle: lateral position is sensitive to small distance differences. No tolerance invented and no repeat requested at this stage."
+    },
+    "old_coordinate_comparison": {
+      "C3_M4_derived_from_raw_points": 87.47142390518174,
+      "new_direct_C3_M4": 88,
+      "interpretation": "Approximately 87.5-inch old coordinate-derived length is close to new 88-inch tie, but a matching length alone does not establish common bearing or global datum coherence."
+    },
+    "next_point": "M2: lower kitchen-facing bend where the long straight family-room-side working counter begins the diagonal main-sink section.",
+    "M2_circle_intersections": [
+      [
+        58.22542297823154,
+        -45.67056074766355
+      ],
+      [
+        -58.22542297823154,
+        -45.67056074766355
+      ]
+    ],
+    "counter_span_audit": {
+      "same_side_M2_M4": 59.44928349711238,
+      "opposite_side_M2_M4": 84.08866119969373,
+      "old_coordinate_derived_M2_M4": 94.2443632266673,
+      "confidence": "Calculated diagnostic only; none of these three spans is a direct M2\u2013M4 measurement",
+      "interpretation": "Neither mirror-branch combination reproduces the old approximately 94.2-inch counter-point span. Closer branch gives approximately 84.1 inches. Individual C3 ties are close to old radial lengths (M4 about 87.5 vs 88; M2 about 73.5 vs 74), but bearings are inconsistent. M4 near-collinearity amplifies sensitivity; cause unresolved. Do not average, stretch, replace readings or blame a particular reading.",
+      "next_check": "Direct horizontal M2\u2013M4 straight chord at lower countertop height; both endpoints are same level. This independently checks counter shape and branch selection without repeating prior ties.",
+      "new_direct_M2_M4": 95,
+      "interpretation_after_direct_check": "Direct 95-inch chord is close to old coordinate-derived 94.2-inch chord and supports approximate old counter shape. It disagrees with the approximately 84.1-inch closer branch of wall-based reconstruction. No reading is discarded; global placement remains unresolved."
+    },
+    "direct_counter_triangle": {
+      "frame": "Separate diagnostic frame C3=(0,0), M4=(88,0); reflection arbitrary. Not local wall frame or original kitchen frame.",
+      "M2": [
+        23.835227272727273,
+        70.0562769554409
+      ],
+      "inputs_inches": {
+        "C3_M4": 88,
+        "C3_M2": 74,
+        "M2_M4": 95
+      },
+      "status": "Derived from three reported horizontal distances; no exact global placement or tolerance implied."
+    },
+    "wall_registration_diagnostic": {
+      "retain_for_calculation_only": [
+        "C3\u2013M4=88",
+        "C3\u2013M2=74",
+        "M2\u2013M4=95",
+        "C3\u2013M5=53.5",
+        "M2\u2013M5=115"
+      ],
+      "conditional_M5_M4_solutions": [
+        139.61374361219106,
+        73.91952227874145
+      ],
+      "interpretation": "Closer conditional solution approximately 139.6 differs from reported 141 by approximately 1.4 inches. This is a diagnostic prediction, not a corrected measurement. Near-collinearity amplifies this difference into a much larger lateral/shape discrepancy. Alternative branch approximately 73.9 is retained mathematically. No specific reading is proven wrong.",
+      "next_action": "Stop targeted repeat loop. Use direct counter triangle with conditional wall registration for explicitly approximate concept review, retain all residuals and uncertainties, and do not claim exact clearances from it.",
+      "repeat_M5_M4": 140,
+      "repeat_minus_closer_conditional_prediction": 0.3862563878089418,
+      "interpretation_after_repeat": "Latest 140-inch recheck differs by approximately 0.4 inches from conditional 139.6 prediction using other reported ties and direct counter triangle. This supports rough-study consistency; does not prove which individual reading is exact. No further repeat requested. Near-collinear baseline was an ill-conditioned choice by assistant, not evidence of user fault."
+    },
+    "M4_circle_intersections_status": "Historical calculation from original 141-inch tie; do not use as current best placement after 140-inch repeat. Raw input and result retained for audit.",
+    "M2_circle_intersections_status": "Calculated from original reported 74/115/53.5 triangle; retained as derived coordinates, not exact surveyed placement."
+  },
+  "combined_geometry_review": {
+    "status": "Qualified approximate base assembled; no layout approved or construction precision claimed.",
+    "method": "Keep C3/M5 local baseline and M2 ties; locate M4 using direct C3\u2013M4=88 and M2\u2013M4=95 on topology-compatible branch. Use latest M5\u2013M4=140 as independent check, retaining 0.386-inch residual. No averaging or least-squares adjustment.",
+    "context_registration": "Rigid distance-preserving coordinate conversion of old kitchen frame anchored at M4 with M4\u2192M2 direction; handedness reversed for local display. No scaling. Residuals retained; original coordinates unchanged.",
+    "checks": {
+      "C3_M2": 74.0,
+      "M5_M2": 115.00000000000001,
+      "C3_M4": 88.0,
+      "M2_M4": 95.00000000000001,
+      "M5_M4_predicted": 139.6137436121911,
+      "M5_M4_latest": 140,
+      "M5_M4_residual": 0.38625638780891336,
+      "old_M2_registration_residual": 0.7556367733326818,
+      "old_C3_registration_residual": 0.5289850467410104
+    },
+    "limits": [
+      "Old island, range and unretied counter edges remain conditional context.",
+      "Historical 5-inch cleanup shift assumed X=165 working edge; latest measured lower edge is X=157. Proposed X=170 is 13 inches from that measured edge in old frame, not a verified 5-inch translation.",
+      "Raised/lower separation is not cabinet depth. Full guest-chair and door-swing envelopes remain uncaptured.",
+      "Closed-door chair gaps 37/26.5 are local existing observations, not guaranteed continuous routes."
+    ],
+    "review_file": "outputs/combined-geometry-review.md",
+    "visualization_validation": "JavaScript syntax checked; browser visual preview blocked by local-file URL policy. No alternate browser route attempted."
+  },
+  "collaboration_preferences": {
+    "continuation": "Jon explicitly expects assistant to continue authorized independent work without repeated proceed prompts. Do not imply work continues after final unless an actual background job exists.",
+    "reasoning_effort": "Jon requests notice when Medium should move to High. Assistant recommends High now for full multi-constraint layout synthesis; no setting changed."
+  }
+}

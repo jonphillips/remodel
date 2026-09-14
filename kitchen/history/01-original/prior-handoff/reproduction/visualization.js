@@ -1,0 +1,390 @@
+
+(()=>{
+const root=document.getElementById('kitchen-tradeoffs');
+const svg=root.querySelector('#kt-plan');
+const D={
+  "status": "Conditional design footprints; no candidate approved. Not a survey, cabinet order, or construction model.",
+  "units": "inches",
+  "coordinate_note": "Inverse rigid display conversion of combined-geometry.json for axis-aligned concept drawing. Derived wall/table points are NOT replacement field coordinates.",
+  "sources": [
+    "/Users/jon/Documents/Codex/2026-09-13/continue-this-kitchen-redesign-read-start/outputs/combined-geometry.json",
+    "/Users/jon/Documents/Codex/2026-09-13/continue-this-kitchen-redesign-read-start/outputs/CURRENT_STATE.json",
+    "/Users/jon/Desktop/combined-geometry-review.md"
+  ],
+  "points": {
+    "C3": [
+      145.47519318656634,
+      178.73241474806167
+    ],
+    "M5": [
+      181.530181300697,
+      218.25820167368656
+    ],
+    "M2": [
+      157.71358827758075,
+      105.75144677971913
+    ],
+    "M4": [
+      68.0,
+      137.00000000000006
+    ],
+    "TC": [
+      119.13927707873167,
+      284.5030133223399
+    ],
+    "TF": [
+      52.859181367342416,
+      278.3229482073287
+    ]
+  },
+  "wall": {
+    "C3": [
+      145.47519318656634,
+      178.73241474806167
+    ],
+    "M5": [
+      181.530181300697,
+      218.25820167368656
+    ],
+    "M6_estimate": [
+      204.9834899953881,
+      204.8812696161658
+    ],
+    "M7_70": [
+      164.0219209398855,
+      246.2307027977912
+    ],
+    "M7_70_5_illustration": [
+      164.60511746755662,
+      246.58737769848693
+    ],
+    "M7_71": [
+      165.20357950193392,
+      246.9364525566227
+    ]
+  },
+  "lower": [
+    [
+      157.00000000000006,
+      41.000000000000036
+    ],
+    [
+      157.00000000000006,
+      106.00000000000006
+    ],
+    [
+      127.00000000000003,
+      137.00000000000006
+    ],
+    [
+      68.0,
+      137.00000000000006
+    ]
+  ],
+  "upper": [
+    [
+      190.00000000000006,
+      41.00000000000004
+    ],
+    [
+      190.00000000000006,
+      133.00000000000009
+    ],
+    [
+      145.0,
+      178.50000000000009
+    ],
+    [
+      67.99999999999999,
+      177.00000000000009
+    ]
+  ],
+  "source_residuals": {
+    "C3_M2": 74.0,
+    "M5_M2": 115.00000000000001,
+    "C3_M4": 88.0,
+    "M2_M4": 95.00000000000001,
+    "M5_M4_predicted": 139.6137436121911,
+    "M5_M4_latest": 140,
+    "M5_M4_residual": 0.38625638780891336,
+    "old_M2_registration_residual": 0.7556367733326818,
+    "old_C3_registration_residual": 0.5289850467410104
+  },
+  "common_test": {
+    "cleanup": [
+      170,
+      41,
+      25,
+      110
+    ],
+    "chef_support": [
+      0,
+      137,
+      120,
+      24
+    ],
+    "raised_guest_surface": [
+      0,
+      161,
+      120,
+      18
+    ],
+    "range_connection": [
+      0,
+      135.5,
+      27.5,
+      1.5
+    ],
+    "guest_centers_x": [
+      15,
+      45,
+      75,
+      105
+    ],
+    "guest_width": 24,
+    "guest_occupied_projection": 26,
+    "guest_pullout_projection": 36,
+    "chef_helper_envelope": [
+      24,
+      20
+    ],
+    "route_width_test": 42,
+    "dishwasher": [
+      170,
+      78,
+      25,
+      24
+    ],
+    "dishwasher_open_projection": 27
+  },
+  "options": {
+    "A": {
+      "name": "Continuous peninsula prep",
+      "island": null,
+      "chef_center": [
+        60,
+        127
+      ],
+      "helper_center": [
+        160,
+        59
+      ],
+      "water": [
+        14,
+        139,
+        18,
+        18
+      ],
+      "board": [
+        38,
+        139,
+        36,
+        20
+      ],
+      "mise": [
+        78,
+        139,
+        36,
+        20
+      ],
+      "helper_board": [
+        173,
+        44,
+        19,
+        30
+      ]
+    },
+    "B": {
+      "name": "Shallower island",
+      "island": [
+        64,
+        38,
+        33,
+        57
+      ],
+      "chef_center": [
+        107,
+        77
+      ],
+      "helper_center": [
+        96,
+        127
+      ],
+      "water": [
+        75,
+        42,
+        18,
+        18
+      ],
+      "board": [
+        79,
+        62,
+        18,
+        30
+      ],
+      "mise": [
+        69,
+        65,
+        10,
+        30
+      ],
+      "helper_board": [
+        78,
+        139,
+        36,
+        20
+      ]
+    },
+    "C": {
+      "name": "Range-facing worktable",
+      "island": [
+        78.5,
+        38,
+        33,
+        57
+      ],
+      "chef_center": [
+        68.5,
+        75
+      ],
+      "helper_center": [
+        96,
+        127
+      ],
+      "water": [
+        5,
+        42,
+        18,
+        18
+      ],
+      "board": [
+        80.5,
+        48,
+        20,
+        36
+      ],
+      "mise": [
+        80.5,
+        84,
+        27,
+        11
+      ],
+      "helper_board": [
+        78,
+        139,
+        36,
+        20
+      ]
+    }
+  },
+  "envelope_assumptions": {
+    "guests": "30-inch pitch, 24-inch envelope width, 26-inch occupied or 36-inch pullout projection; design allowances, not measured guest chairs. 18-inch raised top requires actual knee-clearance/support design.",
+    "dining": "TC chair uses confirmed 23.5-inch width and 19/36 projection with assumed axial pose. TF and two side chairs reuse those sizes only as stress proxies; their actual dimensions and poses are unknown.",
+    "appliances": "Range oven 27-inch open projection over 48-inch width is deliberately conservative schematic; dishwasher 24-inch width/27-inch projection is a test module, not selected product.",
+    "french_doors": "Optional hypothetical pair of 32-inch leaves, near hinge 3 inches beyond M7, flush continuation of wall, inward 90-degree sweeps. Opening width, hinge, setback, handing and plane are NOT measured. Does not reproduce 37/26.5 field observations; cannot validate actual door use.",
+    "appliance_wall": "Refrigerator/ovens are topology-only and intentionally not assigned invented coordinates or swings. Their full access test remains unresolved."
+  },
+  "checks": {
+    "table_length": 66.56759190729899,
+    "guest_frontage_existing_context": 79,
+    "four_seats_at_24": 96,
+    "four_seats_test_pitch_30": 120,
+    "cleanup_face_170_relative_to_measured_lower_157": 13,
+    "cleanup_outer_195_relative_to_old_upper_190": 5,
+    "cleanup_mouth_by_working_face": {
+      "157": 37,
+      "162": 42,
+      "170": 50
+    },
+    "mouth_if_27_inch_dishwasher_opens_across_it": 23,
+    "B_depth_reduction": 18,
+    "B_family_aisle_to_old_lower": 60,
+    "B_family_aisle_to_test_row": 73,
+    "C_range_aisle": 48.0,
+    "C_family_aisle_to_test_row": 58.5,
+    "C_range_aisle_with_27_inch_oven_projection": 21.0,
+    "island_dining_end_to_peninsula_front": 42,
+    "same_gap_with_20_inch_helper_work_envelope": 22,
+    "guest_back_to_schematic_side_chair_back_y_projection": 33.5986918003384,
+    "guest_pullout_to_schematic_side_chair_back_y_projection": 23.5986918003384
+  }
+}
+;
+const NS='http://www.w3.org/2000/svg';
+const color={ink:'var(--foreground)',muted:'var(--border)',proposed:'var(--blue)',people:'var(--orange)',route:'var(--purple)',risk:'var(--red)',water:'var(--blue)',board:'var(--green)'};
+function draw(){
+ const option=root.querySelector('#kt-option').value,o=D.options[option];
+ const pull=root.querySelector('#kt-chairs').value==='pullout';
+ const doors=root.querySelector('#kt-doors').checked,history=root.querySelector('#kt-history').checked;
+ const width=root.clientWidth, narrow=width<480, pad=22, scale=(width-2*pad)/245;
+ const height=365*scale+50;
+ svg.setAttribute('viewBox',`0 0 ${width} ${height}`);svg.style.height=height+'px';svg.replaceChildren();
+ const X=x=>pad+(x+17)*scale,Y=y=>28+(y+8)*scale;
+ function el(tag,attrs,parent=svg){const n=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,v);parent.appendChild(n);return n;}
+ function label(text,x,y,anchor='middle'){const t=el('text',{x:X(x),y:Y(y),'text-anchor':anchor});t.textContent=text;return t;}
+ function line(points,c=color.ink,dash='',w=1.4){return el('polyline',{points:points.map(p=>`${X(p[0])},${Y(p[1])}`).join(' '),fill:'none',stroke:c,'stroke-width':w,'stroke-dasharray':dash});}
+ function rect(r,c=color.proposed,dash='',opacity=.08){return el('rect',{x:X(r[0]),y:Y(r[1]),width:r[2]*scale,height:r[3]*scale,fill:c,'fill-opacity':opacity,stroke:c,'stroke-width':1.3,'stroke-dasharray':dash});}
+ function polygon(ps,c,dash='',opacity=.1){return el('polygon',{points:ps.map(p=>`${X(p[0])},${Y(p[1])}`).join(' '),fill:c,'fill-opacity':opacity,stroke:c,'stroke-width':1.2,'stroke-dasharray':dash});}
+ function area(r,t,c=color.board){rect(r,c);label(t,r[0]+r[2]/2,r[1]+r[3]/2+2);}
+ function person(cx,cy,horizontal,name){const rw=horizontal?20:24,rh=horizontal?24:20;rect([cx-rw/2,cy-rh/2,rw,rh],color.people,'3 2',.13);label(name,cx,cy+3);}
+ const title=el('title',{});title.textContent=option+' — '+o.name+'. All new footprints and occupied routes are conditional design tests.';
+ // Test route is deliberately visible through conflicts; it is never a clearance result.
+ let route=option==='A'?[[124,236],[145,211],[145,162],[140,126],[110,106],[110,20]]:[[124,236],[145,211],[145,162],[145,115],[137,25]];
+ el('polyline',{points:route.map(p=>`${X(p[0])},${Y(p[1])}`).join(' '),fill:'none',stroke:color.route,'stroke-opacity':.09,'stroke-width':42*scale,'stroke-linecap':'round','stroke-linejoin':'round'});
+ line(route,color.route,'5 4',1.4);
+ // Old island is a context reference in every option; two counter levels stay separate.
+ rect([64,38,51,57],color.muted,'5 4',0);
+ if(history){line(D.lower,color.ink,'5 4');line(D.upper,color.people,'2 4');label('Lower',141,116);if(!narrow)label('Raised / outer',196,160);}
+ line([[0,39.5],[27.5,39.5],[27.5,63.5],[30.5,63.5],[30.5,111.5],[27.5,111.5],[27.5,135.5],[0,135.5]],color.ink,'4 3');
+ line([[30.5,63.5],[30.5,111.5]],color.ink,'',2.4);
+ label('Range',9,83);label('48″',9,95);
+ rect(D.common_test.cleanup);
+ rect(D.common_test.chef_support);rect(D.common_test.raised_guest_surface);
+ rect(D.common_test.range_connection);
+ if(o.island)rect(o.island);
+ const dw=D.common_test.dishwasher;area(dw,'DW',color.proposed);area([172,108,21,30],'S',color.water);
+ area(o.water,'W',color.water);area(o.board,'B');area(o.mise,'M');area(o.helper_board,'H');
+ person(...o.chef_center,option!=='A','C');person(...o.helper_center,option==='A','H');
+ if(option==='A')line([[60,127],[43,120],[41,105]],color.board,'',2);
+ if(option==='B')line([[107,77],[109,108],[47,108],[44,91]],color.board,'',2);
+ if(option==='C')line([[68.5,75],[46,75],[43,88]],color.board,'',2);
+ for(const [i,cx] of D.common_test.guest_centers_x.entries()){
+  rect([cx-12,179,24,pull?36:26],color.people,'3 2',.13);label(String(i+1),cx,196);
+ }
+ 
+ if(!narrow){label('4 guests · 30″ pitch',60,173);label('50″ mouth',145,153);label('Cleanup',184,34);}
+ else {label('50″',145,157);label('4 × 30″',60,173);}
+ // Capsule table and four explicitly schematic dining-chair envelopes.
+ const tc=D.points.TC,tf=D.points.TF,L=Math.hypot(tc[0]-tf[0],tc[1]-tf[1]);
+ const u=[(tc[0]-tf[0])/L,(tc[1]-tf[1])/L],n=[u[1],-u[0]],mid=[(tc[0]+tf[0])/2,(tc[1]+tf[1])/2];
+ const b=[tf[0]+24*u[0],tf[1]+24*u[1]],e=[tc[0]-24*u[0],tc[1]-24*u[1]],outline=[];
+ const angle=Math.atan2(u[1],u[0]);
+ for(let i=0;i<=36;i++){const z=angle-Math.PI/2+i*Math.PI/36;outline.push([e[0]+24*Math.cos(z),e[1]+24*Math.sin(z)]);}
+ for(let i=0;i<=36;i++){const z=angle+Math.PI/2+i*Math.PI/36;outline.push([b[0]+24*Math.cos(z),b[1]+24*Math.sin(z)]);}
+ polygon(outline,color.ink,'',.035);label('Table fixed',mid[0],mid[1]);
+ function chair(rim,dir,projection,tag){const perp=[-dir[1],dir[0]],w=23.5/2;const ps=[-1,1].map(s=>[rim[0]+s*w*perp[0],rim[1]+s*w*perp[1]]);ps.push([ps[1][0]+projection*dir[0],ps[1][1]+projection*dir[1]],[ps[0][0]+projection*dir[0],ps[0][1]+projection*dir[1]]);polygon(ps,color.people,'3 2',.08);if(tag)label(tag,rim[0]+dir[0]*projection/2,rim[1]+dir[1]*projection/2+3);}
+ chair(tc,u,pull?36:19,'TC');chair(tf,u.map(x=>-x),pull?36:19,'');
+ chair([mid[0]+24*n[0],mid[1]+24*n[1]],n,pull?36:19,'');
+ chair([mid[0]-24*n[0],mid[1]-24*n[1]],n.map(x=>-x),pull?36:19,'');
+ const m5=D.wall.M5,m6=D.wall.M6_estimate,m7=D.wall.M7_70_5_illustration;
+ line([m6,m5,m7],color.ink,'4 3',2);
+ el('circle',{cx:X(m5[0]),cy:Y(m5[1]),r:3,fill:color.ink});label('M5',m5[0]+5,m5[1]-3,'start');
+ if(!narrow){label('Family room',214,188,'end');label('French trim',m7[0]+8,m7[1]+8,'start');}
+ if(doors){
+  rect([30.5,63.5,27,48],color.risk,'4 3',.12);
+  rect([143,78,27,24],color.risk,'4 3',.12);
+  const dl=Math.hypot(m7[0]-m5[0],m7[1]-m5[1]),w=[(m7[0]-m5[0])/dl,(m7[1]-m5[1])/dl],inside=[-w[1],w[0]];
+  const h1=[m7[0]+3*w[0],m7[1]+3*w[1]],h2=[h1[0]+64*w[0],h1[1]+64*w[1]];
+  line([h1,h2],color.risk,'4 3');
+  for(const [hinge,dir] of [[h1,w],[h2,w.map(x=>-x)]]){
+   const arc=[hinge];for(let i=0;i<=24;i++){const a=i*Math.PI/48;arc.push([hinge[0]+32*(dir[0]*Math.cos(a)+inside[0]*Math.sin(a)),hinge[1]+32*(dir[1]*Math.cos(a)+inside[1]*Math.sin(a))]);}polygon(arc,color.risk,'4 3',.08);
+  }
+ }
+ line([[0,340],[24,340]],color.ink,'',2);line([[0,337],[0,343]],color.ink);line([[24,337],[24,343]],color.ink);label('24″',12,354);
+ label('Appliance side ↑',85,-8);
+ const messages={A:'A: continuous prep near heat; removes island and closes the existing range–dining pass-through.',B:'B: 18″ less depth; 57″ frontage still splits water, board and mise. The route remains behind the chef.',C:'C: tests a 48″ range aisle; prep water uses a conditional range-side landing. Oven-open remainder: 21″.'};
+ root.querySelector('#kt-detail').textContent=doors?'Door tests only: 27″ appliance projections; assumed 2 × 32″ inward French leaves. French geometry does not reconcile the field chair gaps.':messages[option]+(pull?' Pulled-out chairs show a stress state, not measured simultaneous use.':' Route shading is a target envelope; overlaps are unresolved.');
+}
+root.querySelectorAll('select,input').forEach(n=>n.addEventListener('change',draw));
+new ResizeObserver(draw).observe(root);draw();
+})();

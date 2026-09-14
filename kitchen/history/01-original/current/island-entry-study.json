@@ -1,0 +1,440 @@
+{
+  "status": "Jon agreed to 36 \u00d7 66 island as working footprint. Full occupied entrance, four-seat perch and product fit remain unresolved.",
+  "units": "inches",
+  "coordinate_status": "Original kitchen frame, with separately qualified stair point; no refitting or mixing of direct-tie M2.",
+  "cleanup": {
+    "status": "Lead 99 \u00d7 25 concept using measured sink opening/rack; product fit and full occupied fit unresolved.",
+    "counter_rect": [
+      157,
+      41,
+      25,
+      99
+    ],
+    "working_edge_x": 157,
+    "end_y": 140,
+    "extends_beyond_wall_end": 61,
+    "extends_past_existing_M2": 34,
+    "dirty_rect": [
+      157,
+      41,
+      25,
+      36
+    ],
+    "sink_module": [
+      157,
+      77,
+      25,
+      36
+    ],
+    "sink_opening_test_rect": [
+      159.75,
+      80,
+      19.5,
+      30
+    ],
+    "DW_module": [
+      157,
+      113,
+      25,
+      24
+    ],
+    "rack_rect": [
+      162,
+      116,
+      15,
+      18
+    ],
+    "end_allowance": 3,
+    "bridge_allowance": 0,
+    "door_test_rect": [
+      133,
+      113,
+      24,
+      24
+    ],
+    "loader_test_rect": [
+      113,
+      113,
+      20,
+      24
+    ],
+    "notes": [
+      "36-inch sink cabinet is a study allowance, not a product requirement inferred from opening.",
+      "Sink opening leaves 5.5 total depth for front/back structure, rim and faucet; placement unresolved.",
+      "3-inch old sink/DW bridge removed as unsubstantiated allowance; 3-inch end allowance retained.",
+      "Door test uses current approximately 24-inch installation projection, not future product specification."
+    ],
+    "remaining_room_checks": [
+      "Sink/rim/faucet/cabinet installation",
+      "Island prep-sink and chef staging fit",
+      "Dish storage/unloading and open appliances",
+      "Stair shaft/cap/step arrival envelope",
+      "Independent helper and four-place guest perch with normal table/doors"
+    ],
+    "rear_detail": {
+      "status": "Keep 25-inch working depth in island comparison; reserve additional rear envelope for sink surround or cosmetic rack screen. No screen height/thickness or stepped working face selected.",
+      "possible_screen": "User suggested low cosmetic wall to hide rack from family room; exploratory, not selected."
+    }
+  },
+  "stair": {
+    "point": [
+      3.3246858068247596,
+      176.91370358678918
+    ],
+    "third_tie_residual": -1.6551535181330053,
+    "complete_envelope": false
+  },
+  "rear_reserve": {
+    "kitchen_finished_face_x": 182,
+    "wall_thickness": 5,
+    "family_room_face_x": 187,
+    "nominal_counter_rear_extent_x": 189,
+    "working_front_to_outer_edge": 32,
+    "reserve_beyond_25_inch_working_surface": 7,
+    "calculation": "25 + 5 + 2 = 32; 5 + 2 = 7",
+    "scope": "Nominal rear envelope beyond wall termination, not extra aisle width or a selected countertop/screen design."
+  },
+  "cases": {
+    "compact": {
+      "island": [
+        78.5,
+        38,
+        36,
+        60
+      ],
+      "frontage_sequence": [
+        24,
+        24,
+        12
+      ],
+      "sequence_labels": [
+        "Intake",
+        "Board",
+        "Offload"
+      ],
+      "board": [
+        80.5,
+        62,
+        18,
+        24
+      ],
+      "intake": [
+        80.5,
+        38,
+        14,
+        24
+      ],
+      "offload": [
+        80.5,
+        86,
+        32,
+        12
+      ],
+      "sink_zone": [
+        94.5,
+        38,
+        20,
+        24
+      ],
+      "sink_external": [
+        97,
+        40.5,
+        15,
+        15
+      ],
+      "sink_bowl_reference": [
+        97.875,
+        41.375,
+        13.25,
+        13.25
+      ],
+      "faucet_center": [
+        104.5,
+        59
+      ],
+      "sink_cabinet_envelope": [
+        90.5,
+        38,
+        24,
+        24
+      ],
+      "water_visit": [
+        114.5,
+        38,
+        20,
+        24
+      ],
+      "checks": {
+        "range_aisle": 48,
+        "cleanup_aisle": 42.5,
+        "board_rear_strip_after_2_inch_front_and_rear_setbacks": 14,
+        "island_end_y": 98,
+        "signed_DW_start_beyond_island_end": 15,
+        "island_to_left_range_landing_bare_nearest": 44.5926002830066,
+        "island_to_open_DW_bare_nearest": 23.817010727629107,
+        "island_to_DW_loader_bare_nearest": 15.0,
+        "water_visit_to_DW_loader_bare_nearest": 51.0
+      },
+      "existing_bowl_test_rect": [
+        99,
+        41.5,
+        11,
+        13
+      ]
+    },
+    "balanced": {
+      "island": [
+        78.5,
+        38,
+        36,
+        66
+      ],
+      "frontage_sequence": [
+        24,
+        24,
+        18
+      ],
+      "sequence_labels": [
+        "Intake",
+        "Board",
+        "Offload"
+      ],
+      "board": [
+        80.5,
+        62,
+        18,
+        24
+      ],
+      "intake": [
+        80.5,
+        38,
+        14,
+        24
+      ],
+      "offload": [
+        80.5,
+        86,
+        32,
+        18
+      ],
+      "sink_zone": [
+        94.5,
+        38,
+        20,
+        24
+      ],
+      "sink_external": [
+        97,
+        40.5,
+        15,
+        15
+      ],
+      "sink_bowl_reference": [
+        97.875,
+        41.375,
+        13.25,
+        13.25
+      ],
+      "faucet_center": [
+        104.5,
+        59
+      ],
+      "sink_cabinet_envelope": [
+        90.5,
+        38,
+        24,
+        24
+      ],
+      "water_visit": [
+        114.5,
+        38,
+        20,
+        24
+      ],
+      "checks": {
+        "range_aisle": 48,
+        "cleanup_aisle": 42.5,
+        "board_rear_strip_after_2_inch_front_and_rear_setbacks": 14,
+        "island_end_y": 104,
+        "signed_DW_start_beyond_island_end": 9,
+        "island_to_left_range_landing_bare_nearest": 43.15669125408017,
+        "island_to_open_DW_bare_nearest": 20.573040611440984,
+        "island_to_DW_loader_bare_nearest": 9.0,
+        "water_visit_to_DW_loader_bare_nearest": 51.0
+      },
+      "existing_bowl_test_rect": [
+        99,
+        41.5,
+        11,
+        13
+      ]
+    },
+    "slender": {
+      "island": [
+        78.5,
+        38,
+        30,
+        80
+      ],
+      "frontage_sequence": [
+        18,
+        24,
+        18,
+        20
+      ],
+      "sequence_labels": [
+        "Intake",
+        "Board",
+        "Offload",
+        "End water"
+      ],
+      "board": [
+        80.5,
+        56,
+        18,
+        24
+      ],
+      "intake": [
+        80.5,
+        38,
+        26,
+        18
+      ],
+      "offload": [
+        80.5,
+        80,
+        26,
+        18
+      ],
+      "sink_zone": [
+        78.5,
+        98,
+        30,
+        20
+      ],
+      "sink_external": [
+        81,
+        100.5,
+        15,
+        15
+      ],
+      "sink_bowl_reference": [
+        81.875,
+        101.375,
+        13.25,
+        13.25
+      ],
+      "faucet_center": [
+        102,
+        108
+      ],
+      "sink_cabinet_envelope": [
+        80.5,
+        94,
+        26,
+        24
+      ],
+      "water_visit": [
+        81.5,
+        118,
+        24,
+        20
+      ],
+      "checks": {
+        "range_aisle": 48,
+        "cleanup_aisle": 48.5,
+        "board_rear_strip_after_2_inch_front_and_rear_setbacks": 8,
+        "island_end_y": 118,
+        "signed_DW_start_beyond_island_end": -5,
+        "island_to_left_range_landing_bare_nearest": 42.5,
+        "island_to_open_DW_bare_nearest": 24.5,
+        "island_to_DW_loader_bare_nearest": 4.5,
+        "water_visit_to_DW_loader_bare_nearest": 7.5
+      },
+      "existing_bowl_test_rect": [
+        82,
+        102.5,
+        13,
+        11
+      ]
+    }
+  },
+  "working_hypothesis": "balanced",
+  "prep_sink_reference": {
+    "product": "Kohler Strive K-5287",
+    "external": [
+      15,
+      15
+    ],
+    "bowl": [
+      13.25,
+      13.25
+    ],
+    "minimum_cabinet_width": 18,
+    "source": "https://resources.kohler.com/webassets/kpna/catalog/pdf/en/K-5287_spec_US-CA_Kohler_en.pdf",
+    "status": "Dimensional reference, not selected product or accepted reduction of current prep sink.",
+    "comparison": "Reference 13.25-square bowl meets or exceeds existing 13 \u00d7 11 opening in both plan dimensions. Product selection and mounting/faucet/cabinet details remain unresolved."
+  },
+  "operating_assumptions": {
+    "DW_door": [
+      133,
+      113,
+      24,
+      24
+    ],
+    "DW_loader": [
+      113,
+      113,
+      20,
+      24
+    ],
+    "range_oven_door": [
+      30.5,
+      63.5,
+      27,
+      48
+    ],
+    "chef": [
+      58.5,
+      62,
+      20,
+      24
+    ],
+    "main_sink_user": [
+      137,
+      83,
+      20,
+      24
+    ],
+    "left_range_landing": [
+      0,
+      111.5,
+      36,
+      24
+    ],
+    "person_depth": 20,
+    "sink_visits": "Alternate positions; not all people drawn are assumed simultaneously present."
+  },
+  "missing_for_full_fit": [
+    "Bottom tread, newel shaft/cap and stair arrival outline",
+    "Useful left-range counter outline and cookware footprints",
+    "Other appliance/door envelopes",
+    "Independent helper, four guests and table routes"
+  ],
+  "existing_prep_sink_opening": {
+    "size": [
+      13,
+      11
+    ],
+    "source": "Jon reply to current measurement question",
+    "depth": "Bowl depth not supplied; these are plan dimensions."
+  },
+  "current_drawing": "/Users/jon/.codex/visualizations/2026/09/14/01a09fb9-ffe9-7420-a37e-47b63adcab49/island-and-entry-comparison.html",
+  "verification": {
+    "geometry": "Rectangle clearances computed consistently in the original kitchen frame; all values are local model diagnostics.",
+    "visual": "Verified 736px and 360px layouts, all three island choices, and closed/DW/open-oven state controls.",
+    "limits": "No full occupied route, stair outline, guest placement or product installation approved."
+  },
+  "agreed_case": "balanced",
+  "latest_wall_thickness": 5
+}
