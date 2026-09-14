@@ -18,13 +18,21 @@ A direct-manipulation floor plan for trying layout ideas **without changing the 
 
 Drag, resize, rotate, and round the corners of pieces (island, table, peninsula, appliances, porch); the room shell and perimeter counters are locked by default but can be unlocked. It reports live edge-to-edge clearances between pieces, carries a table's or peninsula's chairs when you move them, and lets you show/hide any piece. Save several named layouts to compare, or Export/Import them as JSON. All edits live only in your browser — nothing is written back to the repository.
 
-Each sandbox inlines a snapshot of `kitchen/studies/02-purposeful/explorations-model.json` at build time. The generated `sandbox*.html` / `sandbox*.fragment.html` are gitignored; regenerate them, and refresh the snapshot after the canonical model changes, with:
+Each sandbox inlines a snapshot of `kitchen/studies/02-purposeful/explorations-model.json` at build time. Regenerate the sandboxes, and refresh the snapshot after the canonical model changes, with:
 
 ```
 python3 kitchen/tools/build_sandbox.py
 ```
 
-Source lives in `kitchen/tools/sandbox.template.html`; edit that, not the generated files.
+Files in `kitchen/tools/` (all sandbox files):
+
+- `sandbox.template.html` — the single source for both sandboxes (edit this one).
+- `build_sandbox.py` — inlines the model snapshot and writes both scopes below.
+- `sandbox.html` — generated, kitchen-only standalone page.
+- `sandbox-porch.html` — generated, kitchen + porch standalone page.
+- `sandbox.fragment.html`, `sandbox-porch.fragment.html` — generated, head/body-less versions used only for publishing as Artifacts.
+
+The four generated files (`sandbox*.html`, `sandbox*.fragment.html`) are gitignored — edit the template, not them.
 
 The repository is the canonical home. Daily Codex folders can contain working files and exported copies, but should not become competing sources of truth. Historical packages contain withdrawn assumptions and some old absolute paths; use the current entry point and [source map](kitchen/SOURCE_MAP.md).
 
