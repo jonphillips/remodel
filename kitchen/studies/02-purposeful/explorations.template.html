@@ -1,0 +1,88 @@
+<div id="kitchen-purposeful-v2">
+<h2>Two ways to make room for four</h2>
+<div class="viz-controls">
+<label class="form-label">Use <select id="ev-state" class="form-select"><option value="daily">Everyday · two stools</option><option value="hosting">Hosting · all four places</option><option value="work">Chef + helper</option><option value="dw">Dishwasher loading</option><option value="serving">Serving with four seated</option><option value="pull">Chair pull-out stress test</option></select></label>
+<label class="form-check"><input id="ev-park" class="form-check-input" type="checkbox"><span class="form-check-label">P2: park kitchen-side table chair for hosting</span></label>
+</div>
+<div class="ev-pair"><section><h3>P2 · Stair-side peninsula</h3><svg id="ev-p" role="img" class="ev-plan"></svg><div id="ev-p-note" class="text-small"></div></section><section><h3>F2 · Rectangular 2+2</h3><svg id="ev-f" role="img" class="ev-plan"></svg><div id="ev-f-note" class="text-small"></div></section></div>
+<div id="ev-result" aria-live="polite"></div>
+<div class="viz-row text-small ev-legend"><span>Chef/helper work</span><span>Guest surface</span><span>Dashed outlines: people, openings and unverified details</span><span>Dimensions: local model gaps</span></div>
+</div>
+<style>
+#kitchen-purposeful-v2 .ev-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+#kitchen-purposeful-v2 .ev-plan{width:100%;display:block}
+#kitchen-purposeful-v2 .ev-plan text{font:12px sans-serif;fill:var(--foreground)}
+#kitchen-purposeful-v2 .ev-plan .ev-shape{fill:var(--muted);fill-opacity:.18;stroke:var(--foreground);stroke-width:1}
+#kitchen-purposeful-v2 .ev-plan .ev-work{fill:var(--viz-series-1);fill-opacity:.19}
+#kitchen-purposeful-v2 .ev-plan .ev-social{fill:var(--viz-series-2);fill-opacity:.19}
+#kitchen-purposeful-v2 .ev-plan .ev-body{fill:var(--viz-series-4);fill-opacity:.13;stroke-dasharray:4 3}
+#kitchen-purposeful-v2 .ev-plan .ev-assumed{stroke-dasharray:4 3}
+#kitchen-purposeful-v2 .ev-plan .ev-line{stroke:var(--foreground);stroke-width:1;fill:none}
+#kitchen-purposeful-v2 .ev-plan .ev-route{stroke:var(--viz-series-3);stroke-width:2;fill:none;stroke-dasharray:5 4}
+#kitchen-purposeful-v2 .ev-plan .ev-issue{stroke:var(--destructive);stroke-width:2;fill:none}
+#kitchen-purposeful-v2 .ev-legend{margin-top:12px}
+#kitchen-purposeful-v2 #ev-result{margin-top:14px}
+@media(max-width:780px){#kitchen-purposeful-v2 .ev-pair{grid-template-columns:1fr}}
+</style>
+<script>
+(()=>{
+const root=document.getElementById('kitchen-purposeful-v2'),D=__MODEL__,sel=root.querySelector('#ev-state'),park=root.querySelector('#ev-park');
+const NS='http://www.w3.org/2000/svg',r=(x,y,w,h)=>[[x,y],[x+w,y],[x+w,y+h],[x,y+h]];
+function draw(svg,c){
+svg.replaceChildren();const w=Math.max(280,svg.getBoundingClientRect().width),s=(w-24)/276,h=415*s+24;svg.setAttribute('viewBox',`0 0 ${w} ${h}`);svg.style.height=h+'px';
+const X=x=>12+(x+48)*s,Y=y=>12+(y+42)*s;
+function el(t,a={},parent=svg){const n=document.createElementNS(NS,t);Object.entries(a).forEach(([k,v])=>n.setAttribute(k,v));parent.appendChild(n);return n;}
+function poly(p,cl='ev-shape',title){const n=el('polygon',{points:p.map(q=>`${X(q[0])},${Y(q[1])}`).join(' '),class:cl});if(title)el('title',{},n).textContent=title;return n;}
+function line(p,cl='ev-line'){el('polyline',{points:p.map(q=>`${X(q[0])},${Y(q[1])}`).join(' '),class:cl});}
+function txt(x,y,t,anchor='middle'){const n=el('text',{x:X(x),y:Y(y),'text-anchor':anchor});String(t).split('|').forEach((v,i)=>el('tspan',{x:X(x),dy:i?'1.2em':0},n).textContent=v);}
+function dim(m,label,dx=0,dy=0){if(m?.segment){line(m.segment);const[a,b]=m.segment;txt((a[0]+b[0])/2+dx,(a[1]+b[1])/2+dy,label);}}
+const state=sel.value,host=['hosting','serving','pull'].includes(state),p=c.id==='P2',parking=host&&park.checked&&p;
+el('title').textContent=c.name;el('desc').textContent='Concept plan in inches with fixed 36 by 66 chef island, 99-inch cleanup, square extended table and four guest places. Occupancy and unmeasured openings are assumptions.';
+// Same actual appliance destinations, no generic door obstruction claims.
+for(const a of [[61.5,-27,48,25],[109.5,-27,29.5,25],[139,-27,29.5,25]])poly(r(...a),'ev-shape ev-assumed');
+txt(45.5,-31,'Pantry');txt(85.5,-12,'Fridge');txt(154,-31,'Wall ovens');line([[154,-28],[154,-24]]);
+poly(r(0,39.5,27.5,24));poly(D.fixed.range);txt(15,79,'Cooktop');txt(15,93,'48″');
+poly(D.fixed.landing,'ev-shape ev-work');for(const a of c.attachment)poly(a,'ev-shape ev-work');
+if(p){poly(r(0,135.5,6,33.9),'ev-shape ev-assumed','Stair-side enclosure line for section testing; higher stair and rail unmeasured.');txt(19,125,'Mise');txt(21,151,'+6.4 ft²');}else txt(18,125,'Mise');
+poly(D.fixed.island,'ev-shape ev-work');poly(r(99,41.5,11,13));poly(r(80.5,62,18,24),'ev-shape ev-work');txt(96.5,81,'36 × 66');
+poly(D.fixed.cleanup);poly(D.fixed.rear,'ev-shape ev-assumed');line([[157,77],[182,77]]);line([[157,113],[182,113]]);poly(r(159.75,80,19.5,30));txt(170,63,'Dirty');txt(170,129,'DW');txt(207,87,'99″|cleanup');
+poly(c.top,'ev-shape ev-social');poly(c.helper,'ev-shape ev-work');poly(c.board,'ev-shape ev-work');txt(c.helper[0][0]+21,c.helper[0][1]+12,'Helper');txt(c.top_rect[0]+c.top_rect[2]/2,c.top_rect[1]+33,`${c.top_rect[2]} × 42`);
+// Knee pockets stay clear of the central helper support zone.
+if(host)for(const k of c.knee)poly(k,'ev-shape ev-assumed');
+poly(D.stair.tread);poly(D.stair.shaft);poly(D.stair.cap,'ev-shape ev-assumed');txt(-20,162,'Stairs');
+const px=D.porch.partition_x,py=D.porch.start_y_conditional;
+line([[px,180],[px,py]],'ev-route');
+if(p){line([[-48,py],[-33,py]]);line([[3,py],[px,py]]);line([[-33,py],[3,py]],'ev-route');txt(-21,214,'Door test');line([[px,py],[px,277]],'ev-route');line([[px,277],[px,D.rear_window_wall_y]]);txt(-3,248,'Proposed','end');txt(-3,261,'48″ opening','end');}else{line([[px,py],[px,D.rear_window_wall_y]]);txt(-3,247,'Old porch','end');txt(-3,260,'beverages','end');}
+line([[px,D.rear_window_wall_y],[181.5,D.rear_window_wall_y]]);txt(86,365,'Window wall');
+poly(D.table);txt(86,D.table_center[1]-4,'Extended');txt(86,D.table_center[1]+9,'table');
+const tc=state==='pull'?D.table_pulled:D.table_chairs;
+tc.forEach((q,i)=>{if(!(parking&&i===2))poly(q,'ev-shape ev-assumed');});
+if(parking)txt(86,259,'Chair parked');
+line([[144,D.table_center[1]+24],[144,D.rear_window_wall_y]]);txt(162,D.rear_window_wall_y-13,'30.5″');
+line([[181.53,235],[181.53,218.26],[201,218.26]]);txt(211,239,'M5');txt(208,251,'New porch');
+const seats=state==='pull'?c.pulled:c.seats;
+seats.forEach((q,i)=>{if(host||c.daily_indices.includes(i)){poly(q,'ev-shape ev-body');const cx=q.reduce((a,b)=>a+b[0],0)/4,cy=q.reduce((a,b)=>a+b[1],0)/4;txt(cx,cy+3,c.labels[i]);}});
+if(state==='daily'){if(!p)dim(c.metrics.west_bare_to_landing,'51″',-8,0);else txt(74,140,'Continuous|working elbow');}
+if(host&&state!=='pull'){
+ if(p){dim(c.metrics.east_end_occupied_to_cleanup,'45″',14,0);dim(parking?c.metrics.hosting_to_table_without_near_chair:c.metrics.hosting_to_table_chairs,parking?'36″':'17″',-18,0);}
+ else{dim(c.metrics.west_end_to_landing,'39″',-6,0);dim(c.metrics.hosting_to_table_chairs,parking?'':'18″',-15,0);}
+}
+if(state==='work'){poly(D.fixed.chef,'ev-shape ev-body');poly(c.helper_person,'ev-shape ev-body');dim(c.metrics.island_to_helper_person,p?'42″':'41″',p?-12:15,0);}
+if(state==='dw'){poly(D.fixed.DWdoor,'ev-shape ev-body');poly(D.fixed.DWloader,'ev-shape ev-body');txt(145,125,'Open');txt(121,125,'Load');dim(c.metrics.DW_loader_to_top,p?'34″':'28″',-10,0);}
+if(state==='serving'){
+ line(c.route.centerline,'ev-route');poly(D.fixed.chef,'ev-shape ev-body','Chef must yield the shared range aisle for a wide serving route.');
+ if(p&&!parking){line([[76,248],[96,264]],'ev-issue');line([[96,248],[76,264]],'ev-issue');}
+}
+if(state==='pull')txt(111,246,parking?'Near chair parked':'Pull-outs conflict', 'start');
+line([[-35,303],[1,303]]);txt(-17,298,'36″');
+}
+function render(){const st=sel.value,hosting=['hosting','serving','pull'].includes(st),pk=hosting&&park.checked;
+park.disabled=!hosting;
+draw(root.querySelector('#ev-p'),D.cases[0]);draw(root.querySelector('#ev-f'),D.cases[1]);
+const notes={daily:['54.5″ range-left frontage; two far-side stools daily. Both porch openings needed for stair-to-kitchen connection.','72 × 42 top; two daily stools. Keep range-left landing short to preserve the west entrance.'],hosting:[pk?'Four places as 3 + 1. About 36″ behind guests to the table; both proposed porch openings are essential.':'Four places as 3 + 1. Only 17″ between guest and near table-chair proxies.','Four places as 2 + 2. About 39″ at the west approach; east side remains secondary and restrictive.'],work:['Independent 42 × 18 helper area; about 42″ to standing helper from the island.','Independent 42 × 18 helper area; about 41″ behind standing helper.'],dw:['Loading separately fits the tested envelopes; open DW interrupts the tested serving route.','West serving approach stays separate from DW loading. Helper + loader are only 8″ apart in the proxies.'],serving:[pk?'Tested 36″ swept kitchen approach with both openings and chair parked. Chef yields the shared range aisle.':'Tested route requires the near table chair to be parked; current position blocks it.','Tested 36″ swept west kitchen approach with four guests and table chairs retained. Chef yields the range aisle.'],pull:[pk?'Near table chair parked: guest/table overlap is removed; rear table-chair pull-out still meets the fixed wall.':'Guest/table pull-outs intersect in the normal table-chair configuration.','Guest/table pull-outs intersect; occasional coordinated chair movement still required.']};
+root.querySelector('#ev-p-note').textContent=notes[st][0];root.querySelector('#ev-f-note').textContent=notes[st][1];
+root.querySelector('#ev-result').textContent=st==='serving'?'36″ swept checks stop at the pantry approach; the existing pantry opening is 32″. Wall openings, piers and floor levels remain conditional.':st==='daily'?'Same island, cleanup and table. Different bargain: more continuous mise versus a less dependent everyday entrance.':'Both retain four places. End-stool projections are 26″ assumptions; the two occasional stools are removed between hosting occasions.';
+}
+sel.addEventListener('input',render);park.addEventListener('change',render);new ResizeObserver(render).observe(root.querySelector('.ev-pair'));render();
+})();
+</script>

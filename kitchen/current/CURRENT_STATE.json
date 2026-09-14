@@ -1,5 +1,5 @@
 {
-  "checkpoint": "2026-09-14 discussion update: table squared and anchored 30.5 inches from confirmed rear window-wall plane; 2+2 seating and enclosed stair-side counter authorized for exploration.",
+  "checkpoint": "2026-09-14 purposeful explorations: rectangular F2 2+2 and stair-side P2 3+1, two everyday seats each.",
   "read_first": "START_HERE.md",
   "agreed_direction": {
     "cleanup": "Option C, 99-inch working allowance",
@@ -350,14 +350,14 @@
     }
   },
   "next_task": [
-    "Start from the corrected orthogonal table. Explore a purposeful stair-side working elbow/peninsula and a rectangular 2+2 freestanding social/helper top, with occasional end stools shown separately.",
-    "Use the same comparison tool and baseline; avoid unrelated variant galleries.",
-    "Revise guest/helper footprint to widen a real route, then compare continuity again. No island shrink, guest reduction, or hall substitution without explicit tradeoff.",
-    "Capture actual refrigerator sweep and oven front/open projection for appliance access; approximate refrigerator closed gap is 40 inches.",
-    "52/120 endpoints can be confirmed only when exact beverage opening design needs them; no repeat S1 ties."
+    "Review F2 versus P2 explicit tradeoff: west access with shorter mise run versus substantial mise with porch-opening and hosting-chair dependencies.",
+    "Tape mock-up F2 end stools, west gate and family-room-side approach; actual bodies and stool pull-out matter.",
+    "For P2, check stair-side vertical section, the two proposed porch clear openings and floor-level connection. Do not assume the modeled extension is already buildable.",
+    "Preserve corrected table, 99-inch cleanup and 36 \u00d7 66 island. No repeat S1 ties or workflow interview.",
+    "Appliance access remains lived baseline; test actual introduced differences rather than generic door bands."
   ],
   "preserved_example": "../history/01-original/prior-handoff/example-for-wendy/kitchen-example-for-wendy.html",
-  "drawings_status": "Historical source drawings and previous full-room visualization have superseded captions or assumptions. The previous range-oven obstruction is withdrawn for current conditions; M5 porch expansion suggestion is withdrawn. No new drawing was made for the latest sketch.",
+  "drawings_status": "Latest study is studies/02-purposeful. Earlier comparison.html and comparison-model.json in current/ retain the preceding controlled link test, with corrected table. Earlier tools/build_model.py rebuilds that earlier study and must not be used to overwrite the latest controlling state.",
   "all_historical_checks": "current/cleanup-return-study.json retains initial A/B/C under historical fields. Use C_current and agreed_island, not initial C/common_island.",
   "source_handoff": "../history/01-original",
   "room_fit_study": "../history/02-full-room/room-fit-study.json",
@@ -478,6 +478,8 @@
     "island": "Fridge-facing end stays at Y38, unchanged from original. 66-inch length extends 9 inches farther toward table than original 57. Jon permits considering a couple inches of final length adjustment later, not a change now.",
     "appliances": "Existing access is a lived usable baseline. Generic operating bands are not new evidence of actual appliance interference."
   },
-  "current_comparison": "comparison-model.json",
-  "current_result": "P1 shaped continuous connection closes the already restrictive west approach; its free-end gap to cleanup is inadequate in this specific placement. F1 retains west access but is also restricted. Neither is a selected design; four seats and daily core preserved."
+  "current_comparison": "../studies/02-purposeful/explorations-model.json",
+  "current_result": "F2 practical lead: four occupied seats with modeled west kitchen approach; 39.2-inch local end-stool gap to landing. P2 serious conditional alternative: +6.4 sq ft mise, 45.5-inch occupied east gap to cleanup, but requires two old-porch openings and parked kitchen-side table chair for tested occupied route. Neither selected for construction.",
+  "current_review": "../studies/02-purposeful/README.md",
+  "current_drawing": "../studies/02-purposeful/explorations.html"
 }

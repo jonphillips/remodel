@@ -2,7 +2,7 @@
 
 The permanent project home for Jon's remodel measurements, photographs, design studies, and decisions.
 
-Start with [Kitchen / START_HERE](kitchen/START_HERE.md). The active paired comparison is [current/comparison.html](kitchen/current/comparison.html); open it in a browser. It includes the continuous peninsula and the freestanding comparison under identical assumptions.
+Start with [Kitchen / START_HERE](kitchen/START_HERE.md). The active design comparison is [purposeful explorations](kitchen/studies/02-purposeful/explorations.html); open it in a browser. It includes the continuous peninsula and the freestanding comparison under identical assumptions.
 
 - `kitchen/current/`: controlling state, current evaluation, and shared drawing/model.
 - `kitchen/sources/`: newly supplied original source images.

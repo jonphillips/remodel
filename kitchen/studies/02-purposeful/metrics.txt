@@ -1,0 +1,36 @@
+{
+  "P2": {
+    "island_to_top": 62.0,
+    "island_to_helper_person": 42.1,
+    "free_end_bare_to_cleanup": 66.3,
+    "east_end_occupied_to_cleanup": 45.5,
+    "east_end_occupied_to_DW_door": 33.8,
+    "east_end_occupied_to_DW_loader": 32.0,
+    "DW_loader_to_top": 33.6,
+    "helper_to_DW_loader": 39.1,
+    "hosting_to_table_chairs": 17.4,
+    "hosting_to_table_without_near_chair": 36.4,
+    "both_sets_pulled": 0,
+    "guest_edge_to_near_table_chair": 43.41370358678921,
+    "stair_to_near_guest": 26.5,
+    "west_end_to_landing": null,
+    "west_bare_to_landing": null
+  },
+  "F2": {
+    "island_to_top": 61.0,
+    "island_to_helper_person": 41.0,
+    "free_end_bare_to_cleanup": 25.0,
+    "east_end_occupied_to_cleanup": 28.0,
+    "east_end_occupied_to_DW_door": 31.0,
+    "east_end_occupied_to_DW_loader": 38.6,
+    "DW_loader_to_top": 28.0,
+    "helper_to_DW_loader": 8.0,
+    "hosting_to_table_chairs": 18.4,
+    "hosting_to_table_without_near_chair": 37.4,
+    "both_sets_pulled": 0,
+    "guest_edge_to_near_table_chair": 44.41370358678921,
+    "stair_to_near_guest": 52.2,
+    "west_end_to_landing": 39.2,
+    "west_bare_to_landing": 56.3
+  }
+}
