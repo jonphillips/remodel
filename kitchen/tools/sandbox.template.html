@@ -106,6 +106,9 @@ button,select,input{font-family:inherit;font-size:13px;color:var(--ink)}
 .selhead{display:flex;align-items:center;gap:9px;margin-bottom:12px}
 .swatch{width:13px;height:13px;border-radius:3px;flex:none;border:1px solid rgba(0,0,0,.15)}
 .selname{font-weight:600;font-size:14px}
+.rename{appearance:none;background:transparent;border:0;cursor:pointer;color:var(--ink-soft);font-size:13px;
+  padding:2px 5px;border-radius:5px;line-height:1}
+.rename:hover{background:var(--line-soft);color:var(--accent-ink)}
 .seltag{margin-left:auto;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);
   border:1px solid var(--line);border-radius:20px;padding:2px 8px}
 .dims{display:grid;grid-template-columns:1fr 1fr;gap:8px}
@@ -244,6 +247,7 @@ svg text{font-family:var(--mono)}
           <div class="selhead">
             <span class="swatch" id="selSwatch"></span>
             <span class="selname" id="selName"></span>
+            <button class="rename" id="selRename" title="Rename" hidden>✎</button>
             <span class="seltag" id="selTag"></span>
           </div>
           <div class="dims" id="selDims"></div>
@@ -726,6 +730,9 @@ function updateSelPane(){
   $("#selSwatch").style.borderColor=colorFor(o.group);
   $("#selName").textContent=o.label;
   $("#selTag").textContent=o.locked?"locked":o.group;
+  const rn=$("#selRename");rn.hidden=!o.block;
+  rn.onclick=async()=>{if(!o.block)return;const name=await askName("Rename this block:",o.label);
+    if(name===null)return;const n=name.trim();if(!n)return;o.label=n;save();buildList();render();updateSelPane();};
   const dims=$("#selDims");dims.replaceChildren();
   const field=(key,label,val,editable,ro)=>{
     const d=document.createElement("div");d.className="dim"+(ro?" readonly":"");
