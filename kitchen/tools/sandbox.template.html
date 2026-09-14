@@ -121,6 +121,16 @@ button,select,input{font-family:inherit;font-size:13px;color:var(--ink)}
   padding:7px 8px;cursor:pointer;font-size:12px;color:var(--ink-soft)}
 .mini:hover{border-color:var(--accent);color:var(--accent-ink)}
 .mini:disabled{opacity:.45;cursor:not-allowed}
+.corners{margin-top:10px;background:var(--panel-2);border:1px solid var(--line);border-radius:var(--radius-sm);padding:10px}
+.corners>label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);margin-bottom:8px}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.cnr,.callrow{display:flex;align-items:center;gap:7px;background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:6px 9px}
+.cnr.editing,.callrow.editing{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}
+.cnr span,.callrow span{font-size:10px;color:var(--ink-soft);font-family:var(--mono);letter-spacing:.04em;flex:none;width:22px}
+.callrow{margin-top:6px}
+.callrow span{text-transform:uppercase}
+.cnr input,.callrow input{width:100%;min-width:0;background:transparent;border:0;font-family:var(--mono);font-size:14px;font-variant-numeric:tabular-nums;padding:0}
+.cnr input:focus,.callrow input:focus{outline:none}
 .delta{margin-top:10px;font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);font-variant-numeric:tabular-nums}
 .delta b{color:var(--accent-ink);font-weight:500}
 
@@ -233,6 +243,7 @@ svg text{font-family:var(--mono)}
             <span class="seltag" id="selTag"></span>
           </div>
           <div class="dims" id="selDims"></div>
+          <div id="selCorners"></div>
           <div class="delta" id="selDelta"></div>
           <div class="selfoot">
             <button class="mini" id="selReset">Reset piece</button>
@@ -288,10 +299,26 @@ function rectFromPoly(pts){const xs=pts.map(p=>p[0]),ys=pts.map(p=>p[1]);
 function centroid(pts){let x=0,y=0;for(const p of pts){x+=p[0];y+=p[1];}return [x/pts.length,y/pts.length];}
 function rot2(p,c,deg){const a=rad(deg),cs=Math.cos(a),sn=Math.sin(a),dx=p[0]-c[0],dy=p[1]-c[1];
   return [c[0]+dx*cs-dy*sn, c[1]+dx*sn+dy*cs];}
+// Expand an axis-aligned rect with per-corner radii into a sampled ring (rounded corners).
+function roundedRectPts(x,y,w,h,rad){
+  const R=n=>Math.max(0,n||0);
+  let nw=R(rad.nw),ne=R(rad.ne),se=R(rad.se),sw=R(rad.sw);
+  const cl=(a,b,lim)=>a+b>lim?[a*lim/(a+b),b*lim/(a+b)]:[a,b];
+  [nw,ne]=cl(nw,ne,w);[sw,se]=cl(sw,se,w);[nw,sw]=cl(nw,sw,h);[ne,se]=cl(ne,se,h);
+  const pts=[],seg=6,P=Math.PI;
+  const arc=(cx,cy,r,a0,a1)=>{if(r<=0){pts.push([cx,cy]);return;}
+    for(let i=0;i<=seg;i++){const a=a0+(a1-a0)*i/seg;pts.push([cx+Math.cos(a)*r,cy+Math.sin(a)*r]);}};
+  arc(x+nw,y+nw,nw,P,P*1.5);            // NW
+  arc(x+w-ne,y+ne,ne,P*1.5,P*2);        // NE
+  arc(x+w-se,y+h-se,se,0,P*0.5);        // SE
+  arc(x+sw,y+h-sw,sw,P*0.5,P);          // SW
+  return pts;
+}
 // world points for any object at its current transform
 function worldPts(o){
-  if(o.type==="rect"){const {x,y,w,h,rot}=o.cur,c=[x+w/2,y+h/2];
-    let p=[[x,y],[x+w,y],[x+w,y+h],[x,y+h]];
+  if(o.type==="rect"){const {x,y,w,h,rot}=o.cur,c=[x+w/2,y+h/2],rad=o.cur.rad;
+    const hasR=rad&&(rad.nw||rad.ne||rad.se||rad.sw);
+    let p=hasR?roundedRectPts(x,y,w,h,rad):[[x,y],[x+w,y],[x+w,y+h],[x,y+h]];
     return rot?p.map(q=>rot2(q,c,rot)):p;}
   const c=o.base.c, deg=o.cur.rot||0;
   return o.base.pts.map(q=>{const r=deg?rot2(q,c,deg):q;return [r[0]+o.cur.dx, r[1]+o.cur.dy];});
@@ -353,8 +380,9 @@ let concept="F2";
 let blockSeq=0;
 let currentLayout="";   // name of the saved layout currently loaded ("" = unsaved working draft)
 
+const zeroRad=()=>({nw:0,ne:0,se:0,sw:0});
 function mkRect(id,label,poly,group,locked){const r=rectFromPoly(poly);
-  return {id,label,type:"rect",group,locked,base:{...r},cur:{...r},system:true};}
+  return {id,label,type:"rect",group,locked,base:{...r,rad:zeroRad()},cur:{...r,rad:zeroRad()},system:true};}
 function mkPoly(id,label,pts,group,locked,rotatable=true){
   return {id,label,type:"poly",group,locked,rotatable,base:{pts:pts.map(p=>[...p]),c:(MODEL.table_center&&id==="table")?MODEL.table_center:centroid(pts)},cur:{dx:0,dy:0,rot:0},system:true};}
 function isAxisRect(pts){if(pts.length!==4)return false;
@@ -572,7 +600,7 @@ function isMoved(o){
   if(o.type==="rect"){const b=o.base,c=o.cur;return Math.abs(b.x-c.x)>.05||Math.abs(b.y-c.y)>.05||Math.abs(b.w-c.w)>.05||Math.abs(b.h-c.h)>.05||Math.abs(c.rot||0)>.05;}
   return Math.abs(o.cur.dx)>.05||Math.abs(o.cur.dy)>.05||Math.abs(o.cur.rot||0)>.05;
 }
-function resetObj(o){o.cur=o.type==="rect"?{...o.base}:{dx:0,dy:0,rot:0};}
+function resetObj(o){o.cur=o.type==="rect"?{...o.base,rad:{...(o.base.rad||zeroRad())}}:{dx:0,dy:0,rot:0};}
 // A parent piece carries its seating with it when moved as a whole.
 function groupChildren(o){
   if(o.id==="pen")return OBJ.filter(x=>x.id==="penhelper"||x.id.startsWith("pen-seat"));
@@ -717,6 +745,22 @@ function updateSelPane(){
     w.innerHTML=`<label>Bounding</label><div class="inputrow"><input readonly value="${fmt(bb.w)} × ${fmt(bb.h)}"><span class="u">in</span></div>`;
     dims.appendChild(w);
   }
+  // corner radii (rectangles only)
+  const cc=$("#selCorners");cc.replaceChildren();
+  if(o.type==="rect"&&!o.locked){
+    const rad=o.cur.rad||zeroRad();
+    const wrap=document.createElement("div");wrap.className="corners";
+    const cin=(k,v)=>`<label class="cnr"><span>${k.toUpperCase()}</span><input data-corner="${k}" inputmode="decimal" value="${fmt(v||0)}"></label>`;
+    wrap.innerHTML=`<label>Corner radius — inches</label>
+      <div class="cgrid">${cin("nw",rad.nw)}${cin("ne",rad.ne)}${cin("sw",rad.sw)}${cin("se",rad.se)}</div>
+      <label class="callrow"><span>All</span><input data-corner="all" inputmode="decimal" placeholder="set all"></label>`;
+    cc.appendChild(wrap);
+    wrap.querySelectorAll("input[data-corner]").forEach(inp=>{
+      inp.addEventListener("focus",()=>inp.closest(".cnr,.callrow").classList.add("editing"));
+      inp.addEventListener("blur",()=>{inp.closest(".cnr,.callrow").classList.remove("editing");setCorner(o,inp.dataset.corner,inp.value);});
+      inp.addEventListener("keydown",ev=>{if(ev.key==="Enter")inp.blur();});
+    });
+  }
   // delta vs canonical
   const dl=$("#selDelta");
   if(isMoved(o)){
@@ -731,6 +775,13 @@ function updateSelPane(){
   $("#selDelete").hidden=!o.block;
 }
 function sgn(n){return (n>=0?"+":"")+fmt(n);}
+function setCorner(o,key,val){
+  let v=parseFloat(val);if(isNaN(v)){if(key==="all")return;v=0;}v=Math.max(0,v);
+  if(!o.cur.rad)o.cur.rad=zeroRad();
+  if(key==="all"){if(val==="")return;o.cur.rad={nw:v,ne:v,se:v,sw:v};}
+  else o.cur.rad[key]=v;
+  save();render();updateSelPane();updateClearPane();
+}
 function commitField(o,key,inp){
   let v=parseFloat(inp.value);if(isNaN(v)){updateSelPane();return;}
   if(key==="w"||key==="h")v=Math.max(1,v);
@@ -838,7 +889,8 @@ function loadLayout(name){
 function applyStored(){
   if(!STORED)return;
   for(const o of OBJ)applyStoredOne(o.id);
-  if(STORED.blocks)for(const b of STORED.blocks){const o={id:b.id,label:b.label,type:"rect",group:b.group,locked:false,hidden:!!b.hidden,block:true,base:{...b.cur,rot:0},cur:{...b.cur}};OBJ.push(o);blockSeq=Math.max(blockSeq,parseInt((b.id.match(/\d+/)||[0])[0])||0);}
+  if(STORED.blocks)for(const b of STORED.blocks){const rad={...(b.cur.rad||zeroRad())};
+    const o={id:b.id,label:b.label,type:"rect",group:b.group,locked:false,hidden:!!b.hidden,block:true,base:{...b.cur,rot:0,rad:{...rad}},cur:{...b.cur,rad}};OBJ.push(o);blockSeq=Math.max(blockSeq,parseInt((b.id.match(/\d+/)||[0])[0])||0);}
 }
 function applyStoredOne(id){if(!STORED||!STORED.objects||!STORED.objects[id])return;
   const o=OBJ.find(x=>x.id===id);if(!o)return;const s=STORED.objects[id];
@@ -882,7 +934,7 @@ $("#selReset").onclick=()=>{const o=OBJ.find(x=>x.id===selId);if(o){resetObj(o);
 $("#selDelete").onclick=()=>{OBJ=OBJ.filter(o=>o.id!==selId);save();select(null);buildList();render();};
 $("#btn-add").onclick=()=>{blockSeq++;const c=[ix(svg.getBoundingClientRect().width/2),iy(svg.getBoundingClientRect().height/2)];
   const o={id:"block"+blockSeq,label:"Block "+blockSeq,type:"rect",group:"work",locked:false,block:true,
-    base:{x:c[0]-12,y:c[1]-12,w:24,h:24,rot:0},cur:{x:snapv(c[0]-12),y:snapv(c[1]-12),w:24,h:24,rot:0}};
+    base:{x:c[0]-12,y:c[1]-12,w:24,h:24,rot:0,rad:zeroRad()},cur:{x:snapv(c[0]-12),y:snapv(c[1]-12),w:24,h:24,rot:0,rad:zeroRad()}};
   OBJ.push(o);save();select(o.id);buildList();render();};
 $("#btn-theme").onclick=()=>{const cur=document.documentElement.getAttribute("data-theme");
   const next=cur==="dark"?"light":cur==="light"?"dark":(matchMedia("(prefers-color-scheme:dark)").matches?"light":"dark");
@@ -891,6 +943,7 @@ $("#btn-export").onclick=()=>{
   const out={tool:"kitchen-layout-sandbox",baseVersion:MODEL.version,concept,pieces:OBJ.map(o=>({
     id:o.id,label:o.label,group:o.group,type:o.type,moved:isMoved(o),hidden:!!o.hidden,
     ...(o.type==="rect"?{x:round(o.cur.x),y:round(o.cur.y),w:round(o.cur.w),h:round(o.cur.h),rot:round(o.cur.rot||0),
+        cornerRadius:o.cur.rad||zeroRad(),
         polygon:worldPts(o).map(p=>[round(p[0]),round(p[1])])}
       :{dx:round(o.cur.dx),dy:round(o.cur.dy),rot:round(o.cur.rot||0),polygon:worldPts(o).map(p=>[round(p[0]),round(p[1])])})
   }))};
@@ -906,7 +959,7 @@ function importData(j){
   if(j.fixed&&j.cases){Object.assign(MODEL,j);STORED=null;currentLayout="";buildRegistry();buildList();populateLayoutSelect();fit();return;}
   if(j.pieces){for(const p of j.pieces){const o=OBJ.find(x=>x.id===p.id);if(!o)continue;
     if(typeof p.hidden==="boolean")o.hidden=p.hidden;
-    if(o.type==="rect")o.cur={x:p.x,y:p.y,w:p.w,h:p.h,rot:p.rot||0};else o.cur={dx:p.dx,dy:p.dy,rot:p.rot||0};}
+    if(o.type==="rect")o.cur={x:p.x,y:p.y,w:p.w,h:p.h,rot:p.rot||0,rad:{...zeroRad(),...(p.cornerRadius||{})}};else o.cur={dx:p.dx,dy:p.dy,rot:p.rot||0};}
     if(j.concept)setConcept(j.concept,true);currentLayout="";save();buildList();populateLayoutSelect();render();return;}
 }
 
