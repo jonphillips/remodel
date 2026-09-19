@@ -10,6 +10,8 @@ Start with four layers:
 3. [MATERIALS.md](current/MATERIALS.md) — current cabinetry, countertop and guest-perch material strategy.
 4. [CURRENT_STATE.json](current/CURRENT_STATE.json) — controlling dimensions, geometry, model status and factual constraints.
 
+For a non-technical joint review, [WENDY_CHECKIN.md](current/WENDY_CHECKIN.md) turns the embedded assumptions into ten alignment questions.
+
 Then read [the active evaluation](studies/02-purposeful/README.md) and open [the shared comparison](studies/02-purposeful/explorations.html). Both options have two everyday places and four hosting places, with separate occupied, helper, DW and serving states.
 
 **F2 is the practical lead, not a selected construction plan.** It uses a 72 × 42 rectangular 2+2 guest/helper surface with occasional end stools and retains a tested west approach with table chairs in place. Its range-left mise run remains shorter to keep that approach open.
