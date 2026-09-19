@@ -10,11 +10,13 @@ Entertaining exposes the problems most clearly. In the hour or so before people 
 
 The breakfast table by the north windows is important and stays. We eat breakfast, lunch and dinner there most days because we like looking into the backyard. We also have a formal dining room, so we are not trying to create another dining room inside the kitchen. We like some separation between the kitchen and family room and are not looking for a completely open great-room solution.
 
-We are open to changing the kitchen substantially. The island can change or disappear. Appliances can move. Cabinetry can move. An older screened-porch area beside the breakfast/stair side can be reclaimed and seems promising for breakfast, coffee, beverages and related storage. The newer screened porch is separate and not part of the project.
+We are open to changing the kitchen substantially. The island can change or disappear. Appliances can move. Cabinetry can move. An older screened-porch area beside the breakfast/stair side can be reclaimed and seems promising for breakfast, coffee, beverages and related storage. The newer screened porch is separate and not part of the project. We *do* like having a higher counter to sit/stand and do laptop work.
 
 We cook enough that storage needs to be practical rather than generic. We use a stand mixer, food processor, flour mill, vacuum sealer, sous-vide gear, rice cooker, large cutting boards and other equipment that tends to overwhelm kitchens designed around a more typical amount of cooking. We don’t need every appliance on the counter, but we would like it to have a sensible home.
 
 We care about how the kitchen looks, of course, but we are not trying to make a showroom or maximize cabinetry. We like quiet materials, wood, clean lines and a room that feels appropriate to the house. Function, proportion and the relationship to the backyard matter more than conspicuous luxury.
+
+One particular challenge: our range currently has downdraft venting. We would love to have a hood.
 
 For this first conversation, we are mainly interested in how you see the problem. If you were starting fresh, what would you protect? What would you move? Where do you think the kitchen wants to organize itself, and what do you think is causing the biggest problems now?
 
