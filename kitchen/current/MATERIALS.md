@@ -35,9 +35,12 @@ Selection criteria:
 
 ## Chef island — soapstone
 
-Soapstone is a particularly plausible material for the chef island because its weaknesses are mainly cosmetic while its strengths are operational.
+Soapstone is the selected material direction for the chef island. Its weaknesses are mainly cosmetic while its strengths are operational.
 
 ### Why it fits
+
+Stainless steel was considered seriously because it would make the island an exceptionally capable piece of cooking equipment, including excellent heat / stain resistance and seamless sink integration. It is no longer under consideration. The colder tactile feel and increased noise from pans, bowls and utensils outweigh those advantages for a surface Jon will work at constantly. The goal is a highly capable workbench that still feels quiet and pleasant under hand.
+
 
 - Nonporous / highly stain-resistant in ordinary kitchen use.
 - Excellent resistance to acids.
