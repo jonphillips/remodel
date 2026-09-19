@@ -13,6 +13,7 @@ Start with four layers:
 For a non-technical joint review, [WENDY_CHECKIN.md](current/WENDY_CHECKIN.md) turns the embedded assumptions into ten alignment questions.
 
 Then read [the active evaluation](studies/02-purposeful/README.md) and open [the shared comparison](studies/02-purposeful/explorations.html). Both options have two everyday places and four hosting places, with separate occupied, helper, DW and serving states.
+For the human-facing summary to use with a kitchen designer, see [DESIGNER_FIRST_MEETING.md](DESIGNER_FIRST_MEETING.md).
 
 **F2 is the practical lead, not a selected construction plan.** It uses a 72 × 42 rectangular 2+2 guest/helper surface with occasional end stools and retains a tested west approach with table chairs in place. Its range-left mise run remains shorter to keep that approach open.
 
