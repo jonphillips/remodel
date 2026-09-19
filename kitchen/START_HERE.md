@@ -2,6 +2,8 @@
 
 Latest: September 14, 2026, purposeful F2/P2 explorations.
 
+For the human-facing summary to use with a kitchen designer, see [DESIGNER_FIRST_MEETING.md](DESIGNER_FIRST_MEETING.md).
+
 Read [the new evaluation](studies/02-purposeful/README.md), open [the shared comparison](studies/02-purposeful/explorations.html), and consult [CURRENT_STATE.json](current/CURRENT_STATE.json). Both options have two everyday places and four hosting places, with separate occupied, helper, DW and serving states.
 
 **F2 is the practical lead, not a selected construction plan.** It uses a 72 × 42 rectangular 2+2 guest/helper surface with occasional end stools and retains a tested west approach with table chairs in place. Its range-left mise run remains shorter to keep that approach open.
