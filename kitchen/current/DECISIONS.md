@@ -50,7 +50,7 @@ For dimensions and model status, [CURRENT_STATE.json](CURRENT_STATE.json) remain
 | Status | Decision |
 |---|---|
 | **WORKING DIRECTION** | Use a quiet lighter natural stone / quartzite on perimeter counters, subject to actual slab testing and palette fit. |
-| **WORKING DIRECTION** | Dark architectural soapstone is a strong candidate for the chef island. Its scratches are acceptable only if they read as patina rather than damage in real sample testing. |
+| **CONFIRMED** | Use soapstone for the chef-island countertop. Stainless steel was considered and rejected: its functional performance is excellent, but the colder tactile feel and greater noise from pans / bowls are wrong for this work surface. Exact soapstone variety and finish remain to be selected. |
 | **WORKING DIRECTION** | A furniture-grade wood top is a strong candidate for the guest perch because it reinforces the furniture role. |
 | **CONFIRMED** | The guest-perch surface should not require placemats for ordinary wine / food use. |
 | **WORKING DIRECTION** | If the perch is wood, use a high-performance matte / satin professional film finish rather than relying on a delicate oil-only finish. |
