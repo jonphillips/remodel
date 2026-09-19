@@ -2,9 +2,9 @@
 
 The permanent project home for Jon's remodel measurements, photographs, design studies, and decisions.
 
-Start with [Kitchen / START_HERE](kitchen/START_HERE.md). The active design comparison is [purposeful explorations](kitchen/studies/02-purposeful/explorations.html); open it in a browser. It includes the continuous peninsula and the freestanding comparison under identical assumptions.
+Start with [Kitchen / START_HERE](kitchen/START_HERE.md). The kitchen now separates **design intent** from **geometry**: the current folder contains the durable brief, material strategy and decision log alongside the controlling state. The active layout comparison is [purposeful explorations](kitchen/studies/02-purposeful/explorations.html); open it in a browser.
 
-- `kitchen/current/`: controlling state, current evaluation, and shared drawing/model.
+- `kitchen/current/`: controlling state plus [design intent](kitchen/current/DESIGN_INTENT.md), [materials strategy](kitchen/current/MATERIALS.md), [decision log](kitchen/current/DECISIONS.md), current evaluation, and shared drawing/model.
 - `kitchen/sources/`: newly supplied original source images.
 - `kitchen/history/`: complete earlier handoff packages, preserved without alteration.
 - `kitchen/tools/`: editable drawing template, reproducible model builder, and the layout sandbox (below).
