@@ -1,8 +1,16 @@
 # Kitchen — current entry point
 
-Latest: September 14, 2026, purposeful F2/P2 explorations.
+Latest geometry: September 14, 2026, purposeful F2/P2 explorations.  
+Latest design-intent / materials update: September 19, 2026.
 
-Read [the new evaluation](studies/02-purposeful/README.md), open [the shared comparison](studies/02-purposeful/explorations.html), and consult [CURRENT_STATE.json](current/CURRENT_STATE.json). Both options have two everyday places and four hosting places, with separate occupied, helper, DW and serving states.
+Start with four layers:
+
+1. [DESIGN_INTENT.md](current/DESIGN_INTENT.md) — durable priorities and the reasoning that should govern tradeoffs.
+2. [DECISIONS.md](current/DECISIONS.md) — concise confirmed / working / open decision log.
+3. [MATERIALS.md](current/MATERIALS.md) — current cabinetry, countertop and guest-perch material strategy.
+4. [CURRENT_STATE.json](current/CURRENT_STATE.json) — controlling dimensions, geometry, model status and factual constraints.
+
+Then read [the active evaluation](studies/02-purposeful/README.md) and open [the shared comparison](studies/02-purposeful/explorations.html). Both options have two everyday places and four hosting places, with separate occupied, helper, DW and serving states.
 
 **F2 is the practical lead, not a selected construction plan.** It uses a 72 × 42 rectangular 2+2 guest/helper surface with occasional end stools and retains a tested west approach with table chairs in place. Its range-left mise run remains shorter to keep that approach open.
 
@@ -16,4 +24,4 @@ The old porch is still breakfast/beverage service, distinct from the new giant s
 
 Sources remain in `history/` and `sources/`; see [SOURCE_MAP.md](SOURCE_MAP.md). Earlier `current/comparison*` files are the preceding controlled-link study and remain historical evidence. `tools/build_model.py` rebuilds that earlier study, not this latest state. Latest model reproduction is in `studies/02-purposeful/`.
 
-Next useful checks are the actual F2 stool/route mock-up or P2 stair/porch-opening feasibility, depending on which tradeoff Jon prefers. No repeat room survey or workflow interview.
+Next useful layout checks are the actual F2 stool/route mock-up or P2 stair/porch-opening feasibility, depending on which tradeoff Jon prefers. Material work can proceed in parallel through real cabinet-wood, quartzite and soapstone samples; do not let finish selections silently change the layout constraints.
