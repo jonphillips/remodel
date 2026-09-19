@@ -34,12 +34,16 @@ For dimensions and model status, [CURRENT_STATE.json](CURRENT_STATE.json) remain
 | **CONFIRMED** | The guest perch should read as a piece of furniture rather than a second kitchen island. |
 | **CONFIRMED** | No waterfall-stone treatment for the guest perch. |
 | **CONFIRMED** | Main-kitchen design should have clean lines and low visual noise without becoming generic slab-door minimalism. |
-| **WORKING DIRECTION** | Inset / beaded cabinetry is the preferred cabinet language. |
-| **WORKING DIRECTION** | Use quiet, consistent wood grain; avoid highly figured cabinetry. |
+| **WORKING DIRECTION** | Inset / beaded, flat-panel cabinetry is the preferred cabinet language, with substantive proportions rather than ultra-thin / skinny Shaker framing. |
+| **WORKING DIRECTION** | Use quiet, consistent, relatively straight wood grain; avoid highly figured cabinetry. |
+| **WORKING DIRECTION** | If white oak remains the lead, test a warmer / somewhat richer light-medium to medium finish rather than pale raw oak. Avoid gray, orange and golden-oak effects. |
 | **WORKING DIRECTION** | Minimize upper cabinets in the main kitchen where feasible. |
 | **WORKING DIRECTION** | Use restrained, functional hardware. |
-| **CONFIRMED** | The room needs more tonal / material contrast than an all-cream or all-beige palette. |
-| **OPEN** | Cabinet wood species and finish. Rift-sawn white oak is liked but is not an automatic specification. |
+| **CONFIRMED** | The room needs more tonal / material contrast than an all-cream or all-beige palette; the richer / more-contrast visual family is the current winner. |
+| **CONFIRMED** | Keep the cooking wall visually quiet. Beautiful cabinetry should matter more than a theatrical range / hood composition. |
+| **WORKING DIRECTION** | Do not panel appliances by default. Visible stainless is acceptable; integrate appliances when doing so improves the composition or solves a specific problem. |
+| **OPEN** | Cabinet wood species and exact finish. Rift-sawn white oak is liked for its grain but is not an automatic specification. |
+| **OPEN** | Exact hardware form, size and finish. |
 
 ## Countertops and materials
 

@@ -12,6 +12,8 @@ Start with four layers:
 
 For a non-technical joint review, [WENDY_CHECKIN.md](current/WENDY_CHECKIN.md) turns the embedded assumptions into ten alignment questions.
 
+For the visual shorthand behind the design-language conclusions, see [VISUAL_REFERENCES.md](current/VISUAL_REFERENCES.md). The captions there state what should and should not be carried forward from each image.
+
 Then read [the active evaluation](studies/02-purposeful/README.md) and open [the shared comparison](studies/02-purposeful/explorations.html). Both options have two everyday places and four hosting places, with separate occupied, helper, DW and serving states.
 For the human-facing summary to use with a kitchen designer, see [DESIGNER_FIRST_MEETING.md](DESIGNER_FIRST_MEETING.md).
 

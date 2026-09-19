@@ -130,15 +130,17 @@ The species should be selected *after* the cabinet wood is narrowed down.
 Current direction:
 
 - wood cabinetry;
-- quiet, consistent grain;
-- inset / beaded character;
-- clean but not anonymous;
+- quiet, consistent, relatively straight grain;
+- inset flat-panel doors with a subtle bead and enough frame substance to feel architectural;
+- clean but not anonymous, and specifically not ultra-thin / skinny Shaker;
 - functional reserved handles;
 - limited upper cabinetry in the main kitchen.
 
-Rift-sawn white oak is a reference point for grain quality, not yet a specification.
+Rift-sawn white oak is a reference point for grain quality, not yet a specification. If it remains the lead, test it in a warmer and somewhat richer light-medium / medium treatment rather than the pale raw-oak look that currently dates many white-oak kitchens. The nearby rift-sawn white-oak family-room shelves establish a positive grain reference but should not force a match.
 
 Avoid highly figured wood that turns every door into an object. The cabinetry should establish a calm field against which the stone, metal and furniture-like perch can register.
+
+See [VISUAL_REFERENCES.md](VISUAL_REFERENCES.md): the cabinet reference is useful for profile and proportion but intentionally rejected as an overall all-beige palette.
 
 ## Coherence rules
 
@@ -154,6 +156,8 @@ Avoid highly figured wood that turns every door into an object. The cabinetry sh
 
 The most promising current composition is:
 
-**quiet lighter stone perimeter + dark soapstone chef island + furniture-grade wood guest perch + calm wood cabinetry**
+**quiet lighter stone perimeter + dark soapstone chef island + furniture-grade wood guest perch + calm, somewhat richer wood cabinetry**
 
-The unresolved issue is the exact relationship between cabinet wood and perch wood. Solve those together, then select actual stone slabs against the wood samples rather than from photographs.
+This combination is also a plausible way to achieve the newly preferred "a bit richer / more contrast" direction without adding decorative noise. The darker work island can provide mineral depth; the wood perch can provide warmth and furniture character.
+
+The unresolved issue is the exact relationship between cabinet wood and perch wood. Solve those together, then select actual stone slabs against the wood samples rather than from photographs. Do not infer a dark stone top for the guest perch merely because one visual reference shows it; the current material hypothesis for the perch remains furniture-grade wood.

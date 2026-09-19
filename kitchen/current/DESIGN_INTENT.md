@@ -72,18 +72,22 @@ Occasional hosting constraints can justify temporary stools, moving a chair or m
 
 ## Visual language
 
-The desired room is **reserved, warm and materially rich**, not beige-on-beige minimalism.
+The desired room is **reserved, warm and materially rich**, not beige-on-beige minimalism. The latest visual exploration clarified the target further: **a bit richer / more contrast wins**. Restraint should come from disciplined materials and proportions, not from washing the whole room in cream.
 
-- Wood cabinetry with quiet, consistent grain.
-- Clean lines, but not anonymous slab-door minimalism.
-- Inset / beaded cabinetry is appealing; avoid ultra-thin Shaker proportions that feel fashion-driven.
-- Functional, restrained hardware rather than decorative jewelry.
-- Minimize visual noise and unnecessary material changes.
-- Enough contrast that the room has depth and personality.
-- Stone should be selected for character and usefulness, not simply because it is expensive.
+- Wood cabinetry with quiet, consistent, relatively straight grain.
+- The preferred door language is inset, flat-panel cabinetry with a subtle bead and enough rail/stile substance to feel architectural.
+- Avoid anonymous slab-door minimalism and ultra-thin / skinny Shaker proportions that feel fashion-driven.
+- Functional, restrained hardware rather than decorative jewelry. Exact form and finish remain open.
+- Minimize visual noise and unnecessary material changes, but allow deliberate tonal contrast.
+- Stone should be selected for character and usefulness, not simply because it is expensive or photogenic.
+- The cooking wall should stay quiet. The desired reaction is "beautiful cabinetry," not "wow, range wall."
+- A likely 36-inch induction cooktop should not become an excuse for a heroic hood, faux hearth, Provence gesture or restaurant-kitchen theater.
+- Stainless appliance faces are acceptable when they make functional and architectural sense. Panel-ready is a compositional option, not a premium-kitchen requirement.
 - The guest perch is a deliberate opportunity for furniture-level detailing.
 
-Rift-sawn white oak is admired for its calm grain, but it should not become an automatic default simply because it is currently fashionable. Cabinet species and finish remain open until the whole palette is considered.
+Rift-sawn white oak is admired for its calm grain, but it should not become an automatic default simply because it is currently fashionable. If oak wins, test a warmer, somewhat richer light-medium / medium finish rather than the pale raw-oak formula; avoid gray, orange and golden-oak effects. The nearby rift-sawn white-oak family-room shelves are a useful grain reference, not a mandate to match them.
+
+See [VISUAL_REFERENCES.md](VISUAL_REFERENCES.md) for the images that produced these conclusions and the specific lessons to carry forward from each.
 
 ## Decision hierarchy
 
