@@ -21,5 +21,3 @@ One particular challenge: our range currently has downdraft venting. We would lo
 For this first conversation, we are mainly interested in how you see the problem. If you were starting fresh, what would you protect? What would you move? Where do you think the kitchen wants to organize itself, and what do you think is causing the biggest problems now?
 
 We have done quite a bit of our own analysis and have explored some layouts, but we would rather not lead with them. We’d like to hear your independent instincts first and then compare notes. If we continue, we’d much rather see two or three genuinely different ideas than a large set of small variations on the same plan.
-
-It’s not really a cabinet-replacement project. It’s a room-planning problem, and we want to solve that before choosing the cabinets.
